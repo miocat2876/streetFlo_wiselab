@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface TestDao {
+public interface TestMapper {
     TestDto test2();
 }
