@@ -17,7 +17,7 @@ public class TestController {
 
         System.out.println("테스트화면");
 
-        System.out.println(test.test().getTest());
+       // System.out.println(test.test().getTest());
 
         return "test/test";
     }
