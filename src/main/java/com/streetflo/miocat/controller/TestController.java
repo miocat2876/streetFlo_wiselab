@@ -22,10 +22,9 @@ public class TestController {
 
         System.out.println("테스트화면");
 
-
         logger.info("로그나옵니까?");
 
-        System.out.println(test.test().getTest());
+//        System.out.println(test.test().getTest());
 
         return "test/test";
     }
