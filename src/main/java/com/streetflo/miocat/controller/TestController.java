@@ -28,7 +28,7 @@ public class TestController {
 
         logger.info("로그나옵니까?");
 
-        return "성공";
+        return "{test:'성공'}";
     }
 
 
