@@ -9,8 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@CrossOrigin(origins = "*")
+@RestController
 public class TestController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -19,9 +21,8 @@ public class TestController {
     @Autowired
     private TestService test;
 
-    @CrossOrigin(origins = "*")
+
     @GetMapping("/test")
-    @ResponseBody
     public String test(){
 
         System.out.println("테스트화면");
