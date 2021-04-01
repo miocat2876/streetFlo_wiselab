@@ -21,14 +21,14 @@ public class TestController {
     private TestService test;
 
     @GetMapping("/test")
-    @ResponseBody
     public String test(){
 
         System.out.println("테스트화면");
 
         logger.info("로그나옵니까?");
 
-        return "{test:'성공'}";
+        return "index.tile";
+        
     }
 
 
