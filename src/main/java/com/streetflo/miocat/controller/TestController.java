@@ -13,8 +13,6 @@ public class TestController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-    @Autowired
-    private TestService test;
 
     @GetMapping("/test")
     public String test(){
