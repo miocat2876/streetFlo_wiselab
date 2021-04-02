@@ -27,7 +27,7 @@ public class TestController {
     @GetMapping("/test2")
     public String test2(){
 
-        return "index.jsp";
+        return "index";
 
     }
 

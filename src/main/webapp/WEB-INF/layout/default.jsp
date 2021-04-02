@@ -14,9 +14,9 @@
 </head>
 
 <body>
-        <section class="content">
-                <tiles:insertAttribute name="body" />
-        </section>
+    <section class="content">
+        <tiles:insertAttribute name="body" />
+    </section>
 </body>
 
 </html>
