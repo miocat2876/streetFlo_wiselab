@@ -33,5 +33,14 @@ public class TestController {
 
     }
 
+    @GetMapping("/test3")
+    public String test3(){
+
+        System.out.println("테스트화면2");
+
+        return "test";
+
+    }
+
 
 }
