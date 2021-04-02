@@ -37,7 +37,7 @@ dependencies {
     testImplementation 'org.springframework.batch:spring-batch-test'
     compile("org.apache.tiles:tiles-jsp:3.0.8")
     compile('org.apache.tomcat.embed:tomcat-embed-jasper')
-    compile('javax.servlet:jstl:1.2')
+    compile('javax.servlet:jstl:3.1')
     compile fileTree(dir: '/src/main/webapp/WEB-INF/lib',includes: ['*.jar'])
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
 
