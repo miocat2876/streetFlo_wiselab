@@ -20,21 +20,14 @@ public class TestController {
 
         System.out.println("테스트화면");
 
-        logger.info("로그나옵니까?");
-
         return "index.tile";
         
     }
 
     @GetMapping("/test2")
-    @ResponseBody
     public String test2(){
 
-        System.out.println("테스트화면");
-
-        logger.info("로그나옵니까?");
-
-        return "index.tile";
+        return "index.jsp";
 
     }
 
