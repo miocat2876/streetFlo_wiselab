@@ -99,3 +99,244 @@ DEBUG 21-04-03 00:09:21[http-nio-8080-exec-3] [DispatcherServlet:1131] - Complet
 DEBUG 21-04-03 00:09:21[http-nio-8080-exec-5] [DispatcherServlet:91] - GET "/resources/font/Surt-RegularExtendedOblique.woff", parameters={}
 DEBUG 21-04-03 00:09:21[http-nio-8080-exec-5] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
 DEBUG 21-04-03 00:09:21[http-nio-8080-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [DispatcherServlet:91] - GET "/test2", parameters={}
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [ContentNegotiatingViewResolver:348] - Selected 'text/html' given [text/html, text/html;q=0.8]
+DEBUG 21-04-03 00:13:59[http-nio-8080-exec-10] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [DispatcherServlet:91] - GET "/test2", parameters={}
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [ContentNegotiatingViewResolver:348] - Selected 'text/html' given [text/html, text/html;q=0.8]
+DEBUG 21-04-03 00:14:22[http-nio-8080-exec-7] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+INFO  21-04-03 00:14:45[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.4 on DESKTOP-BM3T0R0 with PID 13492 (C:\Users\user\IdeaProjects\streetFlo2\build\classes\java\main started by user in C:\Users\user\IdeaProjects\streetFlo2)
+INFO  21-04-03 00:14:45[restartedMain] [MiocatApplication:664] - The following profiles are active: dev,oauth
+INFO  21-04-03 00:14:45[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-03 00:14:45[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-03 00:14:45[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 00:14:45[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-03 00:14:45[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.dto.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-03 00:14:45[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-03 00:14:46[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 00:14:46[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-03 00:14:46[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+INFO  21-04-03 00:14:46[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$aa98e8b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-03 00:14:46[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-03 00:14:46[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-03 00:14:46[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 00:14:46[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-03 00:14:46[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+INFO  21-04-03 00:14:47[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-03 00:14:47[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-03 00:14:47[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1967 ms
+INFO  21-04-03 00:14:47[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+WARN  21-04-03 00:14:47[restartedMain] [DriverDataSource:70] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+INFO  21-04-03 00:14:47[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-03 00:14:47[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:oracle:thin:@kgm2876.iptime.org:9501/xe'
+INFO  21-04-03 00:14:47[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-03 00:14:47[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-03 00:14:48[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-03 00:14:48[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+INFO  21-04-03 00:14:48[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-03 00:14:48[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-03 00:14:49[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-03 00:14:49[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-03 00:14:49[restartedMain] [UserDetailsServiceAutoConfiguration:86] - 
+
+Using generated security password: 9eaf3ca3-bc42-4596-9c74-7816bc8467c3
+
+INFO  21-04-03 00:14:49[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/js/**'] with []
+INFO  21-04-03 00:14:49[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/css/**'] with []
+INFO  21-04-03 00:14:49[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/images/**'] with []
+INFO  21-04-03 00:14:49[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/font/**'] with []
+INFO  21-04-03 00:14:49[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/html/**'] with []
+INFO  21-04-03 00:14:49[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2051ec83, org.springframework.security.web.context.SecurityContextPersistenceFilter@48d8d7ed, org.springframework.security.web.header.HeaderWriterFilter@469922ca, org.springframework.security.web.csrf.CsrfFilter@565daae6, org.springframework.security.web.authentication.logout.LogoutFilter@66b89022, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75b8deb7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@316a615f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7eb9893e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@132fd358, org.springframework.security.web.session.SessionManagementFilter@46160150, org.springframework.security.web.access.ExceptionTranslationFilter@2bd0a14e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13218df0]
+INFO  21-04-03 00:14:49[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-03 00:14:49[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-03 00:14:49[restartedMain] [RequestMappingHandlerMapping:349] - 4 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-03 00:14:49[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-03 00:14:49[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-03 00:14:49[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-03 00:14:49[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-03 00:14:50[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 00:14:50[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-03 00:14:50[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 5.603 seconds (JVM running for 6.673)
+INFO  21-04-03 00:14:52[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@485b69d2
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4d8130ab
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:91] - GET "/test2", parameters={}
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.TestController#test2()
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [ContentNegotiatingViewResolver:348] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [JstlView:309] - View name 'views/index', model {}
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [JstlView:169] - Forwarding to [/WEB-INF/views/views/index.jsp]
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [ContentNegotiatingViewResolver:348] - Selected 'text/html' given [text/html, text/html;q=0.8]
+DEBUG 21-04-03 00:14:52[http-nio-8080-exec-1] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+INFO  21-04-03 00:15:06[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.4 on DESKTOP-BM3T0R0 with PID 12792 (C:\Users\user\IdeaProjects\streetFlo2\build\classes\java\main started by user in C:\Users\user\IdeaProjects\streetFlo2)
+INFO  21-04-03 00:15:06[restartedMain] [MiocatApplication:664] - The following profiles are active: dev,oauth
+INFO  21-04-03 00:15:06[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-03 00:15:06[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.dto.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-03 00:15:07[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
+INFO  21-04-03 00:15:07[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4725d00c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-03 00:15:07[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-03 00:15:08[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-03 00:15:08[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 00:15:08[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-03 00:15:08[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+INFO  21-04-03 00:15:08[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-03 00:15:08[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-03 00:15:08[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1806 ms
+INFO  21-04-03 00:15:08[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+WARN  21-04-03 00:15:08[restartedMain] [DriverDataSource:70] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+INFO  21-04-03 00:15:08[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-03 00:15:08[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:oracle:thin:@kgm2876.iptime.org:9501/xe'
+INFO  21-04-03 00:15:09[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-03 00:15:09[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-03 00:15:09[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-03 00:15:09[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+INFO  21-04-03 00:15:09[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-03 00:15:10[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-03 00:15:10[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-03 00:15:10[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-03 00:15:10[restartedMain] [UserDetailsServiceAutoConfiguration:86] - 
+
+Using generated security password: b6e5c473-ac0b-4581-b225-05bab45df387
+
+INFO  21-04-03 00:15:10[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/js/**'] with []
+INFO  21-04-03 00:15:10[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/css/**'] with []
+INFO  21-04-03 00:15:10[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/images/**'] with []
+INFO  21-04-03 00:15:10[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/font/**'] with []
+INFO  21-04-03 00:15:10[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/html/**'] with []
+INFO  21-04-03 00:15:10[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6766c90a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d1689a1, org.springframework.security.web.header.HeaderWriterFilter@2c077ee8, org.springframework.security.web.csrf.CsrfFilter@554c6911, org.springframework.security.web.authentication.logout.LogoutFilter@65d0347e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fc044c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51f21aae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61096993, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a6d4f4f, org.springframework.security.web.session.SessionManagementFilter@25260e2d, org.springframework.security.web.access.ExceptionTranslationFilter@ea13f72, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e5c55cf]
+INFO  21-04-03 00:15:10[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-03 00:15:10[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-03 00:15:10[restartedMain] [RequestMappingHandlerMapping:349] - 4 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-03 00:15:10[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-03 00:15:10[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-03 00:15:10[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-03 00:15:11[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-03 00:15:11[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 00:15:11[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-03 00:15:11[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 5.128 seconds (JVM running for 6.115)
+INFO  21-04-03 00:15:11[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@756dc939
+DEBUG 21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b482d3a
+DEBUG 21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-04-03 00:15:11[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-1] [DispatcherServlet:91] - GET "/test2", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.TestController#test2()
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-1] [ContentNegotiatingViewResolver:348] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-1] [JstlView:309] - View name 'index', model {}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-1] [JstlView:169] - Forwarding to [/WEB-INF/views/index.jsp]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-2] [DispatcherServlet:91] - GET "/resources/css/reset.css", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-3] [DispatcherServlet:91] - GET "/resources/css/style.css", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-4] [DispatcherServlet:91] - GET "/resources/js/common.js", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-4] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-2] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-3] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-3] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-4] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-5] [DispatcherServlet:91] - GET "/resources/assets/menu.svg", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-5] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-6] [DispatcherServlet:91] - GET "/resources/assets/menu-black.svg", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-6] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-6] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-7] [DispatcherServlet:91] - GET "/resources/assets/instar.png", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-7] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-7] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-8] [DispatcherServlet:91] - GET "/resources/assets/mail.png", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-8] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-8] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-9] [DispatcherServlet:91] - GET "/assets/kakao.svg", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-9] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-9] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-9] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-9] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:15:12[http-nio-8080-exec-9] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-9] [HttpEntityMethodProcessor:255] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-9] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sat Apr 03 00:15:12 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-9] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [DispatcherServlet:91] - GET "/assets/facebook.svg", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [HttpEntityMethodProcessor:255] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sat Apr 03 00:15:13 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [DispatcherServlet:91] - GET "/assets/line.svg", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [HttpEntityMethodProcessor:255] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sat Apr 03 00:15:13 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [DispatcherServlet:91] - GET "/assets/google.svg", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [HttpEntityMethodProcessor:255] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sat Apr 03 00:15:13 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-2] [DispatcherServlet:91] - GET "/resources/assets/search.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-2] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-3] [DispatcherServlet:91] - GET "/resources/assets/popup_t.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-3] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-5] [DispatcherServlet:91] - GET "/resources/assets/popup_tl.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-5] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-6] [DispatcherServlet:91] - GET "/resources/assets/popup_l.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-3] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-7] [DispatcherServlet:91] - GET "/resources/assets/popup_r.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-8] [DispatcherServlet:91] - GET "/resources/assets/popup_bl.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-8] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-7] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-6] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-9] [DispatcherServlet:91] - GET "/resources/assets/popup_br.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-9] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [DispatcherServlet:91] - GET "/resources/assets/popup_b.png", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-6] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-7] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-8] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-9] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-10] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [DispatcherServlet:91] - GET "/resources/font/Surt-RegularExtended.woff", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [DispatcherServlet:91] - GET "/resources/font/Surt-RegularExtendedOblique.woff", parameters={}
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-03 00:15:13[http-nio-8080-exec-4] [DispatcherServlet:1131] - Completed 200 OK

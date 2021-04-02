@@ -27,6 +27,8 @@ public class TestController {
     @GetMapping("/test2")
     public String test2(){
 
+        System.out.println("테스트화면2");
+
         return "index";
 
     }
