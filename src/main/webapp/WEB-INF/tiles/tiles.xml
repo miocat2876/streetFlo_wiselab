@@ -22,7 +22,7 @@
 
     <!-- tiles 미적용 -->
     <definition name="default" template="/WEB-INF/layout/default.jsp">
-<!--        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />-->
+        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
     </definition>
     <definition name="*.jsp" extends="default">
         <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
