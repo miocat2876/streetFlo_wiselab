@@ -4,7 +4,7 @@ plugins {
     id 'java'
     id 'war'
 }
-
+ext['tomcat.version'] = '9.0.35'
 group = 'com.streetFlo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -23,7 +23,7 @@ repositories {
 dependencies {
 
     providedCompile (
-            'javax.servlet:javax.servlet-api:4.0.0',
+            'javax.servlet:javax.servlet-api:3.1.0',
             'javax.servlet.jsp:javax.servlet.jsp-api:2.3.1'
     )
 

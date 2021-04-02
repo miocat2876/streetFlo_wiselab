@@ -879,3 +879,122 @@ java.lang.NoSuchMethodError: 'javax.servlet.http.HttpServletMapping javax.servle
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-04-03 01:59:44[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.4 on DESKTOP-BM3T0R0 with PID 1332 (C:\Users\user\IdeaProjects\streetFlo2\build\classes\java\main started by user in C:\Users\user\IdeaProjects\streetFlo2)
+INFO  21-04-03 01:59:44[restartedMain] [MiocatApplication:664] - The following profiles are active: dev,oauth
+INFO  21-04-03 01:59:44[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-03 01:59:44[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-03 01:59:45[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 01:59:45[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-03 01:59:46[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.dto.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-03 01:59:46[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 63 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-03 01:59:46[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 01:59:46[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-03 01:59:46[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+INFO  21-04-03 01:59:46[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f7ccbdcf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-03 01:59:46[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-03 01:59:46[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-03 01:59:46[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 01:59:46[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-03 01:59:46[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+INFO  21-04-03 01:59:47[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-03 01:59:47[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-03 01:59:47[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2278 ms
+INFO  21-04-03 01:59:47[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+WARN  21-04-03 01:59:47[restartedMain] [DriverDataSource:70] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+INFO  21-04-03 01:59:47[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-03 01:59:47[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:oracle:thin:@kgm2876.iptime.org:9501/xe'
+INFO  21-04-03 01:59:48[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-03 01:59:48[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-03 01:59:48[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-03 01:59:48[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+INFO  21-04-03 01:59:49[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-03 01:59:49[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-03 01:59:50[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-03 01:59:50[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-03 01:59:50[restartedMain] [UserDetailsServiceAutoConfiguration:86] - 
+
+Using generated security password: fa677a4d-79be-4726-b939-d6d2c8dc058a
+
+INFO  21-04-03 01:59:50[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/js/**'] with []
+INFO  21-04-03 01:59:50[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/css/**'] with []
+INFO  21-04-03 01:59:50[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/images/**'] with []
+INFO  21-04-03 01:59:50[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/font/**'] with []
+INFO  21-04-03 01:59:50[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/html/**'] with []
+INFO  21-04-03 01:59:50[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4de2ec4d, org.springframework.security.web.context.SecurityContextPersistenceFilter@39005556, org.springframework.security.web.header.HeaderWriterFilter@4e7b4fef, org.springframework.security.web.csrf.CsrfFilter@53b3befd, org.springframework.security.web.authentication.logout.LogoutFilter@4f0d1658, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@711233fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d8bc21b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@284d5423, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d8fb3d7, org.springframework.security.web.session.SessionManagementFilter@8ea2ab9, org.springframework.security.web.access.ExceptionTranslationFilter@73b4770b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@494ac228]
+INFO  21-04-03 01:59:50[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-03 01:59:50[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-03 01:59:50[restartedMain] [RequestMappingHandlerMapping:349] - 5 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-03 01:59:50[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-03 01:59:50[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-03 01:59:50[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-03 01:59:51[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-03 01:59:51[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 01:59:51[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-03 01:59:51[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 7.082 seconds (JVM running for 8.635)
+INFO  21-04-03 02:00:05[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@24054e38
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@797d5319
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [DispatcherServlet:91] - GET "/test3", parameters={}
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.TestController#test3()
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [ContentNegotiatingViewResolver:348] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [JstlView:309] - View name 'test', model {}
+DEBUG 21-04-03 02:00:05[http-nio-8080-exec-1] [JstlView:169] - Forwarding to [/WEB-INF/views/test.jsp]
+DEBUG 21-04-03 02:00:06[http-nio-8080-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+INFO  21-04-03 02:00:23[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.4 on DESKTOP-BM3T0R0 with PID 7180 (C:\Users\user\IdeaProjects\streetFlo2\build\classes\java\main started by user in C:\Users\user\IdeaProjects\streetFlo2)
+INFO  21-04-03 02:00:23[restartedMain] [MiocatApplication:664] - The following profiles are active: dev,oauth
+INFO  21-04-03 02:00:23[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-03 02:00:23[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.dto.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 35 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-03 02:00:24[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+INFO  21-04-03 02:00:24[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6c873c50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-03 02:00:24[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-03 02:00:25[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-03 02:00:25[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 02:00:25[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-03 02:00:25[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+INFO  21-04-03 02:00:25[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-03 02:00:25[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-03 02:00:25[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2333 ms
+INFO  21-04-03 02:00:25[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+WARN  21-04-03 02:00:25[restartedMain] [DriverDataSource:70] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+INFO  21-04-03 02:00:26[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-03 02:00:26[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:oracle:thin:@kgm2876.iptime.org:9501/xe'
+INFO  21-04-03 02:00:26[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-03 02:00:26[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-03 02:00:26[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-03 02:00:26[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+INFO  21-04-03 02:00:27[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-03 02:00:27[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-03 02:00:28[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-03 02:00:28[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-03 02:00:28[restartedMain] [UserDetailsServiceAutoConfiguration:86] - 
+
+Using generated security password: 0f49a2a2-9644-4668-803d-cc69ca882759
+
+INFO  21-04-03 02:00:28[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/js/**'] with []
+INFO  21-04-03 02:00:28[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/css/**'] with []
+INFO  21-04-03 02:00:28[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/images/**'] with []
+INFO  21-04-03 02:00:28[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/font/**'] with []
+INFO  21-04-03 02:00:28[restartedMain] [DefaultSecurityFilterChain:51] - Will secure Ant [pattern='/html/**'] with []
+INFO  21-04-03 02:00:28[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66ddea9d, org.springframework.security.web.context.SecurityContextPersistenceFilter@67dc7cf8, org.springframework.security.web.header.HeaderWriterFilter@6017f5c3, org.springframework.security.web.csrf.CsrfFilter@4accb3a, org.springframework.security.web.authentication.logout.LogoutFilter@6ef83316, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@482530bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24e29e0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fffd8e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71c9e23, org.springframework.security.web.session.SessionManagementFilter@58e01bf5, org.springframework.security.web.access.ExceptionTranslationFilter@769db84c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34cd37fd]
+INFO  21-04-03 02:00:28[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-03 02:00:29[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-03 02:00:29[restartedMain] [RequestMappingHandlerMapping:349] - 5 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-03 02:00:29[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-03 02:00:29[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-03 02:00:29[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-03 02:00:29[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-03 02:00:29[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-03 02:00:29[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-03 02:00:29[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 6.87 seconds (JVM running for 8.306)
