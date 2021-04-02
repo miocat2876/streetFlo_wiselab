@@ -36,53 +36,6 @@
 $(document).ready(function() {
 
 
-
-/* 	$.ajax({ url: "전송 페이지"(action url),
-		    type: "전송 방식"(get, post),
-		    data: "전송할 데이터",
-	    dataType: "요청한 데이터 형식"("html", "xml", "json", "text", "json"),
-		 success: function(data){
-			     //전송에 성공하면 실행될 코드; 
-		        }, 
-		   error: function(){ 
-				     //전송에 실패하면 실행될 코드; 
-		  }}
-	       ); */
-
-
-/* 		    Kakao.Auth.login({
-		      scope: "profile, account_email, gender",
-		      success: (auth) => {
-		        console.log(auth);
-		        Kakao.API.request({
-		          url: "/v2/user/me",
-		          success: (res) => {
-		            const kakao_account = res.kakao_account;
-		            console.log(kakao_account);
-		          },
-		        });
-		        setLogin(true);
-		      },
-		      fail: (err) => {
-		        console.error("err");
-		      },
-		    }); */
-
-	//<![CDATA[
-	// 사용할 앱의 JavaScript 키를 설정해 주세요.
-/* 	Kakao.init('YOUR KEY NUMBER');
-	// 카카오 로그인 버튼을 생성합니다.
-	Kakao.Auth.createLoginButton({
-	    container: '#kakao-login-btn',
-	    success: function (authObj) {
-	        alert(JSON.stringify(authObj));
-	    },
-	    fail: function (err) {
-	        alert(JSON.stringify(err));
-	    }
-	}); */
-
-		   
 	
 });
 
