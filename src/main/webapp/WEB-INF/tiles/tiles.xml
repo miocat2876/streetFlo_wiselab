@@ -5,7 +5,7 @@
 <tiles-definitions>
 
     <!-- tiles 적용 -->
-    <definition name="baseLayout" template="/WEB-INF/base-layout2.jsp">
+    <definition name="baseLayout" template="/WEB-INF/layout/base-layout.jsp">
         <put-attribute name="top" value="/WEB-INF/layout/top.jsp" />
         <put-attribute name="body" value=""/>
         <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
@@ -21,8 +21,8 @@
     </definition>
 
     <!-- tiles 미적용 -->
-    <definition name="default" template="/WEB-INF/layout/default.jsp">
-<!--        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />-->
+   <!-- <definition name="default" template="/WEB-INF/layout/default.jsp">
+&lt;!&ndash;        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />&ndash;&gt;
     </definition>
     <definition name="*.jsp" extends="default">
         <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
@@ -33,5 +33,5 @@
     <definition name="*/*/*.jsp" extends="baseLayout">
         <put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
     </definition>
-
+-->
 </tiles-definitions>
