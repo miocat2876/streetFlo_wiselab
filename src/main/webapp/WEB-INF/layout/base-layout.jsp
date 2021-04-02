@@ -15,7 +15,7 @@
 
 <body>
         <section class="content">
-                <tiles:insertAttribute name="body" />
+
         </section>
 </body>
 
