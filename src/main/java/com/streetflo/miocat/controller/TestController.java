@@ -15,7 +15,7 @@ public class TestController {
 
 
 
-    @GetMapping("/test")
+    @GetMapping("/main")
     public String test(){
 
         System.out.println("테스트화면");
@@ -24,7 +24,7 @@ public class TestController {
         
     }
 
-    @GetMapping("/test2")
+    @GetMapping("/test")
     public String test2(){
 
         System.out.println("테스트화면2");
@@ -33,7 +33,7 @@ public class TestController {
 
     }
 
-    @GetMapping("/test3")
+    @GetMapping("/test2")
     public String test3(){
 
         System.out.println("테스트화면2");
