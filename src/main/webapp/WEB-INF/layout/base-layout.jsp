@@ -15,10 +15,7 @@
 
 <body>
         <section class="content">
-               <%-- <tiles:insertAttribute name="top"/>--%>
-                <%--        <tiles:insertAttribute name="left"/>--%>
                 <tiles:insertAttribute name="body" />
-                <%--<tiles:insertAttribute name="footer" />--%>
         </section>
 </body>
 

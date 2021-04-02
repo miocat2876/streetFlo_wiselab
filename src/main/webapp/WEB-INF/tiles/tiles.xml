@@ -6,10 +6,7 @@
 
     <!-- tiles 적용 -->
     <definition name="baseLayout" template="/WEB-INF/layout/base-layout.jsp">
-<!--        <put-attribute name="top" value="/WEB-INF/layout/top.jsp" />
-        <put-attribute name="left" value="/WEB-INF/layout/left.jsp" />-->
         <put-attribute name="body" value=""/>
-<!--        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />-->
     </definition>
     <definition name="*.tile" extends="baseLayout">
         <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
