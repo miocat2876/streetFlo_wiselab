@@ -115,14 +115,17 @@ $(document).ready(function() {
 			</div>
 			<div class="content_box">
 				<ul class="sns">
-					<li><img src="assets/kakao.svg" alt="kakao"> <a href="#" id = "kakao-login-btn">KakaoTalk</a>
+					<li><img src="assets/kakao.svg" alt="kakao"> <a href="/oauth2/authorization/kakao" id = "kakao-login-btn">KakaoTalk</a>
 					</li>
-					<li><img src="assets/facebook.svg" alt="facebook"> <a
-						href="#">Facebook</a></li>
-					<li><img src="assets/line.svg" alt="line"> <a href="#">Line</a>
+<%--					<li><img src="assets/facebook.svg" alt="facebook"> <a--%>
+<%--						href="#">Facebook</a></li>--%>
+					<li><a href="/oauth2/authorization/facebook">
+						<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+							 data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div></a></li>
+					<li><img src="assets/line.svg" alt="line"> <a href="/oauth2/authorization/naver">Line</a>
 					</li>
 					<li><img src="assets/google.svg" alt="" class="google">
-						<a href="#">Google</a></li>
+						<a href="/oauth2/authorization/google">Google</a></li>
 				</ul>
 			</div>
 		</div>

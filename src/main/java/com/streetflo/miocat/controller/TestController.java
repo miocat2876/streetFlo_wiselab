@@ -3,10 +3,8 @@ package com.streetflo.miocat.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TestController {
@@ -29,7 +27,7 @@ public class TestController {
 
         System.out.println("테스트화면2");
 
-        return "index";
+        return "temp/index";
 
     }
 

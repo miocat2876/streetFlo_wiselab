@@ -1,4 +1,4 @@
-package com.streetflo.miocat.dto;
+package com.streetflo.miocat.domain.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

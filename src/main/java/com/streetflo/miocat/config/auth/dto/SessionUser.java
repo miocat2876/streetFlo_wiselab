@@ -1,6 +1,6 @@
 package com.streetflo.miocat.config.auth.dto;
 
-import com.streetflo.miocat.dto.User;
+import com.streetflo.miocat.domain.user.User;
 import lombok.Getter;
 
 import java.io.Serializable;

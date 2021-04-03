@@ -1,5 +1,6 @@
-package com.streetflo.miocat.dto;
+package com.streetflo.miocat.domain.user;
 
+import com.streetflo.miocat.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,6 @@ public class User extends BaseTimeEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-
     private Role role;
 
     @Builder

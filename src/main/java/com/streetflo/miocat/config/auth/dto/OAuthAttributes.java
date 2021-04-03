@@ -1,9 +1,10 @@
 package com.streetflo.miocat.config.auth.dto;
 
-import com.streetflo.miocat.dto.Role;
-import com.streetflo.miocat.dto.User;
+import com.streetflo.miocat.domain.user.Role;
+import com.streetflo.miocat.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
+
 import java.util.Map;
 
 @Getter
@@ -15,24 +16,31 @@ public class OAuthAttributes {
     private String picture;
 
     @Builder
-    public OAuthAttributes(Map<String, Object> attributes,
-                           String nameAttributeKey, String name,
-                           String email, String picture) {
+    public OAuthAttributes(Map<String, Object> attributes, String nameAttributeKey, String name, String email, String picture) {
         this.attributes = attributes;
-        this.nameAttributeKey= nameAttributeKey;
+        this.nameAttributeKey = nameAttributeKey;
         this.name = name;
         this.email = email;
         this.picture = picture;
     }
 
-    public static OAuthAttributes of(String registrationId,
-                                     String userNameAttributeName,
-                                     Map<String, Object> attributes) {
+    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
+
+        if("naver".equals(registrationId)) {
+            return ofNaver("id", attributes);
+        } else if("kakao".equals(registrationId)) {
+            return ofKakao("id", attributes);
+        } else if("facebook".equals(registrationId)) {
+            return ofFacebook("id", attributes);
+        }
+
+        // else if 안 쓰도록 수정 예정
+
         return ofGoogle(userNameAttributeName, attributes);
     }
 
-    private static OAuthAttributes ofGoogle(String userNameAttributeName,
-                                            Map<String, Object> attributes) {
+
+    private static OAuthAttributes ofFacebook(String userNameAttributeName, Map<String, Object> attributes) {
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
                 .email((String) attributes.get("email"))
@@ -41,6 +49,47 @@ public class OAuthAttributes {
                 .nameAttributeKey(userNameAttributeName)
                 .build();
     }
+
+
+    private static OAuthAttributes ofKakao(String userNameAttributeName, Map<String, Object> attributes) {
+        Map<String,Object> response = (Map<String, Object>)attributes.get("kakao_account");
+        Map<String, Object> profile = (Map<String, Object>) response.get("profile");
+        return OAuthAttributes.builder()
+                .name((String)profile.get("nickname"))
+                .email((String)response.get("email"))
+                .picture((String)profile.get("profile_image_url"))
+                .attributes(attributes)
+                .nameAttributeKey(userNameAttributeName)
+                .build();
+    }
+
+
+    private static OAuthAttributes ofGoogle(String userNameAttributeName, Map<String, Object> attributes) {
+        return OAuthAttributes.builder()
+                .name((String) attributes.get("name"))
+                .email((String) attributes.get("email"))
+                .picture((String) attributes.get("picture"))
+                .attributes(attributes)
+                .nameAttributeKey(userNameAttributeName)
+                .build();
+    }
+
+
+    private static OAuthAttributes ofNaver(String userNameAttributeName, Map<String, Object> attributes) {
+        Map<String, Object> response = (Map<String, Object>) attributes.get("response");
+
+        return OAuthAttributes.builder()
+                .name((String) response.get("name"))
+                .email((String) response.get("email"))
+                .picture((String) response.get("profile_image"))
+                .attributes(response)
+                .nameAttributeKey(userNameAttributeName)
+                .build();
+    }
+
+
+
+
 
 
     public User toEntity() {
