@@ -49,7 +49,7 @@ $(document).ready(function() {
 	<header class="w-100">
 		<div class="content_1200 menu">
 			<a class="menu_title">Menu</a> <a href="#" class="menu_toggle"><img
-				src="/resources/assets/menu.svg" alt="menubar"></a>
+                src="/resources/assets/menu.svg" alt="menubar"></a>
 			<h1 class="logo">
 				<a href="#">[Street-Flo]</a>
 			</h1>
@@ -58,7 +58,7 @@ $(document).ready(function() {
 			<div class="nav">
 				<div class="nav_title">
 					<a href="#">Menu</a> <a href="#" class="nav_toggle"><img
-						src="/resources/assets/menu-black.svg" alt="menubar"></a>
+                        src="/resources/assets/menu-black.svg" alt="menubar"></a>
 				</div>
 				<ul class="nav_menu">
 					<li class="nav_list nav_login"><a href="#">Log-In</a></li>
