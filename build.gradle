@@ -41,7 +41,7 @@ dependencies {
     compile("org.apache.tiles:tiles-jsp:3.0.8")
     compile('org.apache.tomcat.embed:tomcat-embed-jasper')
     compile('javax.servlet:jstl:1.2')
-    compile fileTree(dir: '/src/main/webapp/WEB-INF/lib',includes: ['*.jar'])
+//    compile fileTree(dir: '/src/main/webapp/WEB-INF/lib',includes: ['**/*.jar'])
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
 
 
@@ -51,7 +51,8 @@ dependencies {
     implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
     //implementation 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
 
-
+    // ojdbc8 file import
+    compile files("src/main/webapp/WEB-INF/lib/ojdbc8.jar")
 }
 
 test {
