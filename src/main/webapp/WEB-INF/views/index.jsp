@@ -78,6 +78,12 @@ $(document).ready(function() {
 		</nav>
 	</header>
 	<div class="content_1200 index">
+
+		<c:if test="${userName != null}">
+		<c:set var="userName" scope="session" value="${userName}"/>
+		<c:out value="${userName}"/>
+		<a href="/logout" class="btn btn-info active" role="button">Logout</a>
+		</c:if>
 		<div class="bg">
 			<div class="rect">
 				<div class="circle1"></div>
@@ -115,16 +121,16 @@ $(document).ready(function() {
 			</div>
 			<div class="content_box">
 				<ul class="sns">
-					<li><img src="assets/kakao.svg" alt="kakao"> <a href="/oauth2/authorization/kakao" id = "kakao-login-btn">KakaoTalk</a>
+					<li><img src="/resources/assets/kakao.svg" alt="kakao"> <a href="/oauth2/authorization/kakao" id ="kakao-login-btn">KakaoTalk</a>
 					</li>
 <%--					<li><img src="assets/facebook.svg" alt="facebook"> <a--%>
 <%--						href="#">Facebook</a></li>--%>
 					<li><a href="/oauth2/authorization/facebook">
 						<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
 							 data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div></a></li>
-					<li><img src="assets/line.svg" alt="line"> <a href="/oauth2/authorization/naver">Line</a>
+					<li><img src="/resources/assets/line.svg" alt="line"> <a href="/oauth2/authorization/naver">Line</a>
 					</li>
-					<li><img src="assets/google.svg" alt="" class="google">
+					<li><img src="/resources/assets/google.svg" class="google">
 						<a href="/oauth2/authorization/google">Google</a></li>
 				</ul>
 			</div>
