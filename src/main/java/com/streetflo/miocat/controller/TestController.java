@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TestController {
@@ -37,6 +38,16 @@ public class TestController {
         System.out.println("테스트화면2");
 
         return "test";
+
+    }
+
+    @GetMapping("/test5")
+    @ResponseBody
+    public String test5(){
+
+        System.out.println("테스트화면2");
+
+        return "성공!";
 
     }
 
