@@ -73,7 +73,7 @@ public class TestController {
 
         System.out.println("테스트화면2");
 
-        String data = "[{'name' : '김하연','genre' : '크럼핑','level' : 'Master','content1' : '유익한 수업', '재밌는 커리큘럼','content2' : '다양한 강사 선생님','content3' : '좋은 시설'},{'name' : '김경민','genre' : '미어캣','level' : 'Master','content1' : '테스트','content2' : '','content3' : ''}]";
+        String data = "[{'name' : '김하연','genre' : '크럼핑','level' : 'Master','content1' : '유익한 수업 재밌는 커리큘럼','content2' : '다양한 강사 선생님','content3' : '좋은 시설'},{'name' : '김경민','genre' : '미어캣','level' : 'Master','content1' : '테스트','content2' : '','content3' : ''}]";
 
         return data;
 
