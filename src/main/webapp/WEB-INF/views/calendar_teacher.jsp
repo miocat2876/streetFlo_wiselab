@@ -177,85 +177,87 @@
                 </div>
                 <div class="right">
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="review_box">
-                                    <div class="border-top"></div>
-                                    <div class="border-middle">
-                                        <div class="top clear">
-                                            <div class="left">
-                                                <img src="/resources/assets/profile_img.png" alt="profile_img">
-                                            </div>
-                                            <div class="right">
-                                                <h4>김하연 (23 여)</h4>
-                                                <h4>종목: 브레이크댄스</h4>
-                                                <p>Lv. Beginner</p>
-                                            </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <p>
-                                                - 유익한 수업, 재밌는 커리큘럼<br/>
-                                                - 다양한 강사 선생님<br/>
-                                                - 좋은 시설<br/>
-                                            </p>
-                                        </div>
-                                        <button>Edit>></button>
-                                    </div>
-                                    <div class="border-bottom"></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review_box">
-                                    <div class="border-top"></div>
-                                    <div class="border-middle">
-                                        <div class="top clear">
-                                            <div class="left">
-                                                <img src="/resources/assets/profile_img.png" alt="profile_img">
-                                            </div>
-                                            <div class="right">
-                                                <h4>김하연 (23 여)</h4>
-                                                <h4>종목: 브레이크댄스</h4>
-                                                <p>Lv. Beginner</p>
-                                            </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <p>
-                                                - 유익한 수업, 재밌는 커리큘럼<br/>
-                                                - 다양한 강사 선생님<br/>
-                                                - 좋은 시설<br/>
-                                            </p>
-                                        </div>
-                                        <button>Edit>></button>
-                                    </div>
-                                    <div class="border-bottom"></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review_box">
-                                    <div class="border-top"></div>
-                                    <div class="border-middle">
-                                        <div class="top clear">
-                                            <div class="left">
-                                                <img src="/resources/assets/profile_img.png" alt="profile_img">
-                                            </div>
-                                            <div class="right">
-                                                <h4>김하연 (23 여)</h4>
-                                                <h4>종목: 브레이크댄스</h4>
-                                                <p>Lv. Beginner</p>
-                                            </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <p>
-                                                - 유익한 수업, 재밌는 커리큘럼<br/>
-                                                - 다양한 강사 선생님<br/>
-                                                - 좋은 시설<br/>
-                                            </p>
-                                        </div>
-                                        <button>Edit>></button>
-                                    </div>
-                                    <div class="border-bottom"></div>
-                                </div>
-                            </div>
+                        <div class="swiper-wrapper review">
+
+<%--                            <div class="swiper-slide">--%>
+<%--                                <div class="review_box">--%>
+<%--                                    <div class="border-top"></div>--%>
+<%--                                    <div class="border-middle">--%>
+<%--                                        <div class="top clear">--%>
+<%--                                            <div class="left">--%>
+<%--                                                <img src="/resources/assets/profile_img.png" alt="profile_img">--%>
+<%--                                            </div>--%>
+<%--                                            <div class="right">--%>
+<%--                                                <h4>김하연 (23 여)</h4>--%>
+<%--                                                <h4>종목: 브레이크댄스</h4>--%>
+<%--                                                <p>Lv. Beginner</p>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="bottom">--%>
+<%--                                            <p>--%>
+<%--                                                - 유익한 수업, 재밌는 커리큘럼<br/>--%>
+<%--                                                - 다양한 강사 선생님<br/>--%>
+<%--                                                - 좋은 시설<br/>--%>
+<%--                                            </p>--%>
+<%--                                        </div>--%>
+<%--                                        <button>Edit>></button>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="border-bottom"></div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+
+<%--                            <div class="swiper-slide">--%>
+<%--                                <div class="review_box">--%>
+<%--                                    <div class="border-top"></div>--%>
+<%--                                    <div class="border-middle">--%>
+<%--                                        <div class="top clear">--%>
+<%--                                            <div class="left">--%>
+<%--                                                <img src="/resources/assets/profile_img.png" alt="profile_img">--%>
+<%--                                            </div>--%>
+<%--                                            <div class="right">--%>
+<%--                                                <h4>김하연 (23 여)</h4>--%>
+<%--                                                <h4>종목: 브레이크댄스</h4>--%>
+<%--                                                <p>Lv. Beginner</p>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="bottom">--%>
+<%--                                            <p>--%>
+<%--                                                - 유익한 수업, 재밌는 커리큘럼<br/>--%>
+<%--                                                - 다양한 강사 선생님<br/>--%>
+<%--                                                - 좋은 시설<br/>--%>
+<%--                                            </p>--%>
+<%--                                        </div>--%>
+<%--                                        <button>Edit>></button>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="border-bottom"></div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="swiper-slide">--%>
+<%--                                <div class="review_box">--%>
+<%--                                    <div class="border-top"></div>--%>
+<%--                                    <div class="border-middle">--%>
+<%--                                        <div class="top clear">--%>
+<%--                                            <div class="left">--%>
+<%--                                                <img src="/resources/assets/profile_img.png" alt="profile_img">--%>
+<%--                                            </div>--%>
+<%--                                            <div class="right">--%>
+<%--                                                <h4>김하연 (23 여)</h4>--%>
+<%--                                                <h4>종목: 브레이크댄스</h4>--%>
+<%--                                                <p>Lv. Beginner</p>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="bottom">--%>
+<%--                                            <p>--%>
+<%--                                                - 유익한 수업, 재밌는 커리큘럼<br/>--%>
+<%--                                                - 다양한 강사 선생님<br/>--%>
+<%--                                                - 좋은 시설<br/>--%>
+<%--                                            </p>--%>
+<%--                                        </div>--%>
+<%--                                        <button>Edit>></button>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="border-bottom"></div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>

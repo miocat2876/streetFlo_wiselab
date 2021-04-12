@@ -73,39 +73,70 @@ $(function () {
           prevEl: ".swiper-button-prev"
         }
     });
-     var swiper = new Swiper(".notice_list .swiper-container", {
+     var swiper2 = new Swiper(".notice_list .swiper-container", {
         slidesPerView: 2,
         centeredSlides: true,
-        spaceBetween: 30,
+        spaceBetween: 20,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         }
      });
-    var swiper = new Swiper(".calender_teacther .review_list", {
+
+    var swiper = new Swiper(".swiper-container", {
         slidesPerView: 2,
         centeredSlides: true,
-        spaceBetween: 30,
+        spaceBetween: 10,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
+        },
+        loop : false,
+        virtual: {
+            slides : ['Slide 1', 'Slide 2', 'Slide 3'],
+            renderSlide : function( slide , index ) {
+                console.log(slide);
+                return '<div class="swiper-slide">' +
+                    '<div class="review_box">' +
+                    '<div class="border-top"></div>' +
+                    '<div class="border-middle">' +
+                    slide  +
+                    '</div>' +
+                    '<div class="border-bottom"></div>' +
+                    '</div>' +
+                    '</div>'
+            }
+        },
+        on: {
+            init: function (swiper) {
+                console.log(swiper);
+            },
+            reachEnd : function (swiper) {
+                 console.log(swiper);
+                      swiper.virtual.slides.push('slide'+(swiper.activeIndex+3));
+                  console.log(swiper.activeIndex+3);
+            },
         }
     });
 
 
     $(".swiper-button-next").click(function (e) {
-        e.preventDefault();
-        swiper.appendSlide([
-            '<div class="swiper-slide">' +
-                '<div class="review_box">' +
-                    '<div class="border-top"></div>' +
-                    '<div class="border-middle">' +
-                        'Slide ' + (++appendNumber) +
-                    '</div>' +
-                    '<div class="border-bottom"></div>' +
-                '</div>' +
-            '</div>'
-        ]);
+        // console.log(++appendNumber);
+        // e.preventDefault();
+        // swiper.appendSlide(++appendNumber,[
+        //     '<div class="swiper-slide">' +
+        //         '<div class="review_box">' +
+        //             '<div class="border-top"></div>' +
+        //             '<div class="border-middle">' +
+        //                 'Slide ' + (++appendNumber) +
+        //             '</div>' +
+        //             '<div class="border-bottom"></div>' +
+        //         '</div>' +
+        //     '</div>'
+        // ]);
+
+
+
     });
 
 
@@ -173,17 +204,12 @@ $(function () {
     //     })
     // })
 
-    $(".swiper-button-next").click(function () {
-        $.ajax({
-            url: 'swiper_slide.html',
-            success: function (data) {
-console.log(data);
 
-$('.swiper-wrapper').append(data)
 
-            }
-        })
-    })
+
+
+
+
 
 
 });
