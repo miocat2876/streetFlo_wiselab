@@ -184,7 +184,7 @@
                                     <div class="border-middle">
                                         <div class="top clear">
                                             <div class="left">
-                                                <img src="../../../../../../../Desktop/화면소스/assets/profile_img.png" alt="profile_img">
+                                                <img src="/resources/assets/profile_img.png" alt="profile_img">
                                             </div>
                                             <div class="right">
                                                 <h4>김하연 (23 여)</h4>
@@ -210,7 +210,7 @@
                                     <div class="border-middle">
                                         <div class="top clear">
                                             <div class="left">
-                                                <img src="../../../../../../../Desktop/화면소스/assets/profile_img.png" alt="profile_img">
+                                                <img src="/resources/assets/profile_img.png" alt="profile_img">
                                             </div>
                                             <div class="right">
                                                 <h4>김하연 (23 여)</h4>
@@ -236,7 +236,7 @@
                                     <div class="border-middle">
                                         <div class="top clear">
                                             <div class="left">
-                                                <img src="../../../../../../../Desktop/화면소스/assets/profile_img.png" alt="profile_img">
+                                                <img src="/resources/assets/profile_img.png" alt="profile_img">
                                             </div>
                                             <div class="right">
                                                 <h4>김하연 (23 여)</h4>
