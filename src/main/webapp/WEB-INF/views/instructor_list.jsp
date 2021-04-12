@@ -67,34 +67,44 @@
                 <div class="bottom">
                     <ul class="clear">
                         <li>
-                            <img src="http://placeimg.com/340/200/animals">
-                            <h2>Selene Lee</h2>
-                            <p>Krumping, K-Pop</p>
-                            <div class="level"></div>
+                            <a href="/instructorInfo">
+                                <img src="http://placeimg.com/340/200/animals">
+                                <h2>Selene Lee</h2>
+                                <p>Krumping, K-Pop</p>
+                                <div class="level"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="http://placeimg.com/340/160/animals">
-                            <h2>Selene Lee</h2>
-                            <p>Krumping, K-Pop</p>
-                            <div class="level"></div>
+                            <a href="/instructorInfo">
+                                <img src="http://placeimg.com/340/200/animals">
+                                <h2>Selene Lee</h2>
+                                <p>Krumping, K-Pop</p>
+                                <div class="level"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="http://placeimg.com/340/160/animals">
-                            <h2>Selene Lee</h2>
-                            <p>Krumping, K-Pop</p>
-                            <div class="level"></div>
+                            <a href="/instructorInfo">
+                                <img src="http://placeimg.com/340/200/animals">
+                                <h2>Selene Lee</h2>
+                                <p>Krumping, K-Pop</p>
+                                <div class="level"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="http://placeimg.com/340/160/animals">
-                            <h2>Selene Lee</h2>
-                            <p>Krumping, K-Pop</p>
-                            <div class="level"></div>
+                            <a href="/instructorInfo">
+                                <img src="http://placeimg.com/340/200/animals">
+                                <h2>Selene Lee</h2>
+                                <p>Krumping, K-Pop</p>
+                                <div class="level"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="http://placeimg.com/340/160/animals">
-                            <h2>Selene Lee</h2>
-                            <p>Krumping, K-Pop</p>
-                            <div class="level"></div>
+                            <a href="/instructorInfo">
+                                <img src="http://placeimg.com/340/200/animals">
+                                <h2>Selene Lee</h2>
+                                <p>Krumping, K-Pop</p>
+                                <div class="level"></div>
+                            </a>
                         </li>
                     </ul>
                 </div>

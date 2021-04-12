@@ -9,7 +9,7 @@
     <a class="menu_title">Menu</a> <a href="#" class="menu_toggle"><img
     src="/resources/assets/menu.svg" alt="menubar"></a>
     <h1 class="logo">
-    <a href="#">[Street-Flo]</a>
+    <a href="/main">[Street-Flo]</a>
     </h1>
     </div>
     <nav id="nav">
@@ -19,10 +19,11 @@
     src="/resources/assets/menu-black.svg" alt="menubar"></a>
     </div>
     <ul class="nav_menu">
-    <li class="nav_list nav_login"><a href="#">Log-In</a></li>
-    <li class="nav_list nav_search"><a href="#">Search</a>
+    <li class="nav_list nav_login"><a href="#">Log-In</a></li><%--로그인 조건문 처리..--%>
+    <li class="nav_list"><a href="/calendarTeacher">Mypage</a></li><%--로그인 조건문 처리.. 강사로 하드코딩--%>
+    <li class="nav_list nav_search"><a href="/instructorList">Search</a>
     <ul class="nav_search_sub">
-    <li><a href="#">Teacher</a></li>
+    <li><a href="/instructorList">Teacher</a></li>
     <li><a href="#">Academy</a></li>
     </ul></li>
     <li class="nav_list"><a href="#">FAQ</a></li>

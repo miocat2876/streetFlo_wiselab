@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 소개페이지
 학생마이페이지
 학생스케줄
+FAQ
  */
 @Controller
 public class PageController {
@@ -42,8 +43,8 @@ public class PageController {
 
     }
 
-    @GetMapping("instructorDetail")
-    public String instructorDetail() {
+    @GetMapping("instructorInfo")
+    public String instructorInfo() {
 
         System.out.println("강사상세페이지");
 
@@ -60,8 +61,8 @@ public class PageController {
 
     }
     //없음
-    @GetMapping("academyDetail")
-    public String academyDetail() {
+    @GetMapping("academyInfo")
+    public String academyInfo() {
 
         System.out.println("학원상세페이지");
 
