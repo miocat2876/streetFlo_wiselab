@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sumoselect@3.0.5/sumoselect.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.8/dist/css/tooltipster.bundle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../../../Desktop/화면소스/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../../../../../../../Desktop/화면소스/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/style2.css"> -->
 
 <!-- script -->
