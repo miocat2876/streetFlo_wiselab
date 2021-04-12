@@ -14,15 +14,6 @@ public class TestController {
 
 
 
-    @GetMapping("/main")
-    public String test(){
-
-        System.out.println("테스트화면");
-
-        return "index.tile";
-        
-    }
-
     @GetMapping("/test")
     public String test2(){
 

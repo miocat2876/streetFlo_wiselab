@@ -57,6 +57,7 @@ $(function () {
         });
     }
 
+    //swipe
     UpdateInstructorImg();
     $(window).resize(function () {
         UpdateInstructorImg();
@@ -72,6 +73,25 @@ $(function () {
           prevEl: ".swiper-button-prev"
         }
     });
+     var swiper = new Swiper(".notice_list .swiper-container", {
+        slidesPerView: 2,
+        centeredSlides: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+     });
+    var swiper = new Swiper(".calender_teacther .review_list", {
+        slidesPerView: 2,
+        centeredSlides: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+    });
+
 
     $(".swiper-button-next").click(function (e) {
         e.preventDefault();
@@ -87,6 +107,8 @@ $(function () {
             '</div>'
         ]);
     });
+
+
 
     $(".index .top a").click(function(e) {
         $(".index .top a").removeClass("on");
@@ -126,6 +148,41 @@ $(function () {
     })
     $(".popup_login .close").click(function () {
         $("#layerPopup").hide();
+    })
+
+
+
+    $(".notice button").click(function () {
+        $.ajax({
+            url: 'http://kgm2876.iptime.org:9500/test5',
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    })
+
+
+    // $(".swiper-button-next").click(function () {
+    //     $.ajax({
+    //         url: 'http://kgm2876.iptime.org:9500/test7',
+    //         success: function (data) {
+    //             var data = [{'name' : '김하연','genre' : '크럼핑','level' : 'Master','content1' : '유익한 수업 재밌는 커리큘럼','content2' : '다양한 강사 선생님','content3' : '좋은 시설'},{'name' : '김경민','genre' : '미어캣','level' : 'Master','content1' : '테스트','content2' : '','content3' : ''}];
+
+    //             console.log(data[0].name);
+    //         }
+    //     })
+    // })
+
+    $(".swiper-button-next").click(function () {
+        $.ajax({
+            url: 'swiper_slide.html',
+            success: function (data) {
+console.log(data);
+
+$('.swiper-wrapper').append(data)
+
+            }
+        })
     })
 
 
