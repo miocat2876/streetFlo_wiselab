@@ -92,6 +92,7 @@ $(function () {
           prevEl: ".swiper-button-prev"
         },
         loop : false,
+        simulateTouch : false,
         virtual: {
             slides : ['Slide 1', 'Slide 2', 'Slide 3'],
             renderSlide : function( slide , index ) {
@@ -108,10 +109,11 @@ $(function () {
             }
         },
         on: {
-            init: function (swiper) {
+            afterInit: function (swiper) {
                 console.log(swiper);
+                swiper.allowTouchMove = false;
             },
-            reachEnd : function (swiper) {
+            touchMove : function (swiper) {
                  console.log(swiper);
                       swiper.virtual.slides.push('slide'+(swiper.activeIndex+3));
                   console.log(swiper.activeIndex+3);

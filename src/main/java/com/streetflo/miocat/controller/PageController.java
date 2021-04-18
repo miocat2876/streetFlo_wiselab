@@ -57,7 +57,7 @@ public class PageController {
 
         System.out.println("학원리스트");
 
-        return "index.tile";
+        return "academy_list.tile";
 
     }
     //없음
@@ -66,7 +66,7 @@ public class PageController {
 
         System.out.println("학원상세페이지");
 
-        return "index.tile";
+        return "academy_info.tile";
 
     }
 
