@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 // 페이지에 관련된 컨트롤러는 모두 여기에서 사용
 
 /* 없는 페이지
-학원리스트
-학원상세페이지
-소개페이지
+학원리스트 --생성중
+소개페이지 --남현님
 학생마이페이지
 학생스케줄
 FAQ
@@ -60,7 +59,7 @@ public class PageController {
         return "academy_list.tile";
 
     }
-    //없음
+
     @GetMapping("academyInfo")
     public String academyInfo() {
 
