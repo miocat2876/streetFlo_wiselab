@@ -1,1 +1,228 @@
 WARN  21-04-17 15:54:13[HikariPool-1 housekeeper] [HikariPool:787] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h36m49s222ms729µs399ns).
+INFO  21-04-20 20:16:00[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.10 on TIKEui-MacBookPro-2.local with PID 1927 (/Users/jean/Desktop/spring study/streetFlo/build/classes/java/main started by jean in /Users/jean/Desktop/spring study/streetFlo)
+INFO  21-04-20 20:16:00[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-04-20 20:16:01[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-20 20:16:01[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-20 20:16:01[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+INFO  21-04-20 20:16:01[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1091fc56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-20 20:16:01[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-20 20:16:02[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8443 (https)
+INFO  21-04-20 20:16:02[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["https-jsse-nio-8443"]
+INFO  21-04-20 20:16:02[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-20 20:16:02[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-04-20 20:16:02[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-20 20:16:02[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-20 20:16:02[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1441 ms
+INFO  21-04-20 20:16:02[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-20 20:16:02[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-20 20:16:02[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+INFO  21-04-20 20:16:02[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-20 20:16:02[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-20 20:16:02[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-20 20:16:02[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-04-20 20:16:03[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-20 20:16:03[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-04-20 20:16:03[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-04-20 20:16:03[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-20 20:16:03[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-20 20:16:04[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@450836c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@52ed6ef8, org.springframework.security.web.header.HeaderWriterFilter@183ef722, org.springframework.security.web.authentication.logout.LogoutFilter@47617c6, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5e95b4a9, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@279cd608, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3b6e8cd0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7f2e7a02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b2e3077, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f83a55e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3abe6ec9, org.springframework.security.web.session.SessionManagementFilter@411b9de9, org.springframework.security.web.access.ExceptionTranslationFilter@287e29c8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e31f278]
+INFO  21-04-20 20:16:04[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-20 20:16:04[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-20 20:16:04[restartedMain] [RequestMappingHandlerMapping:349] - 18 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-20 20:16:04[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-20 20:16:04[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-20 20:16:04[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-20 20:16:04[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["https-jsse-nio-8443"]
+INFO  21-04-20 20:16:05[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8443 (https) with context path ''
+INFO  21-04-20 20:16:05[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 4.552 seconds (JVM running for 5.414)
+INFO  21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@a76e815
+DEBUG 21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d1bbdb
+DEBUG 21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-04-20 20:24:06[https-jsse-nio-8443-exec-8] [DispatcherServlet:547] - Completed initialization in 2 ms
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [DispatcherServlet:91] - GET "/test7", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.TestController#test7()
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [RequestResponseBodyMethodProcessor:255] - Using 'text/html', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [RequestResponseBodyMethodProcessor:91] - Writing ["[{'name' : '김하연','genre' : '크럼핑','level' : 'Master','content1' : '유익한 수업 재밌는 커리큘럼','content2' : '다양 (truncated)...]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [DispatcherServlet:91] - GET "/apple-touch-icon-precomposed.png", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [DispatcherServlet:91] - GET "/favicon.ico", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [HttpEntityMethodProcessor:255] - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [HttpEntityMethodProcessor:255] - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Tue Apr 20 20:24:07 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Tue Apr 20 20:24:07 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-8] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-6] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [DispatcherServlet:91] - GET "/apple-touch-icon.png", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [HttpEntityMethodProcessor:255] - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Tue Apr 20 20:24:07 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-20 20:24:07[https-jsse-nio-8443-exec-10] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+INFO  21-04-20 21:01:57[SpringContextShutdownHook] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-04-20 21:01:57[SpringContextShutdownHook] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-20 21:01:57[SpringContextShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-04-20 21:01:57[SpringContextShutdownHook] [SchemaDropperImpl$DelayedDropActionImpl:526] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+WARN  21-04-20 21:01:57[SpringContextShutdownHook] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+INFO  21-04-20 21:01:57[SpringContextShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-04-20 21:01:57[SpringContextShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-04-20 21:02:00[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.10 on TIKEui-MacBookPro-2.local with PID 2422 (/Users/jean/Desktop/spring study/streetFlo/build/classes/java/main started by jean in /Users/jean/Desktop/spring study/streetFlo)
+INFO  21-04-20 21:02:00[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-04-20 21:02:00[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-20 21:02:00[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-20 21:02:01[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+INFO  21-04-20 21:02:01[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ddc3c504] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-20 21:02:01[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-20 21:02:02[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8443 (https)
+INFO  21-04-20 21:02:02[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["https-jsse-nio-8443"]
+INFO  21-04-20 21:02:02[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-20 21:02:02[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-04-20 21:02:02[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-20 21:02:02[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-20 21:02:02[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1388 ms
+INFO  21-04-20 21:02:02[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-20 21:02:02[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-20 21:02:02[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+INFO  21-04-20 21:02:02[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-20 21:02:02[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-20 21:02:02[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-20 21:02:02[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-04-20 21:02:03[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-20 21:02:03[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-04-20 21:02:03[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-04-20 21:02:03[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-20 21:02:03[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-20 21:02:03[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@320cfb5a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e408ca, org.springframework.security.web.header.HeaderWriterFilter@9cbe3f7, org.springframework.security.web.authentication.logout.LogoutFilter@12c3520d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@29e683ce, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1b906955, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@26ae970e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@365cc3cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@189c1255, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ae558b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5eddac5f, org.springframework.security.web.session.SessionManagementFilter@2bd8a5d6, org.springframework.security.web.access.ExceptionTranslationFilter@12238b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45024978]
+INFO  21-04-20 21:02:03[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-20 21:02:03[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-20 21:02:04[restartedMain] [RequestMappingHandlerMapping:349] - 19 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-20 21:02:04[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-20 21:02:04[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-20 21:02:04[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-20 21:02:04[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["https-jsse-nio-8443"]
+INFO  21-04-20 21:02:04[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8443 (https) with context path ''
+INFO  21-04-20 21:02:04[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 4.36 seconds (JVM running for 5.152)
+INFO  21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@72726f05
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@53fe3089
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:547] - Completed initialization in 2 ms
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:91] - GET "/noticelist", parameters={}
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.TPageController#noticeList()
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [RequestResponseBodyMethodProcessor:255] - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [RequestResponseBodyMethodProcessor:91] - Writing [{test2=test2, test1=test1}]
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [DispatcherServlet:91] - GET "/favicon.ico", parameters={}
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [HttpEntityMethodProcessor:255] - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Tue Apr 20 21:02:16 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-20 21:02:16[https-jsse-nio-8443-exec-10] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
+INFO  21-04-20 21:25:34[SpringContextShutdownHook] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-04-20 21:25:34[SpringContextShutdownHook] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-20 21:25:34[SpringContextShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-04-20 21:25:34[SpringContextShutdownHook] [SchemaDropperImpl$DelayedDropActionImpl:526] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+WARN  21-04-20 21:25:34[SpringContextShutdownHook] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+INFO  21-04-20 21:25:34[SpringContextShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-04-20 21:25:34[SpringContextShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-04-20 21:25:37[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.10 on TIKEui-MacBookPro-2.local with PID 2545 (/Users/jean/Desktop/spring study/streetFlo/build/classes/java/main started by jean in /Users/jean/Desktop/spring study/streetFlo)
+INFO  21-04-20 21:25:37[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-04-20 21:25:37[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-20 21:25:37[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-20 21:25:37[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-20 21:25:37[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-04-20 21:25:37[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-04-20 21:25:37[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
+INFO  21-04-20 21:25:37[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-04-20 21:25:37[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-20 21:25:38[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+INFO  21-04-20 21:25:38[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e1df8482] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-04-20 21:25:38[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-04-20 21:25:38[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8443 (https)
+INFO  21-04-20 21:25:38[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["https-jsse-nio-8443"]
+INFO  21-04-20 21:25:38[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-20 21:25:38[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-04-20 21:25:38[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-04-20 21:25:38[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-20 21:25:38[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1361 ms
+INFO  21-04-20 21:25:38[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-20 21:25:38[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-20 21:25:38[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+INFO  21-04-20 21:25:39[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-20 21:25:39[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-04-20 21:25:39[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-20 21:25:39[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-04-20 21:25:39[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-20 21:25:39[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-04-20 21:25:39[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-04-20 21:25:40[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-20 21:25:40[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-04-20 21:25:40[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55e8cbd, org.springframework.security.web.context.SecurityContextPersistenceFilter@12a27043, org.springframework.security.web.header.HeaderWriterFilter@1e168469, org.springframework.security.web.authentication.logout.LogoutFilter@66b9af25, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@723d1ab4, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@46106eee, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5a7633fd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@509c5b1c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c833117, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bf5d611, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f1db3de, org.springframework.security.web.session.SessionManagementFilter@77c74576, org.springframework.security.web.access.ExceptionTranslationFilter@cee3e06, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fd2da78]
+INFO  21-04-20 21:25:40[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-04-20 21:25:40[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-04-20 21:25:40[restartedMain] [RequestMappingHandlerMapping:349] - 21 mappings in 'requestMappingHandlerMapping'
+INFO  21-04-20 21:25:40[restartedMain] [WelcomePageHandlerMapping:57] - Adding welcome page template: index
+DEBUG 21-04-20 21:25:40[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-04-20 21:25:40[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-04-20 21:25:40[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["https-jsse-nio-8443"]
+INFO  21-04-20 21:25:41[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8443 (https) with context path ''
+INFO  21-04-20 21:25:41[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 4.379 seconds (JVM running for 5.146)
+INFO  21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@27b23335
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b1cdeab
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:547] - Completed initialization in 2 ms
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:91] - GET "/teacher/noticelist", parameters={}
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.MypageController#noticeList()
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [RequestResponseBodyMethodProcessor:255] - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [RequestResponseBodyMethodProcessor:91] - Writing [{test2=test2, test1=test1}]
+DEBUG 21-04-20 21:25:49[https-jsse-nio-8443-exec-6] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [DispatcherServlet:91] - GET "/favicon.ico", parameters={}
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [SimpleUrlHandlerMapping:510] - Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [ResourceHttpRequestHandler:525] - Resource not found
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [DispatcherServlet:1131] - Completed 404 NOT_FOUND
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [DispatcherServlet:91] - "ERROR" dispatch for GET "/error", parameters={}
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [HttpEntityMethodProcessor:255] - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Tue Apr 20 21:25:50 KST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+DEBUG 21-04-20 21:25:50[https-jsse-nio-8443-exec-10] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 404
