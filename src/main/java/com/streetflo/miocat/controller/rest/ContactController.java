@@ -9,7 +9,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-// 페이지에 관련된 컨트롤러는 모두 여기에서 사용
+/* 구독 관련 컨트롤러
+ * 
+ * 구독 조회
+ * 구독 업데이트
+ */
+
+
+
 
 @RequiredArgsConstructor
 @Controller
@@ -17,7 +24,29 @@ public class ContactController {
 
 
     @GetMapping("/")
-    public String index(Model model, @LoginUser SessionUser user) {
+    public String contactRead(Model model, @LoginUser SessionUser user) {
+    	
+    	/* 1. 회원 pk 받음
+    	 * 2. 회원 검증
+    	 * 3. 구독 상태값 조회
+    	 * 4. 성공값 리턴
+    	 */
+    	
+    	
+    	
+    	
+    	
+		return null;
+    }
+    
+    @GetMapping("/")
+    public String contactUpdate(Model model, @LoginUser SessionUser user) {
+    	
+    	/* 1. 회원 pk 받음
+    	 * 2. 회원 검증
+    	 * 3. 구독 상태값 변경
+    	 * 4. 성공값 리턴
+    	 */
     	
     	
     	
