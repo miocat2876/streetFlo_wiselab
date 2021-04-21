@@ -48,6 +48,13 @@ public class AES256Cipher {
 	
 	public static class KeySpec{
 		
+		private String key = "random";
+		private String ivKey = "";
+		
+		//가져오는 함수
+		//만드는 함수
+		//만드는걸 도와주는 함수
+		
 
 		public AES256Cipher bulid() {
 			
