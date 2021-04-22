@@ -7,6 +7,7 @@ import net.minidev.json.JSONArray;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /* 리뷰
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 
 @RequiredArgsConstructor
-@Controller
+@RestController
 public class ReviewController {
 
 
