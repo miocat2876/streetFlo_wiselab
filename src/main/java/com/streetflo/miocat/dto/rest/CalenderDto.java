@@ -6,4 +6,4 @@ import lombok.Data;
 public class CalenderDto {
 
     private String test;
-}
+}   
