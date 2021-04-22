@@ -32,6 +32,8 @@ public class NoticeController {
     @GetMapping("/")
     public String noticeRead(NoticeDto dto, Model model, @LoginUser SessionUser user) {
     	
+    	
+    	//https://gracelove91.tistory.com/24 프로퍼티 세팅하기
     	/* 1. 회원 pk 받음
     	 * 2. 회원 검증
     	 * 3. DB 조회(공지 10건씩 페이징처리)
