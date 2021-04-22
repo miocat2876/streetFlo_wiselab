@@ -14,9 +14,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class NoticeDao implements ScrollPagingDao {
 	
-    TestDto test2() {
-		return null;
-	}
 
 	@Override
 	public ArrayList paging(PagingDto pagingDto) {

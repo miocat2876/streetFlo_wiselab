@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public interface ScrollPagingDao {
 	
-	ArrayList paging(PagingDto pagingDto);
+	ArrayList<?> paging(PagingDto pagingDto);
 
 }

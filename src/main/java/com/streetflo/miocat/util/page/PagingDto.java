@@ -14,8 +14,8 @@ public class PagingDto {
 		
 		this.currentPage = bulider.currentPage == 0 ? 1 : bulider.currentPage;
 		this.viewData = bulider.viewData == 0 ? defaultViewData : bulider.viewData;
-		this.searchCondition = bulider.searchCondition;
-		this.searchValue = bulider.searchValue;
+		this.searchCondition = bulider.searchCondition == null ? "" : bulider.searchCondition;
+		this.searchValue = bulider.searchValue == null ? "" : bulider.searchValue;
 
 	}
 	

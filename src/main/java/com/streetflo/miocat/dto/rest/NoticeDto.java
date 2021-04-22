@@ -1,11 +1,12 @@
 package com.streetflo.miocat.dto.rest;
 
-import com.streetflo.miocat.util.page.PageImpl;
+
+import com.streetflo.miocat.util.page.PageDtoImpl;
 
 import lombok.Data;
 
 
-public class NoticeDto implements PageImpl {
+public class NoticeDto implements PageDtoImpl {
 
     private String test;
 

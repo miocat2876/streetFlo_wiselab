@@ -6,7 +6,7 @@ import com.streetflo.miocat.util.page.PagingDto.PageingBulider;
 
 import oracle.net.aso.p;
 
-public abstract class AbScrollPage<E> {
+public class ScrollPage<E> implements Page<E> {
 	
 	
 	// 현재페이지
@@ -16,20 +16,21 @@ public abstract class AbScrollPage<E> {
 	//검색
 	//회원정보
 
-
 	private ScrollPagingDao dao;
-	private PageImpl dto;
+	private PageDtoImpl dto;
 	
-	public AbScrollPage(PageImpl dto,ScrollPagingDao dao) {
-		
+	public ScrollPage(PageDtoImpl dto,ScrollPagingDao dao) {
 		this.dto = dto;
 		this.dao = dao;
-		
 	}
 	
-
+	@Override
+	public List<E> process() {
+		return bulid();
+	}
 	
-	public List<E> paging() {
+	@SuppressWarnings("unchecked")
+	private List<E> bulid() {
 		
 		PageingBulider bulider = new PageingBulider();
 		
@@ -37,10 +38,7 @@ public abstract class AbScrollPage<E> {
 		bulider.setViewData(dto.getViewData());
 		bulider.setSearchCondition(dto.getSearchCondition());
 		bulider.setSearchValue(dto.getSearchValue());
-		
-		List<E> list = dao.paging(bulider.bulid());
-		
-		return list;
+		return (List<E>) dao.paging(bulider.bulid());
 
 	}
 

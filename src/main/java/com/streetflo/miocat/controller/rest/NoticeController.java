@@ -2,8 +2,15 @@ package com.streetflo.miocat.controller.rest;
 
 import com.streetflo.miocat.config.auth.LoginUser;
 import com.streetflo.miocat.config.auth.dto.SessionUser;
+import com.streetflo.miocat.dao.rest.NoticeDao;
+import com.streetflo.miocat.dto.rest.NoticeDto;
+import com.streetflo.miocat.util.page.Page;
+import com.streetflo.miocat.util.page.ScrollPage;
+
 import lombok.RequiredArgsConstructor;
-import net.minidev.json.JSONArray;
+
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +28,7 @@ public class NoticeController {
 
 
     @GetMapping("/")
-    public String noticeRead(Model model, @LoginUser SessionUser user) {
+    public String noticeRead(NoticeDto dto, Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk 받음
     	 * 2. 회원 검증
@@ -29,8 +36,13 @@ public class NoticeController {
     	 * 4. json타입으로 반환
     	 */
     	
+    	Page<NoticeDto> page = new ScrollPage<>(dto, new NoticeDao());
     	
-		return null;
+    	List<NoticeDto> list = page.process();
+    	
+    	
+    	
+		return list.toString();
     }
     
     @GetMapping("/")

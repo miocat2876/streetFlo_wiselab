@@ -1,6 +1,6 @@
 package com.streetflo.miocat.util.page;
 
-public interface PageImpl {
+public interface PageDtoImpl {
 	
 	public abstract int getCurrentPage();
 	public abstract int getViewData();
