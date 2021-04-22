@@ -40,9 +40,8 @@ public class NoticeController {
     	
     	Page<NoticeDto> page = new AbScrollPage<>(dto, new NoticeDao());
     	
-    	List<NoticeDto> list = page.process();
     	
-		return list.toString();
+		return page.process().toString();
     }
     
     @GetMapping("/")

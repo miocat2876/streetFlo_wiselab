@@ -1,9 +1,9 @@
 package com.streetflo.miocat.util.page;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface ScrollPagingDao {
 	
-	ArrayList<?> paging(ScrollPagingDto pagingDto);
+	List<?> paging(ScrollPagingDto pagingDto);
 
 }

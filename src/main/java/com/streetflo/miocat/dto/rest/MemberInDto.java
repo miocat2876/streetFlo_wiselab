@@ -3,7 +3,7 @@ package com.streetflo.miocat.dto.rest;
 import lombok.Data;
 
 @Data
-public class SearchDto {
+public class MemberInDto {
 
     private String test;
 }
