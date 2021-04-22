@@ -16,9 +16,9 @@ public class AbScrollPage<E> implements Page<E> {
 	//회원정보
 
 	private ScrollPagingDao dao;
-	private PageDtoImpl dto;
+	private PageDto dto;
 	
-	public AbScrollPage(PageDtoImpl dto,ScrollPagingDao dao) {
+	public AbScrollPage(PageDto dto,ScrollPagingDao dao) {
 		this.dto = dto;
 		this.dao = dao;
 	}
