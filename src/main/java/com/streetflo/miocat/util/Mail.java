@@ -1,5 +1,6 @@
 package com.streetflo.miocat.util;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 
 import javax.activation.DataSource;
