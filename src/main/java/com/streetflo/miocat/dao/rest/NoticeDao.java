@@ -2,11 +2,25 @@ package com.streetflo.miocat.dao.rest;
 
 
 import com.streetflo.miocat.dto.TestDto;
+import com.streetflo.miocat.util.page.PagingDto;
+import com.streetflo.miocat.util.page.ScrollPagingDao;
+
+import java.util.ArrayList;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface NoticeDao {
-    TestDto test2();
+public class NoticeDao implements ScrollPagingDao {
+	
+    TestDto test2() {
+		return null;
+	}
+
+	@Override
+	public ArrayList paging(PagingDto pagingDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
