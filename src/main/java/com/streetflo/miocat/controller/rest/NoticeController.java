@@ -4,8 +4,9 @@ import com.streetflo.miocat.config.auth.LoginUser;
 import com.streetflo.miocat.config.auth.dto.SessionUser;
 import com.streetflo.miocat.dao.rest.NoticeDao;
 import com.streetflo.miocat.dto.rest.NoticeDto;
+import com.streetflo.miocat.util.page.AbScrollPage;
 import com.streetflo.miocat.util.page.Page;
-import com.streetflo.miocat.util.page.ScrollPage;
+
 
 import lombok.RequiredArgsConstructor;
 
@@ -36,11 +37,9 @@ public class NoticeController {
     	 * 4. json타입으로 반환
     	 */
     	
-    	Page<NoticeDto> page = new ScrollPage<>(dto, new NoticeDao());
+    	Page<NoticeDto> page = new AbScrollPage<>(dto, new NoticeDao());
     	
     	List<NoticeDto> list = page.process();
-    	
-    	
     	
 		return list.toString();
     }

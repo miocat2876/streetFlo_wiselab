@@ -2,11 +2,10 @@ package com.streetflo.miocat.util.page;
 
 import java.util.List;
 
-import com.streetflo.miocat.util.page.PagingDto.PageingBulider;
+import com.streetflo.miocat.util.page.ScrollPagingDto.ScrollPageingBulider;
 
-import oracle.net.aso.p;
 
-public class ScrollPage<E> implements Page<E> {
+public class AbScrollPage<E> implements Page<E> {
 	
 	
 	// 현재페이지
@@ -19,7 +18,7 @@ public class ScrollPage<E> implements Page<E> {
 	private ScrollPagingDao dao;
 	private PageDtoImpl dto;
 	
-	public ScrollPage(PageDtoImpl dto,ScrollPagingDao dao) {
+	public AbScrollPage(PageDtoImpl dto,ScrollPagingDao dao) {
 		this.dto = dto;
 		this.dao = dao;
 	}
@@ -32,7 +31,7 @@ public class ScrollPage<E> implements Page<E> {
 	@SuppressWarnings("unchecked")
 	private List<E> bulid() {
 		
-		PageingBulider bulider = new PageingBulider();
+		ScrollPageingBulider bulider = new ScrollPageingBulider();
 		
 		bulider.setCurrentPage(dto.getCurrentPage());
 		bulider.setViewData(dto.getViewData());

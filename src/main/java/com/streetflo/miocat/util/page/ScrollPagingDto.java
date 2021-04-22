@@ -1,6 +1,6 @@
 package com.streetflo.miocat.util.page;
 
-public class PagingDto {
+public class ScrollPagingDto {
 	
 	private final static int defaultViewData = 20;
 	private int viewData;
@@ -8,7 +8,7 @@ public class PagingDto {
 	private String searchCondition;
 	private String searchValue;
 	
-	public PagingDto(PageingBulider bulider) {
+	public ScrollPagingDto(ScrollPageingBulider bulider) {
 		
 		//필수값없으면 에러처리.
 		
@@ -37,33 +37,33 @@ public class PagingDto {
 	}
 
 
-	public static class PageingBulider{
+	public static class ScrollPageingBulider{
 		
 		private int viewData;
 		private int currentPage;
 		private String searchCondition;
 		private String searchValue;
 		
-		public PageingBulider setViewData(int viewData) {
+		public ScrollPageingBulider setViewData(int viewData) {
 			this.viewData = viewData;
 			return this;
 		}
-		public PageingBulider setCurrentPage(int currentPage) {
+		public ScrollPageingBulider setCurrentPage(int currentPage) {
 			this.currentPage = currentPage;
 			return this;
 		}
-		public PageingBulider setSearchCondition(String searchCondition) {
+		public ScrollPageingBulider setSearchCondition(String searchCondition) {
 			this.searchCondition = searchCondition;
 			return this;
 		}
-		public PageingBulider setSearchValue(String searchValue) {
+		public ScrollPageingBulider setSearchValue(String searchValue) {
 			this.searchValue = searchValue;
 			return this;
 		}
 		
-		public PagingDto bulid() {
+		public ScrollPagingDto bulid() {
 			
-			return new PagingDto(this);
+			return new ScrollPagingDto(this);
 		}
 		
 		

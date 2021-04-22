@@ -23,6 +23,7 @@ public class AES256Cipher {
 	}
 	
 	
+	@SuppressWarnings("static-access")
 	public String AesEncode(String str) throws InvalidKeyException, InvalidAlgorithmParameterException, Exception {
 		
 		
@@ -35,6 +36,7 @@ public class AES256Cipher {
 	}
 	
 	
+	@SuppressWarnings("static-access")
 	public String AesDecode(String str) throws InvalidKeyException, InvalidAlgorithmParameterException, Exception {
 		
 		
