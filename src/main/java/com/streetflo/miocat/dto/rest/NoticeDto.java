@@ -2,7 +2,7 @@ package com.streetflo.miocat.dto.rest;
 
 import com.streetflo.miocat.util.page.PageDto;
 
-public class NoticeOutDto implements PageDto {
+public class NoticeDto implements PageDto {
 
 	@Override
 	public int getCurrentPage() {
