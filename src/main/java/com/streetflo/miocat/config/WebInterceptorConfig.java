@@ -15,7 +15,7 @@ public class WebInterceptorConfig implements WebMvcConfigurer  {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		
+		//테스트를위한 모든기능에 대해 로그인검증
 		registry.addInterceptor(loginInterceptor).excludePathPatterns("/**");
 	}
 
