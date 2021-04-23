@@ -7,13 +7,13 @@ public class NoticeDto implements PageDto {
 	@Override
 	public int getCurrentPage() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 2;
 	}
 
 	@Override
 	public int getViewData() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 5;
 	}
 
 	@Override
