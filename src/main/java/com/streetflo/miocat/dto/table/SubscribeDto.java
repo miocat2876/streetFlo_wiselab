@@ -1,10 +1,9 @@
 package com.streetflo.miocat.dto.table;
 
 public class SubscribeDto {
-
-    SEQ
-            MEMBER_SEQ
-    SUBSCRIBE_MEMBER
-            SUBSCRIBE_DT
-
+    
+    private int seq;
+    private int memberSeq;
+    private String subscribeMember;
+    private String subscribeDt;
 }

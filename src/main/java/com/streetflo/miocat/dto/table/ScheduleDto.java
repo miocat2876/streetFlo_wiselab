@@ -2,10 +2,9 @@ package com.streetflo.miocat.dto.table;
 
 public class ScheduleDto {
 
-    SEQ
-            MEMBER_SEQ
-    CONTENT
-            SCHEDULE
-    DISTINCTION
-
+    private int seq;
+    private int memberSeq;
+    private String content;
+    private String schedule;
+    private String distinction;
 }

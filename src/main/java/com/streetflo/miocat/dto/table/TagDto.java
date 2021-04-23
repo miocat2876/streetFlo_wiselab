@@ -2,9 +2,8 @@ package com.streetflo.miocat.dto.table;
 
 public class TagDto {
 
-    SEQ
-            GENRE_SEQ
-    TAG
-            TAG_DVCD
-
+    private int seq;
+    private int genreSeq;
+    private String tag;
+    private String tagDvcd;
 }

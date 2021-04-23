@@ -2,10 +2,10 @@ package com.streetflo.miocat.dto.table;
 
 public class PhoneAddressDto {
 
-    SEQ
-            MEMBER_SEQ
-    ACADEMY_SEQ
-            PHONE_ADDRESS
-    DISTINCTION
+    private int seq;
+    private int memberSeq;
+    private int academySeq;
+    private String phoneAddress;
+    private String distinction;
 
 }

@@ -2,8 +2,8 @@ package com.streetflo.miocat.dto.table;
 
 public class ReviewKeywordDto {
 
-    SEQ
-            KEYWORD_GROUP
-    CONTENT
-
+    private int seq;
+    private String keywordGroup;
+    private String content;
 }
+

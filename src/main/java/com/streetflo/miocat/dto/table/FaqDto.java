@@ -2,8 +2,8 @@ package com.streetflo.miocat.dto.table;
 
 public class FaqDto {
 
-    SEQ
-            QUESTIONS
-    ANSWER
+    private int seq;
+    private String questtions;
+    private String answer;
 
 }

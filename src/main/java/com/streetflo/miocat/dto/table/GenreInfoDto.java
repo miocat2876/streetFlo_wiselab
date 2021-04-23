@@ -2,7 +2,7 @@ package com.streetflo.miocat.dto.table;
 
 public class GenreInfoDto {
 
-    SEQ
-            GENRE
+    private int seq;
+    private String genre;
 
 }
