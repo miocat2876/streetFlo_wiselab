@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SearchController {
 
-    
-    @GetMapping("/")
+
     public String searchAcademy(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 검색값 받음
@@ -31,8 +30,7 @@ public class SearchController {
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String searchTeacher(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 검색값 받음

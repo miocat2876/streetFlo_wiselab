@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReviewController {
 
 
-    @GetMapping("/")
     public String reviewRead(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk 받음
@@ -34,8 +33,7 @@ public class ReviewController {
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String reviewInsert(Model model, @LoginUser SessionUser user) {
     	
     	/* 1.회원 pk받음
@@ -49,8 +47,7 @@ public class ReviewController {
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String reviewDelete(Model model, @LoginUser SessionUser user) {
     	
     	

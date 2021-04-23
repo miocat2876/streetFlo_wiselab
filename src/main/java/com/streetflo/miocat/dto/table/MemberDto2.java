@@ -3,7 +3,7 @@ package com.streetflo.miocat.dto.table;
 import lombok.Data;
 
 @Data
-public class MemberDto {
+public class MemberDto2 {
 
     private int seq;
     private String flatform;

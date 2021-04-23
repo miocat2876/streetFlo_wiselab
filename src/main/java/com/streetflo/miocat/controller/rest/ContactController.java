@@ -24,7 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ContactController {
 
 
-    @GetMapping("/")
     public String contactRead(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk 받음
@@ -39,8 +38,7 @@ public class ContactController {
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String contactUpdate(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk 받음

@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalenderController {
 
 
-    @GetMapping("/")
     public String calenderRead(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 클라이언트에서 pk 와 검색할 month를 받음
@@ -34,8 +33,7 @@ public class CalenderController {
 
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String calenderInsert(Model model, @LoginUser SessionUser user) {
     	
     	/* 1.클라이언트에서 pk 와 등록할 값을 받음
@@ -48,8 +46,7 @@ public class CalenderController {
 
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String calenderDelete(Model model, @LoginUser SessionUser user) {
     	
     	/* 1.클라이언트에서 pk 와 등록할 값을 받음
@@ -62,8 +59,7 @@ public class CalenderController {
 
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String calenderUpdate(Model model, @LoginUser SessionUser user) {
     	
     	

@@ -28,8 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NoticeController {
 
-
-    @GetMapping("/")
+	@GetMapping(path = "/test8")
     public String noticeRead(NoticeDto dto, Model model, @LoginUser SessionUser user) {
     	
     	
@@ -40,13 +39,12 @@ public class NoticeController {
     	 * 4. json타입으로 반환
     	 */
     	
-    	Page<NoticeDto> page = new AbScrollPage<>(dto, new NoticeDao());
-    	
-    	
+    	Page page = new AbScrollPage<>(dto, new NoticeDao());
+
+
 		return page.process().toString();
     }
-    
-    @GetMapping("/")
+
     public String noticeInsert(Model model, @LoginUser SessionUser user) {
     	
     	
@@ -60,8 +58,7 @@ public class NoticeController {
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String noticeDelete(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk 받음

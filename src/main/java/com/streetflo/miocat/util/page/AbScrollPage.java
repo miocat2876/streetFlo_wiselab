@@ -18,7 +18,7 @@ public class AbScrollPage<T extends PageDto,T2 extends ScrollPagingDao> implemen
 	private ScrollPagingDao dao;
 	private PageDto dto;
 	
-	public AbScrollPage(T dto,T2 dao) {
+	public AbScrollPage(PageDto dto,T2 dao) {
 		this.dto = dto;
 		this.dao = dao;
 	}

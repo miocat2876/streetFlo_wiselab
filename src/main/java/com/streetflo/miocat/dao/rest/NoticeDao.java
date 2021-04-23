@@ -15,6 +15,8 @@ public class NoticeDao implements ScrollPagingDao {
 
 	@Override
 	public List<?> paging(ScrollPagingDto pagingDto) {
+
+		System.out.println("찍히나?");
 		// TODO Auto-generated method stub
 		return null;
 	}

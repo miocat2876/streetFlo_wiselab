@@ -21,15 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
 
-    @GetMapping("/")
     public String memberRead(Model model, @LoginUser SessionUser user) {
     	
     	
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String memberDetail(Model model, @LoginUser SessionUser user) {
     	
     	
@@ -44,8 +42,7 @@ public class MemberController {
     	
 		return null;
     }
-    
-    @GetMapping("/")
+
     public String memberInsert(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk 받음
@@ -60,8 +57,7 @@ public class MemberController {
 		return null;
     }
     
-    
-    @GetMapping("/")
+
     public String memberUpdate(Model model, @LoginUser SessionUser user) {
     	
     	/* 1. 회원 pk받음
@@ -76,7 +72,6 @@ public class MemberController {
     }
     
 
-    @GetMapping("/")
     public String memberDelete(Model model, @LoginUser SessionUser user) {
     	
     	
