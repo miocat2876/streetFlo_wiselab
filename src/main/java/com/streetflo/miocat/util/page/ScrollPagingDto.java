@@ -8,7 +8,7 @@ public class ScrollPagingDto {
 	private String searchCondition;
 	private String searchValue;
 	
-	public ScrollPagingDto(ScrollPageingBulider bulider) {
+	private ScrollPagingDto(ScrollPageingBulider bulider) {
 		
 		//필수값없으면 에러처리.
 		
@@ -37,31 +37,27 @@ public class ScrollPagingDto {
 	}
 
 
-	public static class ScrollPageingBulider{
+	static class ScrollPageingBulider{
 		
 		private int viewData;
 		private int currentPage;
 		private String searchCondition;
 		private String searchValue;
 		
-		public ScrollPageingBulider setViewData(int viewData) {
+		void setViewData(int viewData) {
 			this.viewData = viewData;
-			return this;
 		}
-		public ScrollPageingBulider setCurrentPage(int currentPage) {
+		void setCurrentPage(int currentPage) {
 			this.currentPage = currentPage;
-			return this;
 		}
-		public ScrollPageingBulider setSearchCondition(String searchCondition) {
+		void setSearchCondition(String searchCondition) {
 			this.searchCondition = searchCondition;
-			return this;
 		}
-		public ScrollPageingBulider setSearchValue(String searchValue) {
+		void setSearchValue(String searchValue) {
 			this.searchValue = searchValue;
-			return this;
 		}
 		
-		public ScrollPagingDto bulid() {
+		ScrollPagingDto bulid() {
 			
 			return new ScrollPagingDto(this);
 		}
