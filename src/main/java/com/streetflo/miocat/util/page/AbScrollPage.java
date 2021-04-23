@@ -5,7 +5,7 @@ import java.util.List;
 import com.streetflo.miocat.util.page.ScrollPagingDto.ScrollPageingBulider;
 
 
-public class AbScrollPage<T extends PageDto> implements Page<T> {
+public class AbScrollPage<T extends PageDto,T2 extends ScrollPagingDao> implements Page<T> {
 	
 	
 	// 현재페이지
@@ -18,7 +18,7 @@ public class AbScrollPage<T extends PageDto> implements Page<T> {
 	private ScrollPagingDao dao;
 	private PageDto dto;
 	
-	public AbScrollPage(PageDto dto,ScrollPagingDao dao) {
+	public AbScrollPage(T dto,T2 dao) {
 		this.dto = dto;
 		this.dao = dao;
 	}
