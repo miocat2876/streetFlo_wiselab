@@ -1,9 +1,10 @@
 package com.streetflo.miocat.util.page;
 
+
 import java.util.List;
 
-public interface Page<T> {
+public interface Page{
 	
-	public List<T> process();
+	public List<PageDto> process();
 
 }

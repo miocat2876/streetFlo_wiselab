@@ -39,7 +39,7 @@ public class NoticeController {
     	 * 4. json타입으로 반환
     	 */
     	
-    	Page page = new AbScrollPage<>(dto, new NoticeDao());
+    	Page page = new AbScrollPage(dto, new NoticeDao());
 
 
 		return page.process().toString();
