@@ -27,4 +27,5 @@ public class NoticeDto implements PageDto {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

@@ -1,6 +1,9 @@
 package com.streetflo.miocat.dto.table;
 
-public class academyDto {
+import lombok.Data;
+
+@Data
+public class AcademyDto {
 	
 	private int seq;
 	private int memberSeq;

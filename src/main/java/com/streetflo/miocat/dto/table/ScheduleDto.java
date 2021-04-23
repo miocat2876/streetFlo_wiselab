@@ -1,5 +1,8 @@
 package com.streetflo.miocat.dto.table;
 
+import lombok.Data;
+
+@Data
 public class ScheduleDto {
 
     private int seq;
