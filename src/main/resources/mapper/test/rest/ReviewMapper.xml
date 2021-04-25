@@ -4,9 +4,13 @@
 <mapper namespace="com.streetflo.miocat.mapper.TestMapper">
 
     <select id="test2" resultType="TestDto">
-
-        SELECT 'test' test FROM DUAL
-
+    SELECT * FROM (
+        SELECT REBOARD.*
+             , ROW_NUMBER() OVER(ORDER BY SEQ DESC) AS RNUM
+          FROM RECOMMEND_BOARD REBOARD
+         WHERE MEMBER_SEQ = 1
+        )
+    WHERE RNUM BETWEEN 1 AND 20;
     </select>
 
 
