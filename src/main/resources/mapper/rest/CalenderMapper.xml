@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.streetflo.miocat.dao.rest.CalenderMapper">
+
+    <select id="scheduleFind" parameterType="CalenderDto" resultType="ScheduleDto">
+
+        SELECT SEQ
+             , MEMBER_SEQ
+             , CONTENT
+             , SCHEDULE
+             , DISTINCTION
+          FROM SCHEDULE
+         WHERE MEMBER_SEQ = #{memberSeq}
+           AND TO_CHAR(SCHEDULE,'MM') BETWEEN #{startMonth} AND #{endMonth}
+
+    </select>
+
+
+</mapper>

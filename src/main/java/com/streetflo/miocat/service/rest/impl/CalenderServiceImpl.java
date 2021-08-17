@@ -1,19 +1,23 @@
 package com.streetflo.miocat.service.rest.impl;
 
-import com.streetflo.miocat.dto.TestDto;
-import com.streetflo.miocat.dao.TestMapper;
-import com.streetflo.miocat.service.TestService;
+import com.streetflo.miocat.dao.rest.CalenderMapper;
+import com.streetflo.miocat.dto.rest.CalenderDto;
+import com.streetflo.miocat.dto.table.ScheduleDto;
+import com.streetflo.miocat.service.rest.CalenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-public class CalenderServiceImpl implements TestService {
+import java.util.List;
+
+@Service("CalenderService")
+public class CalenderServiceImpl implements CalenderService {
 
     @Autowired
-    private TestMapper testMapper;
+    private CalenderMapper calenderMapper;
+
 
     @Override
-    public TestDto test() {
-
-        return testMapper.test2();
+    public List<ScheduleDto> scheduleFind(CalenderDto calenderDto) {
+        return calenderMapper.scheduleFind(calenderDto);
     }
 }

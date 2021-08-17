@@ -5,5 +5,7 @@ import lombok.Data;
 @Data
 public class CalenderDto {
 
-    private String test;
+    private int memberSeq;
+    private int startMonth;
+    private int endMonth;
 }   

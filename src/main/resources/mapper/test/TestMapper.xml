@@ -3,11 +3,7 @@
 
 <mapper namespace="com.streetflo.miocat.mapper.TestMapper">
 
-    <select id="test2" resultType="TestDto">
 
-        SELECT 'test' test FROM DUAL
-
-    </select>
 
 
 
