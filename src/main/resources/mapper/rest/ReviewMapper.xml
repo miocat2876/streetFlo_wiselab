@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.streetflo.miocat.dao.rest.ReviewDao">
+
+    <select id="test2" resultType="TestDto">
+    SELECT * FROM (
+        SELECT REBOARD.*
+             , ROW_NUMBER() OVER(ORDER BY SEQ DESC) AS RNUM
+          FROM RECOMMEND_BOARD REBOARD
+         WHERE MEMBER_SEQ = 1
+        )
+    WHERE RNUM BETWEEN 1 AND 20;
+    </select>
+
+
+
+</mapper>
