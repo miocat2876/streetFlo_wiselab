@@ -2,9 +2,12 @@ package com.streetflo.miocat.config.auth;
 
 import com.streetflo.miocat.config.auth.dto.OAuthAttributes;
 import com.streetflo.miocat.config.auth.dto.SessionUser;
+import com.streetflo.miocat.dao.rest.MemberDao;
 import com.streetflo.miocat.domain.user.User;
 import com.streetflo.miocat.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
@@ -20,6 +23,10 @@ import java.util.Collections;
 @RequiredArgsConstructor
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
+
+    @Autowired
+    private MemberDao dao;
+
     private final UserRepository userRepository;
     private final HttpSession httpSession;
 
@@ -37,6 +44,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
         User user = saveOrUpdate(attributes);
+        // exception 처리?
         httpSession.setAttribute("user", new SessionUser(user));
 
         return new DefaultOAuth2User(
@@ -45,13 +53,15 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 attributes.getNameAttributeKey());
     }
 
-
-    private User saveOrUpdate(OAuthAttributes attributes) {
-        User user = userRepository.findByEmail(attributes.getEmail())
-                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
-                .orElse(attributes.toEntity());
-
-        return userRepository.save(user);
+    private User saveOrUpdate(OAuthAttributes attributes){
+        User user = dao.saveOrUpdate(attributes);
+        return user;
     }
 
-}
+        //        User user = userRepository.findByEmail(attributes.getEmail())
+        //                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
+        //                .orElse(attributes.toEntity());
+        //
+        //        return userRepository.save(user);
+    }
+

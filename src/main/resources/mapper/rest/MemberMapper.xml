@@ -3,12 +3,36 @@
 
 <mapper namespace="com.streetflo.miocat.dao.rest.MemberDao">
 
-    <select id="test2" resultType="TestDto">
+    <!-- 회원 가입 -->
+    <insert id="join" parameterType="MemberVO">
 
-        SELECT 'test' test FROM DUAL
+    </insert>
+
+    <!-- 회원 로그인 -->
+    <select id="login" parameterType="String" resultType="MemberDto">
 
     </select>
 
+    <!-- 회원 가입 여부 체크 -->
+    <select id="idCheck" parameterType="String" resultType="String">
+
+    </select>
+
+    <!-- 회원 정보 조회 -->
+    <select id="getInfo" parameterType="String" resultType="MemberDto">
+
+    </select>
+
+    <!-- 회원 정보 수정 -->
+    <update id="update" parameterType="MemberDto">
+
+    </update>
+
+
+    <!-- 회원 정보 삭제 -->
+    <update id="delete" parameterType="String">
+
+    </update>
 
 
 </mapper>
