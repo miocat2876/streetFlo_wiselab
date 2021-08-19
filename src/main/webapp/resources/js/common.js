@@ -174,14 +174,24 @@ $(function () {
         $(".nav_search_sub").slideToggle(400);
     })
 
-//sns popup
-    $("#layerPopup").hide();
+//login popup
+    $("#loginPopupLayer").hide();
     $(".nav_login").click(function () {
-        $("#layerPopup").show();
+        $("#loginPopupLayer").show();
     })
     $(".popup_login .close").click(function () {
-        $("#layerPopup").hide();
+        $("#loginPopupLayer").hide();
     })
+
+//signUp popup
+    $("#signUpPopupLayer").hide();
+    $(".nav_signUp").click(function () {
+        $("#signUpPopupLayer").show();
+    })
+    $(".popup_login .close").click(function () {
+        $("#signUpPopupLayer").hide();
+    })
+
 
 
 

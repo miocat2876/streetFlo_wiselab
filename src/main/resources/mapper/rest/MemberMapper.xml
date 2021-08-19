@@ -4,7 +4,7 @@
 <mapper namespace="com.streetflo.miocat.dao.rest.MemberDao">
 
     <!-- 회원 가입 -->
-    <insert id="join" parameterType="MemberVO">
+    <insert id="join" parameterType="MemberDto">
 
     </insert>
 

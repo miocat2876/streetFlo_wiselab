@@ -16,8 +16,12 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.net.http.HttpResponse;
 import java.util.Collections;
 
 @RequiredArgsConstructor
@@ -36,13 +40,17 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuth2UserService<OAuth2UserRequest, OAuth2User> delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
+
+        System.out.println(userRequest.getClass());
+
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
 
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
 
-        String role = "role input test";
-        //      = (String) httpSession.getAttribute("role");
+        System.out.println(userRequest.getAdditionalParameters());
+        String role = "test";
+                //(String) httpSession.getAttribute("role");
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, role, oAuth2User.getAttributes());
 
