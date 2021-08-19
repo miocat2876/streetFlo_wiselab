@@ -41,7 +41,10 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
 
-        OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
+        String role = "role input test";
+        //      = (String) httpSession.getAttribute("role");
+
+        OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, role, oAuth2User.getAttributes());
 
         User user = saveOrUpdate(attributes);
         // exception 처리?
@@ -53,15 +56,17 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 attributes.getNameAttributeKey());
     }
 
-    private User saveOrUpdate(OAuthAttributes attributes){
-        User user = dao.saveOrUpdate(attributes);
-        return user;
+    private User saveOrUpdate(OAuthAttributes attributes) {
+//        User user = dao.saveOrUpdate(attributes);
+//        return user;
+//    }
+
+        User user = userRepository.findByEmail(attributes.getEmail())
+                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
+                .orElse(attributes.toEntity());
+
+        return userRepository.save(user);
     }
 
-        //        User user = userRepository.findByEmail(attributes.getEmail())
-        //                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
-        //                .orElse(attributes.toEntity());
-        //
-        //        return userRepository.save(user);
     }
 

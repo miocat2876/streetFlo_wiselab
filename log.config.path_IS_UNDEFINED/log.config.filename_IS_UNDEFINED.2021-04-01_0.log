@@ -18,7 +18,7 @@ INFO  21-04-01 12:52:44[restartedMain] [Http11NioProtocol:173] - Initializing Pr
 INFO  21-04-01 12:52:44[restartedMain] [StandardService:173] - Starting service [Tomcat]
 INFO  21-04-01 12:52:44[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
 INFO  21-04-01 12:52:44[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-INFO  21-04-01 12:52:44[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-01 12:52:44[restartedMain] [[/]:173] - Initializing Spring embedded Web
 INFO  21-04-01 12:52:44[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2040 ms
 INFO  21-04-01 12:52:44[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
 WARN  21-04-01 12:52:44[restartedMain] [DriverDataSource:70] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
