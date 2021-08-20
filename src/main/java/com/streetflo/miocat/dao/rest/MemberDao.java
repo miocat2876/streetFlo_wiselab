@@ -3,6 +3,7 @@ package com.streetflo.miocat.dao.rest;
 
 import com.streetflo.miocat.config.auth.dto.OAuthAttributes;
 import com.streetflo.miocat.domain.user.User;
+import com.streetflo.miocat.dto.rest.MemberDto;
 import com.streetflo.miocat.util.page.ScrollPagingDao;
 import com.streetflo.miocat.util.page.ScrollPagingDto;
 
@@ -26,7 +27,7 @@ public class MemberDao implements ScrollPagingDao {
 		return null;
 	}
 
-	public User saveOrUpdate(OAuthAttributes attributes) {
+	public MemberDto saveOrUpdate(OAuthAttributes attributes) {
 		if (sql.selectOne(namespace + ".idCheck", attributes)== null) {
 			sql.insert(namespace + ".join", attributes);
 		}else{
@@ -34,4 +35,6 @@ public class MemberDao implements ScrollPagingDao {
 		}
 		return sql.selectOne(namespace + ".getInfo", attributes);
 	}
+
+
 }

@@ -5,7 +5,18 @@
 
     <!-- 회원 가입 -->
     <insert id="join" parameterType="MemberDto">
-
+        INSERT INTO TBL_MEMBER(
+            ID,
+            EMAIL,
+            PICTURE,
+            USER_TYPE
+        )
+        VALUES (
+            #{id},
+            #{email},
+            #{picture},
+            #{userType}
+        )
     </insert>
 
     <!-- 회원 로그인 -->

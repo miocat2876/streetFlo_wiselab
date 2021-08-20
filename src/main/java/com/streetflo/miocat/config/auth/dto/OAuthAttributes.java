@@ -1,10 +1,8 @@
 package com.streetflo.miocat.config.auth.dto;
 
-import com.streetflo.miocat.domain.user.Role;
 import com.streetflo.miocat.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
-
 import java.util.Map;
 
 @Getter
@@ -35,8 +33,6 @@ public class OAuthAttributes {
         } else if("facebook".equals(registrationId)) {
             return ofFacebook("id", attributes);
         }
-
-        // else if 안 쓰도록 수정 예정
 
         return ofGoogle(userNameAttributeName, attributes);
     }
