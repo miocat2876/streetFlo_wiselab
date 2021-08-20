@@ -66,37 +66,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .additionalParameters(params -> params.put("prompt", "consent"));
         }
 
-//
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        // 보안 처리 (HttpSecurity)
-//        http.authorizeRequests()
-//                .antMatchers("/admin/**").hasRole("ADMIN")
-//                .antMatchers("/**", "/h2-console/**").permitAll()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login/form")
-//                .usernameParameter("userId")
-//                .passwordParameter("password")
-//                .loginProcessingUrl("/login/perform")
-//                .defaultSuccessUrl("/login/success")
-//                .failureUrl("/login/fail")
-//                .and()
-//                .logout()
-//                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                .logoutSuccessUrl("/login/logout")
-//                .invalidateHttpSession(true)
-//                .and()
-//                .exceptionHandling().accessDeniedPage("/login/denied");
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public LoginService loginService() {
-//        return new LoginService();
-//    }
 }

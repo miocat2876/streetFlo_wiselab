@@ -8,6 +8,7 @@ import com.streetflo.miocat.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
@@ -19,14 +20,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.net.http.HttpResponse;
 import java.util.Collections;
 
 @RequiredArgsConstructor
 @Service
-public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
+public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User>{
 
     @Autowired
     private MemberDao dao;
@@ -40,17 +39,13 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuth2UserService<OAuth2UserRequest, OAuth2User> delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
-
-        System.out.println(userRequest.getClass());
-
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
 
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
 
-        System.out.println(userRequest.getAdditionalParameters());
         String role = "test";
-                //(String) httpSession.getAttribute("role");
+                //  (String) httpSession.getAttribute("user");
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, role, oAuth2User.getAttributes());
 
@@ -64,11 +59,8 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 attributes.getNameAttributeKey());
     }
 
-    private User saveOrUpdate(OAuthAttributes attributes) {
-//        User user = dao.saveOrUpdate(attributes);
-//        return user;
-//    }
 
+    private User saveOrUpdate(OAuthAttributes attributes) {
         User user = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
                 .orElse(attributes.toEntity());

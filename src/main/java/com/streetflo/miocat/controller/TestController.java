@@ -3,14 +3,15 @@ package com.streetflo.miocat.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.net.http.HttpResponse;
 
 @Controller
 public class TestController {
@@ -78,10 +79,11 @@ public class TestController {
 
 
     @GetMapping("/test10")
-    public String test8(@RequestParam("type") String type){
+    public String test10(HttpServletRequest request, @RequestParam("type") String type){
 
-        Cookie cookie = new Cookie("type", type);
-        cookie.setMaxAge(-1);
+        HttpSession session = request.getSession();
+        String value = "선생님";
+        session.setAttribute("type", value);
 
         return "forward:/oauth2/authorization/kakao";
 
