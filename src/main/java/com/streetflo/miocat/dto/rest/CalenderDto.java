@@ -6,6 +6,6 @@ import lombok.Data;
 public class CalenderDto {
 
     private int memberSeq;
-    private int startMonth;
-    private int endMonth;
+    private int year;
+    private int month;
 }   

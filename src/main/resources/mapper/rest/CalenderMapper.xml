@@ -6,15 +6,44 @@
     <select id="scheduleFind" parameterType="CalenderDto" resultType="ScheduleDto">
 
         SELECT SEQ
+             , DATE_FORMAT(START_TIME,'%e') as 'day'
              , MEMBER_SEQ
              , CONTENT
-             , SCHEDULE
+             , SCHEDULE_DT
              , DISTINCTION
+             , START_TIME
+             , END_TIME
+             , GENRE
+             , LEVEL
           FROM SCHEDULE
          WHERE MEMBER_SEQ = #{memberSeq}
-           AND DATE_FORMAT(SCHEDULE,'MM') BETWEEN #{startMonth} AND #{endMonth}
+           AND DATE_FORMAT(START_TIME,'%Y') = ${year}
+           AND DATE_FORMAT(START_TIME,'%c') = ${month}
 
     </select>
+
+    <insert id="scheduleAdd" parameterType="ScheduleDto">
+
+        INSERT INTO SCHEDULE
+                    (MEMBER_SEQ
+                   , CONTENT
+                   , DISTINCTION
+                   , START_TIME
+                   , END_TIME
+                   , GENRE
+                   , LEVEL
+                    )
+             VALUES(#{memberSeq}
+                  , #{content}
+                  , #{distinct }
+                  , #{startTime}
+                  , #{endTime}
+                  , #{genre}
+                  , #{level}
+                  )
+
+
+    </insert>
 
 
 </mapper>

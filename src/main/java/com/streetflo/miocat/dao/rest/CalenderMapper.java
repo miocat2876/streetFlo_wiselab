@@ -12,4 +12,6 @@ import java.util.List;
 @Repository
 public interface CalenderMapper {
     List<ScheduleDto> scheduleFind(CalenderDto calenderDto);
+
+    int scheduleAdd(ScheduleDto dto);
 }

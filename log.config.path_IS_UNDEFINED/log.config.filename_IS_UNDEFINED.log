@@ -1867,3 +1867,670 @@ DEBUG 21-08-18 22:18:23[http-nio-8080-exec-1] [RequestMappingHandlerMapping:510]
 DEBUG 21-08-18 22:18:23[http-nio-8080-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
 DEBUG 21-08-18 22:18:23[http-nio-8080-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing ["aa"]
 DEBUG 21-08-18 22:18:23[http-nio-8080-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+INFO  21-08-22 21:58:06[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 44792 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-22 21:58:06[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-22 21:58:06[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-08-22 21:58:06[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 84 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-22 21:58:08[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interfaces.
+INFO  21-08-22 21:58:09[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$29c85580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-22 21:58:09[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-22 21:58:09[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-08-22 21:58:09[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-08-22 21:58:09[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-22 21:58:09[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-22 21:58:10[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-22 21:58:10[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-22 21:58:10[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 3358 ms
+INFO  21-08-22 21:58:10[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-08-22 21:58:10[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-08-22 21:58:10[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/board?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-22 21:58:10[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-22 21:58:10[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-08-22 21:58:11[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-08-22 21:58:11[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB102Dialect
+INFO  21-08-22 21:58:12[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-22 21:58:12[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-08-22 21:58:12[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+DEBUG 21-08-22 21:58:12[restartedMain] [LogFactory:135] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 21-08-22 21:58:12[restartedMain] [VFS:77] - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:13[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+INFO  21-08-22 21:58:13[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-22 21:58:13[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d98783e, org.springframework.security.web.context.SecurityContextPersistenceFilter@4dc6423b, org.springframework.security.web.header.HeaderWriterFilter@6dcc5f0a, org.springframework.security.web.authentication.logout.LogoutFilter@3eebd99a, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1887bba0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5419cb51, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@62bc57b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1b879cde, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3815bf79, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8980d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dd300eb, org.springframework.security.web.session.SessionManagementFilter@3df63df9, org.springframework.security.web.access.ExceptionTranslationFilter@67265ee4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59d3919b]
+INFO  21-08-22 21:58:13[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-22 21:58:13[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-22 21:58:13[restartedMain] [RequestMappingHandlerMapping:349] - 21 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-22 21:58:13[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-22 21:58:13[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-22 21:58:13[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-22 21:58:14[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-22 21:58:14[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+WARN  21-08-22 21:58:14[restartedMain] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+INFO  21-08-22 21:58:14[restartedMain] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-08-22 21:58:14[restartedMain] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-22 21:58:14[restartedMain] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-08-22 21:58:14[restartedMain] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-08-22 21:58:14[restartedMain] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-08-22 21:58:14[restartedMain] [Http11NioProtocol:173] - Pausing ProtocolHandler ["http-nio-8080"]
+INFO  21-08-22 21:58:14[restartedMain] [StandardService:173] - Stopping service [Tomcat]
+INFO  21-08-22 21:58:14[restartedMain] [Http11NioProtocol:173] - Stopping ProtocolHandler ["http-nio-8080"]
+INFO  21-08-22 21:58:14[restartedMain] [Http11NioProtocol:173] - Destroying ProtocolHandler ["http-nio-8080"]
+INFO  21-08-22 21:58:14[restartedMain] [ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ERROR 21-08-22 21:58:14[restartedMain] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+INFO  21-08-22 21:58:40[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 44276 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-22 21:58:41[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-22 21:58:41[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-08-22 21:58:41[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-08-22 21:58:42[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 21:58:42[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-22 21:58:43[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-22 21:58:43[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 123 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-22 21:58:43[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 21:58:43[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-22 21:58:43[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interfaces.
+INFO  21-08-22 21:58:43[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ceec4da9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-22 21:58:43[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-22 21:58:44[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-08-22 21:58:44[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-08-22 21:58:44[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-22 21:58:44[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-22 21:58:44[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-22 21:58:44[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-22 21:58:44[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 3784 ms
+INFO  21-08-22 21:58:44[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-08-22 21:58:45[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-08-22 21:58:45[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/board?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-22 21:58:45[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-22 21:58:45[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-08-22 21:58:45[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-08-22 21:58:46[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB102Dialect
+INFO  21-08-22 21:58:47[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-22 21:58:47[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-08-22 21:58:48[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+DEBUG 21-08-22 21:58:48[restartedMain] [LogFactory:135] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 21-08-22 21:58:48[restartedMain] [VFS:77] - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:58:48[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+INFO  21-08-22 21:58:48[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-22 21:58:48[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a36dc3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@a44b50e, org.springframework.security.web.header.HeaderWriterFilter@2095bf52, org.springframework.security.web.authentication.logout.LogoutFilter@69e244df, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@79c1eb4c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@b7d9594, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6e839939, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@676aaba0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c2e3e7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@340b758e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@459140e2, org.springframework.security.web.session.SessionManagementFilter@5bd31f71, org.springframework.security.web.access.ExceptionTranslationFilter@5aeb2251, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23aa385e]
+INFO  21-08-22 21:58:49[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-22 21:58:49[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-22 21:58:49[restartedMain] [RequestMappingHandlerMapping:349] - 21 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-22 21:58:49[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-22 21:58:49[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-22 21:58:49[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-22 21:58:49[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-22 21:58:49[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-22 21:58:49[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-22 21:58:49[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 9.841 seconds (JVM running for 12.39)
+INFO  21-08-22 21:58:54[http-nio-9090-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4c6e1bc0
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2dfd79c4
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:547] - Completed initialization in 6 ms
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:91] - OPTIONS "/scheduleFind", parameters={}
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-22 21:58:54[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(memberSeq=1, year=2021, month=8)]
+DEBUG 21-08-22 21:58:55[http-nio-9090-exec-1] [DispatcherServlet:1101] - Failed to complete request: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=676) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'
+### The error may exist in file [C:\Users\kim\IdeaProjects\streetFlo\build\resources\main\mapper\rest\CalenderMapper.xml]
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleFind-Inline
+### The error occurred while setting parameters
+### SQL: SELECT SEQ              , DATE_FORMAT(START_TIME,'%e') 2021 as 'day'              , MEMBER_SEQ              , CONTENT              , SCHEDULE_DT              , DISTINCTION              , START_TIME              , END_TIME              , GENRE              , LEVEL           FROM SCHEDULE          WHERE MEMBER_SEQ = ?            AND DATE_FORMAT(START_TIME,'%Y') 2021            AND DATE_FORMAT(START_TIME,'%c') 8
+### Cause: java.sql.SQLSyntaxErrorException: (conn=676) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=676) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'
+ERROR 21-08-22 21:58:55[http-nio-9090-exec-1] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=676) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'
+### The error may exist in file [C:\Users\kim\IdeaProjects\streetFlo\build\resources\main\mapper\rest\CalenderMapper.xml]
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleFind-Inline
+### The error occurred while setting parameters
+### SQL: SELECT SEQ              , DATE_FORMAT(START_TIME,'%e') 2021 as 'day'              , MEMBER_SEQ              , CONTENT              , SCHEDULE_DT              , DISTINCTION              , START_TIME              , END_TIME              , GENRE              , LEVEL           FROM SCHEDULE          WHERE MEMBER_SEQ = ?            AND DATE_FORMAT(START_TIME,'%Y') 2021            AND DATE_FORMAT(START_TIME,'%c') 8
+### Cause: java.sql.SQLSyntaxErrorException: (conn=676) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=676) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'] with root cause
+java.sql.SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021 as 'day'
+             , MEMBER_SEQ
+             , CONTENT
+             ,...' at line 2
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1683)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1545)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1508)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:318)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:220)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy113.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy114.scheduleFind(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy115.scheduleFind(Unknown Source)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl.scheduleFind(CalenderServiceImpl.java:21)
+	at com.streetflo.miocat.controller.DataController.scheduleFind(DataController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+DEBUG 21-08-22 21:58:55[http-nio-9090-exec-1] [DispatcherServlet:91] - "ERROR" dispatch for POST "/error", parameters={}
+DEBUG 21-08-22 21:58:55[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-08-22 21:58:55[http-nio-9090-exec-1] [HttpEntityMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-22 21:58:55[http-nio-9090-exec-1] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sun Aug 22 21:58:55 KST 2021, status=500, error=Internal Server Error, exception=org.spri (truncated)...]
+DEBUG 21-08-22 21:58:55[http-nio-9090-exec-1] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 500
+INFO  21-08-22 21:59:46[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 23676 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-22 21:59:46[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-22 21:59:46[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-08-22 21:59:46[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 90 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-22 21:59:47[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interfaces.
+INFO  21-08-22 21:59:48[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$96b52e4b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-22 21:59:48[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-22 21:59:48[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-08-22 21:59:48[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-08-22 21:59:48[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-22 21:59:48[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-22 21:59:49[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-22 21:59:49[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-22 21:59:49[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 3006 ms
+INFO  21-08-22 21:59:49[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-08-22 21:59:49[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-08-22 21:59:49[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/board?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-22 21:59:49[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-22 21:59:49[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-08-22 21:59:49[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-08-22 21:59:50[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB102Dialect
+INFO  21-08-22 21:59:50[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-22 21:59:50[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-08-22 21:59:51[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+DEBUG 21-08-22 21:59:51[restartedMain] [LogFactory:135] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 21-08-22 21:59:51[restartedMain] [VFS:77] - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 21:59:52[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+INFO  21-08-22 21:59:52[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-22 21:59:52[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5963a0b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@10b88722, org.springframework.security.web.header.HeaderWriterFilter@63c63d14, org.springframework.security.web.authentication.logout.LogoutFilter@61f4b96b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@14713e8f, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3163114d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@41f017a8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@69cbdc41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@380797d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4da35204, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bc57d06, org.springframework.security.web.session.SessionManagementFilter@46109bfe, org.springframework.security.web.access.ExceptionTranslationFilter@2ac444ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f942dbe]
+INFO  21-08-22 21:59:53[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-22 21:59:53[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-22 21:59:53[restartedMain] [RequestMappingHandlerMapping:349] - 21 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-22 21:59:53[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-22 21:59:53[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-22 21:59:53[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-22 21:59:53[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-22 21:59:53[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-22 21:59:53[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-22 21:59:53[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 8.269 seconds (JVM running for 10.863)
+INFO  21-08-22 21:59:55[http-nio-9090-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5758b751
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@56c5382c
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:547] - Completed initialization in 6 ms
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-22 21:59:55[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(memberSeq=1, year=2021, month=8)]
+DEBUG 21-08-22 21:59:56[http-nio-9090-exec-1] [DispatcherServlet:1101] - Failed to complete request: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=686) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021
+### The error may exist in file [C:\Users\kim\IdeaProjects\streetFlo\build\resources\main\mapper\rest\CalenderMapper.xml]
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleFind-Inline
+### The error occurred while setting parameters
+### SQL: SELECT SEQ              , DATE_FORMAT(START_TIME,'%e') as 'day'              , MEMBER_SEQ              , CONTENT              , SCHEDULE_DT              , DISTINCTION              , START_TIME              , END_TIME              , GENRE              , LEVEL           FROM SCHEDULE          WHERE MEMBER_SEQ = ?            AND DATE_FORMAT(START_TIME,'%Y') 2021            AND DATE_FORMAT(START_TIME,'%c') 8
+### Cause: java.sql.SQLSyntaxErrorException: (conn=686) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=686) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021
+ERROR 21-08-22 21:59:56[http-nio-9090-exec-1] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=686) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021
+### The error may exist in file [C:\Users\kim\IdeaProjects\streetFlo\build\resources\main\mapper\rest\CalenderMapper.xml]
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleFind-Inline
+### The error occurred while setting parameters
+### SQL: SELECT SEQ              , DATE_FORMAT(START_TIME,'%e') as 'day'              , MEMBER_SEQ              , CONTENT              , SCHEDULE_DT              , DISTINCTION              , START_TIME              , END_TIME              , GENRE              , LEVEL           FROM SCHEDULE          WHERE MEMBER_SEQ = ?            AND DATE_FORMAT(START_TIME,'%Y') 2021            AND DATE_FORMAT(START_TIME,'%c') 8
+### Cause: java.sql.SQLSyntaxErrorException: (conn=686) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=686) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021] with root cause
+java.sql.SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2021
+           AND DATE_FORMAT(START_TIME,'%c') 8' at line 13
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1683)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1545)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1508)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:318)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:220)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy113.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy114.scheduleFind(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy115.scheduleFind(Unknown Source)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl.scheduleFind(CalenderServiceImpl.java:21)
+	at com.streetflo.miocat.controller.DataController.scheduleFind(DataController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+DEBUG 21-08-22 21:59:56[http-nio-9090-exec-1] [DispatcherServlet:91] - "ERROR" dispatch for POST "/error", parameters={}
+DEBUG 21-08-22 21:59:56[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-08-22 21:59:56[http-nio-9090-exec-1] [HttpEntityMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-22 21:59:56[http-nio-9090-exec-1] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sun Aug 22 21:59:56 KST 2021, status=500, error=Internal Server Error, exception=org.spri (truncated)...]
+DEBUG 21-08-22 21:59:56[http-nio-9090-exec-1] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 500
+INFO  21-08-22 22:00:18[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 45968 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-22 22:00:18[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-22 22:00:18[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-08-22 22:00:18[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 84 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-22 22:00:20[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interfaces.
+INFO  21-08-22 22:00:20[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$848c5e13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-22 22:00:20[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-22 22:00:21[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-08-22 22:00:21[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-08-22 22:00:21[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-22 22:00:21[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-22 22:00:21[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-22 22:00:21[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-22 22:00:21[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 3015 ms
+INFO  21-08-22 22:00:21[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-08-22 22:00:21[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-08-22 22:00:21[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/board?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-22 22:00:22[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-22 22:00:22[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-08-22 22:00:22[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-08-22 22:00:22[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB102Dialect
+INFO  21-08-22 22:00:23[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-22 22:00:23[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-08-22 22:00:23[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+DEBUG 21-08-22 22:00:24[restartedMain] [LogFactory:135] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 21-08-22 22:00:24[restartedMain] [VFS:77] - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-22 22:00:24[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+INFO  21-08-22 22:00:24[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-22 22:00:24[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3008fe15, org.springframework.security.web.context.SecurityContextPersistenceFilter@596fc696, org.springframework.security.web.header.HeaderWriterFilter@5a0d0fca, org.springframework.security.web.authentication.logout.LogoutFilter@cba5924, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5cb16689, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@360e62d7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@564e91e2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@481bb2f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59ad279, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69fe4fb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56e8f305, org.springframework.security.web.session.SessionManagementFilter@3111716c, org.springframework.security.web.access.ExceptionTranslationFilter@2cbe9c1a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8d1e1d3]
+INFO  21-08-22 22:00:24[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-22 22:00:24[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-22 22:00:25[restartedMain] [RequestMappingHandlerMapping:349] - 21 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-22 22:00:25[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-22 22:00:25[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-22 22:00:25[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-22 22:00:25[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-22 22:00:25[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-22 22:00:25[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-22 22:00:25[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 7.69 seconds (JVM running for 10.746)
+INFO  21-08-22 22:00:27[http-nio-9090-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@23865008
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@63c94209
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:547] - Completed initialization in 7 ms
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(memberSeq=1, year=2021, month=8)]
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing [[]]
+DEBUG 21-08-22 22:00:27[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-22 22:00:31[http-nio-9090-exec-2] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-22 22:00:31[http-nio-9090-exec-2] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-22 22:00:31[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(memberSeq=1, year=2021, month=9)]
+DEBUG 21-08-22 22:00:31[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-22 22:00:31[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Writing [[]]
+DEBUG 21-08-22 22:00:31[http-nio-9090-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-22 22:00:32[http-nio-9090-exec-3] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-22 22:00:32[http-nio-9090-exec-3] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-22 22:00:32[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(memberSeq=1, year=2021, month=8)]
+DEBUG 21-08-22 22:00:32[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-22 22:00:32[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Writing [[]]
+DEBUG 21-08-22 22:00:32[http-nio-9090-exec-3] [DispatcherServlet:1131] - Completed 200 OK

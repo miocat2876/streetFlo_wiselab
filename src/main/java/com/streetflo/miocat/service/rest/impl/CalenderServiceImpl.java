@@ -20,4 +20,9 @@ public class CalenderServiceImpl implements CalenderService {
     public List<ScheduleDto> scheduleFind(CalenderDto calenderDto) {
         return calenderMapper.scheduleFind(calenderDto);
     }
+
+    @Override
+    public int scheduleAdd(ScheduleDto dto) {
+        return calenderMapper.scheduleAdd(dto);
+    }
 }

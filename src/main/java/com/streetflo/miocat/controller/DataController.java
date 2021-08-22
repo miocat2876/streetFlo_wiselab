@@ -1,12 +1,12 @@
 package com.streetflo.miocat.controller;
 
 import com.streetflo.miocat.dto.rest.CalenderDto;
+import com.streetflo.miocat.dto.table.ScheduleDto;
 import com.streetflo.miocat.service.rest.CalenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 @RestController
 //@RequestMapping(value = "/teacher/") -> 이 부분 학생 / 선생님 분리 고민 중
@@ -19,23 +19,17 @@ public class DataController {
     @Autowired
     private CalenderService calenderService;
 
-    @RequestMapping("tschedule")
-    public String tschedule(){
+    @RequestMapping("scheduleFind")
+    public List<ScheduleDto> scheduleFind(@RequestBody CalenderDto dto){
 
+        return calenderService.scheduleFind(dto);
 
-//        String data = "[{'noticeGenre' : '테스트 공지사항1','date' : '2021/04/11','content' : '테스트1'},{'noticeGenre' : '테스트 공지사항2','date' : '2021/04/11','content' : '테스트2'}]";
-//
-//        Map result = new HashMap<String, String>();
-//        result.put("noticeGenre", "공지사항1");
-//        result.put("date", "2021/04/11");
-//        result.put("content", "테스트1");
-        CalenderDto dto = new CalenderDto();
-        dto.setMemberSeq(1);
-        dto.setStartMonth(1);
-        dto.setEndMonth(12);
-        System.out.println(calenderService.scheduleFind(dto));
+    }
 
-        return "aa";
+    @RequestMapping("scheduleAdd")
+    public int scheduleAdd(@RequestBody ScheduleDto dto){
+
+        return calenderService.scheduleAdd(dto);
 
     }
 //

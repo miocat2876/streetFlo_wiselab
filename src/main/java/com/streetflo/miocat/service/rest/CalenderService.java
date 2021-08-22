@@ -10,4 +10,6 @@ public interface CalenderService {
 
     List<ScheduleDto> scheduleFind(CalenderDto calenderDto);
 
+    int scheduleAdd(ScheduleDto dto);
+
 }
