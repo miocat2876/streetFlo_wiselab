@@ -17,7 +17,7 @@
         </div>
         <div class="content_box">
             <ul class="sns">
-                <li><img src="/resources/assets/kakao.svg" alt="kakao"> <a href="/oauth2/authorization/kakao" id ="kakao-login-btn">KakaoTalk</a>
+                <li><img src="/resources/assets/kakao.svg" alt="kakao"> <a href="/oauth2/authorization/kakao">KakaoTalk</a>
                 </li>
                 <%--					<li><img src="assets/facebook.svg" alt="facebook"> <a--%>
                 <%--						href="#">Facebook</a></li>--%>
@@ -34,7 +34,7 @@
 </div>
 
 
-<div id="signUpPopupLayer">
+<div id="signUpPopupLayer1">
     <div class="popup_login">
         <div class="title_bar">
             <h2>SNS Sign-Up</h2>
@@ -42,9 +42,33 @@
         </div>
         <div class="content_box">
             <ul class="signUpbtn">
-                <li><a href="#" >선생님</a>
+                <li><a href="javascript:void(0)">선생님</a>
                 </li>
-                <li><a href="#">학생</a></li>
+                <li><a href="javascript:void(0)">학생</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="signUpPopupLayer2">
+    <div class="popup_login">
+        <div class="title_bar">
+            <h2>SNS Sign-Up</h2>
+            <a class="close"></a>
+        </div>
+        <div class="content_box">
+            <ul class="sns">
+                <li><img src="/resources/assets/kakao.svg" alt="kakao"> <a href="/oauth2/authorization/kakao">KakaoTalk</a>
+                </li>
+                <li><a href="/oauth2/authorization/facebook">
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+                         data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div></a></li>
+                <li><img src="/resources/assets/line.svg" alt="line"> <a href="/oauth2/authorization/naver">Line</a>
+                </li>
+                <li><img src="/resources/assets/google.svg" class="google">
+                    <a href="/oauth2/authorization/google">Google</a></li>
             </ul>
         </div>
     </div>

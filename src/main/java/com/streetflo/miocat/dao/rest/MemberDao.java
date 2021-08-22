@@ -19,7 +19,7 @@ public class MemberDao implements ScrollPagingDao {
 
 	private SqlSession sql;
 
-	private static String namespace = "com.streetflo.miocat.dao.rest.MemberDao";
+	private static String namespace = "com.streetflo.mapper.MemberMapper";
 
 	@Override
 	public ArrayList<?> paging(ScrollPagingDto pagingDto) {
@@ -27,13 +27,22 @@ public class MemberDao implements ScrollPagingDao {
 		return null;
 	}
 
-	public MemberDto saveOrUpdate(OAuthAttributes attributes) {
-		if (sql.selectOne(namespace + ".idCheck", attributes)== null) {
-			sql.insert(namespace + ".join", attributes);
+	public MemberDto saveOrUpdate(MemberDto n) {
+		if (sql.selectOne(namespace + ".idCheck", n)== null) {
+			sql.insert(namespace + ".join", n);
 		}else{
-			sql.update(namespace + ".update", attributes);
+			sql.update(namespace + ".update", n);
 		}
-		return sql.selectOne(namespace + ".getInfo", attributes);
+		return sql.selectOne(namespace + ".getInfo", n);
+	}
+
+	public void save(MemberDto n) {
+		sql.insert(namespace + ".join", n);
+
+	}
+
+	public MemberDto select(MemberDto n) {
+		return sql.selectOne(namespace + ".getInfo", n.getEmail());
 	}
 
 

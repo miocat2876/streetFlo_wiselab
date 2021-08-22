@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.streetflo.miocat.dao.rest.MemberDao">
+<mapper namespace="com.streetflo.mapper.MemberMapper">
 
     <!-- 회원 가입 -->
     <insert id="join" parameterType="MemberDto">
-        INSERT INTO TBL_MEMBER(
+        INSERT INTO USER_ENTITY(
             ID,
             EMAIL,
-            PICTURE,
-            USER_TYPE
+            PICTURE
         )
         VALUES (
             #{id},
             #{email},
-            #{picture},
-            #{userType}
+            #{picture}
         )
     </insert>
 
@@ -31,7 +29,13 @@
 
     <!-- 회원 정보 조회 -->
     <select id="getInfo" parameterType="String" resultType="MemberDto">
-
+        SELECT(
+            ID,
+            EMAIL,
+            PICTURE
+                )
+        FROM USER_ENTITY
+        WHERE EMAIL = #{email}
     </select>
 
     <!-- 회원 정보 수정 -->

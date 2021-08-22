@@ -39,30 +39,51 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
 
-        String role = "test";
-                //  (String) httpSession.getAttribute("user");
 
-        OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, role, oAuth2User.getAttributes());
+        OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
-        MemberDto user = saveOrUpdate(attributes);
+        String none = "none";
+
+        MemberDto user = (MemberDto) httpSession.getAttribute("user");
+
+        System.out.println("user" + user);
+
+        user.setName(attributes.getName());
+        user.setEmail(attributes.getEmail());
+        user.setPicture(attributes.getPicture());
+
+
+        System.out.println("user" + user);
+
         // exception 처리?
         httpSession.setAttribute("user", user);
+        saveOrUpdate(user);
 
         return new DefaultOAuth2User(
-                Collections.singleton(new SimpleGrantedAuthority(role)),
+                Collections.singleton(new SimpleGrantedAuthority(none)),
                 attributes.getAttributes(),
                 attributes.getNameAttributeKey());
     }
 
 
-    private MemberDto saveOrUpdate(OAuthAttributes attributes) {
+    private MemberDto saveOrUpdate(MemberDto attributes) {
+
+        MemberDto n = new MemberDto();
+
+        n.setName(attributes.getName());
+        n.setEmail(attributes.getEmail());
+        n.setPicture(attributes.getPicture());
+        n.setMemType(attributes.getMemType());
 
 //        MemberDto user = userRepository.findByEmail(attributes.getEmail())
 //                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
 //                .orElse(attributes.toEntity());
 
-        MemberDto user = dao.saveOrUpdate(attributes);
-        return user;
+        System.out.println("n을 뽑아봅니다" + n);
+
+         dao.save(n);
+        // MemberDto user = dao.select(n);
+        return n;
     }
 
     }

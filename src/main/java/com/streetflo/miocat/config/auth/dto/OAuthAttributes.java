@@ -12,24 +12,22 @@ public class OAuthAttributes {
     private String name;
     private String email;
     private String picture;
-    private String role;
 
     @Builder
-    public OAuthAttributes(Map<String, Object> attributes, String nameAttributeKey, String name, String email, String picture, String role) {
+    public OAuthAttributes(Map<String, Object> attributes, String nameAttributeKey, String name, String email, String picture) {
         this.attributes = attributes;
         this.nameAttributeKey = nameAttributeKey;
         this.name = name;
         this.email = email;
         this.picture = picture;
-        this.role = role;
     }
 
-    public static OAuthAttributes of(String registrationId, String userNameAttributeName, String role, Map<String, Object> attributes) {
+    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
 
         if("naver".equals(registrationId)) {
             return ofNaver("id", attributes);
         } else if("kakao".equals(registrationId)) {
-            return ofKakao("id", attributes, role);
+            return ofKakao("id", attributes);
         } else if("facebook".equals(registrationId)) {
             return ofFacebook("id", attributes);
         }
@@ -49,14 +47,13 @@ public class OAuthAttributes {
     }
 
 
-    private static OAuthAttributes ofKakao(String userNameAttributeName, Map<String, Object> attributes, String role) {
+    private static OAuthAttributes ofKakao(String userNameAttributeName, Map<String, Object> attributes) {
         Map<String,Object> response = (Map<String, Object>)attributes.get("kakao_account");
         Map<String, Object> profile = (Map<String, Object>) response.get("profile");
         return OAuthAttributes.builder()
                 .name((String)profile.get("nickname"))
                 .email((String)response.get("email"))
                 .picture((String)profile.get("profile_image_url"))
-                .role(role)
                 .attributes(attributes)
                 .nameAttributeKey(userNameAttributeName)
                 .build();
@@ -93,7 +90,6 @@ public class OAuthAttributes {
                 .name(name)
                 .email(email)
                 .picture(picture)
-                .role(role)
                 .build();
     }
 }

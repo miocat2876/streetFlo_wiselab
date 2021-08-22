@@ -184,12 +184,32 @@ $(function () {
     })
 
 //signUp popup
-    $("#signUpPopupLayer").hide();
+    $("#signUpPopupLayer1").hide();
+    $("#signUpPopupLayer2").hide();
     $(".nav_signUp").click(function () {
-        $("#signUpPopupLayer").show();
+        $("#signUpPopupLayer1").show();
     })
     $(".popup_login .close").click(function () {
-        $("#signUpPopupLayer").hide();
+        $("#signUpPopupLayer1").hide();
+        $("#signUpPopupLayer2").hide();
+    })
+    $(".signUpbtn li").first().click(function () {
+        alert("선생님");
+        $("#signUpPopupLayer1").hide();
+        $("#signUpPopupLayer2").show();
+    })
+    $(".signUpbtn li").last().click(function () {
+        alert("학생");
+        $("#signUpPopupLayer1").hide();
+        $("#signUpPopupLayer2").show();
+
+        $.ajax({
+            url: './join?memType=teacher',
+            success: function (data) {
+                console.log(data);
+            }
+        })
+
     })
 
 
