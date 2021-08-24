@@ -24,13 +24,13 @@ public class IndexController {
     public String index(Model model) {
 
         MemberDto user = (MemberDto) httpSession.getAttribute("user");
-        // annoation 인터페이스 생성 후 반복 코드 개선
+        // TODO annoation 인터페이스 생성 후 반복 코드 개선
 
         System.out.println(user);
 
         if(user!=null){
-            model.addAttribute("userName", user.getName());
-            System.out.println(user.getName());
+            model.addAttribute("userName", user.getId());
+            System.out.println(user.getId());
         }
 
         return "index.tile";
