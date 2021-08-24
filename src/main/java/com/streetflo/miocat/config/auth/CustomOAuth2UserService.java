@@ -1,9 +1,7 @@
 package com.streetflo.miocat.config.auth;
 
 import com.streetflo.miocat.config.auth.dto.OAuthAttributes;
-import com.streetflo.miocat.config.auth.dto.SessionUser;
 import com.streetflo.miocat.dao.rest.MemberDao;
-import com.streetflo.miocat.domain.user.User;
 import com.streetflo.miocat.domain.user.UserRepository;
 import com.streetflo.miocat.dto.rest.MemberDto;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +21,7 @@ import java.util.Collections;
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User>{
 
-    private MemberDao dao;
+    public MemberDao dao;
 
     private final UserRepository userRepository;
     private final HttpSession httpSession;
@@ -52,9 +50,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         user.setEmail(attributes.getEmail());
         user.setPicture(attributes.getPicture());
 
-
         System.out.println("user" + user);
-
         // exception 처리?
         httpSession.setAttribute("user", user);
         saveOrUpdate(user);
@@ -78,8 +74,6 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 //        MemberDto user = userRepository.findByEmail(attributes.getEmail())
 //                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
 //                .orElse(attributes.toEntity());
-
-        System.out.println("n을 뽑아봅니다" + n);
 
          dao.save(n);
         // MemberDto user = dao.select(n);

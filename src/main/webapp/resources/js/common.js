@@ -197,6 +197,14 @@ $(function () {
         alert("선생님");
         $("#signUpPopupLayer1").hide();
         $("#signUpPopupLayer2").show();
+
+        $.ajax({
+            url: './join?memType=teacher',
+            success: function (data) {
+                console.log(data);
+            }
+        })
+
     })
     $(".signUpbtn li").last().click(function () {
         alert("학생");
@@ -204,7 +212,7 @@ $(function () {
         $("#signUpPopupLayer2").show();
 
         $.ajax({
-            url: './join?memType=teacher',
+            url: './join?memType=student',
             success: function (data) {
                 console.log(data);
             }

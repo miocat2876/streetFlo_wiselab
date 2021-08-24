@@ -12,7 +12,7 @@
              , DISTINCTION
           FROM SCHEDULE
          WHERE MEMBER_SEQ = #{memberSeq}
-           AND TO_CHAR(SCHEDULE,'MM') BETWEEN #{startMonth} AND #{endMonth}
+           AND DATE_FORMAT(SCHEDULE,'MM') BETWEEN #{startMonth} AND #{endMonth}
 
     </select>
 

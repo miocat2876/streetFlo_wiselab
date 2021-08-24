@@ -24,9 +24,4 @@
         <package name="com.streetflo.miocat.dto" />
     </typeAliases>
 
-
-    <mappers>
-        <mapper resource="mapper/rest/MemberMapper.xml"/>
-    </mappers>
-
 </configuration>
