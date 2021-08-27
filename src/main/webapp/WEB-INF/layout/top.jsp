@@ -20,6 +20,7 @@
     </div>
     <ul class="nav_menu">
     <li class="nav_list nav_login"><a href="#">Log-In</a></li><%--로그인 조건문 처리..--%>
+    <li class="nav_list nav_signUp"><a href="#">Sign-Up</a></li>
     <li class="nav_list"><a href="/calendarTeacher">Mypage</a></li><%--로그인 조건문 처리.. 강사로 하드코딩--%>
     <li class="nav_list nav_search"><a href="/instructorList">Search</a>
     <ul class="nav_search_sub">

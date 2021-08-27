@@ -152,7 +152,7 @@ footer .footer .footer_logo {
 }
 
 /*========== Index sns popup ==========*/
-#layerPopup {
+#loginPopupLayer {
   position: absolute;
   top: 0;
   width: 100%;
@@ -160,7 +160,7 @@ footer .footer .footer_logo {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#layerPopup .popup_login {
+#loginPopupLayer .popup_login {
   position: absolute;
   z-index: 1000;
   top: 50%;
@@ -170,7 +170,7 @@ footer .footer .footer_logo {
   height: auto;
   margin: 0 auto;
 }
-#layerPopup .popup_login .title_bar {
+#loginPopupLayer .popup_login .title_bar {
   position: relative;
   height: 76px;
   width: calc(100% - 152px);
@@ -181,10 +181,10 @@ footer .footer .footer_logo {
   background-image: url("../assets/popup_t.png");
   background-repeat: repeat-x;
 }
-#layerPopup .popup_login .title_bar h2 {
+#loginPopupLayer .popup_login .title_bar h2 {
   color: white;
 }
-#layerPopup .popup_login .title_bar .close {
+#loginPopupLayer .popup_login .title_bar .close {
   color: white;
   position: absolute;
   right: -24px;
@@ -195,7 +195,7 @@ footer .footer .footer_logo {
   background-color: white;
   transform: rotate(45deg);
 }
-#layerPopup .popup_login .title_bar .close::before {
+#loginPopupLayer .popup_login .title_bar .close::before {
   content: "";
   position: absolute;
   right: 0px;
@@ -205,7 +205,7 @@ footer .footer .footer_logo {
   background-color: white;
   transform: rotate(-90deg);
 }
-#layerPopup .popup_login .title_bar::before {
+#loginPopupLayer .popup_login .title_bar::before {
   content: "";
   position: absolute;
   height: 76px;
@@ -214,7 +214,7 @@ footer .footer .footer_logo {
   top: 0px;
   background-image: url("../assets/popup_tl.png");
 }
-#layerPopup .popup_login .title_bar::after {
+#loginPopupLayer .popup_login .title_bar::after {
   content: "";
   position: absolute;
   height: 76px;
@@ -224,7 +224,7 @@ footer .footer .footer_logo {
   background-image: url("../assets/popup_tl.png");
   transform: scaleX(-1);
 }
-#layerPopup .popup_login .content_box {
+#loginPopupLayer .popup_login .content_box {
   width: 100%;
   padding: 0px 46px;
   margin-bottom: 76px;
@@ -232,7 +232,7 @@ footer .footer .footer_logo {
   background-repeat: repeat-y;
   background-position: left, right;
 }
-#layerPopup .popup_login .content_box .sns {
+#loginPopupLayer .popup_login .content_box .sns {
   display: flex;
   flex-wrap: wrap;
   width: 350px;
@@ -240,14 +240,14 @@ footer .footer .footer_logo {
   padding-top: 40px;
   background-color: white;
 }
-#layerPopup .popup_login .content_box .sns li {
+#loginPopupLayer .popup_login .content_box .sns li {
   width: 48%;
   height: 50px;
   margin: 1%;
   background-color: pink;
   position: relative;
 }
-#layerPopup .popup_login .content_box .sns li img {
+#loginPopupLayer .popup_login .content_box .sns li img {
   display: block;
   width: 40px;
   height: 40px;
@@ -256,7 +256,7 @@ footer .footer .footer_logo {
   left: 5px;
   transform: translateY(-50%);
 }
-#layerPopup .popup_login .content_box .sns li a {
+#loginPopupLayer .popup_login .content_box .sns li a {
   display: block;
   background-color: white;
   width: 70%;
@@ -269,28 +269,28 @@ footer .footer .footer_logo {
   right: 3px;
   transform: translateY(-50%);
 }
-#layerPopup .popup_login .content_box .sns li:nth-child(1) {
+#loginPopupLayer .popup_login .content_box .sns li:nth-child(1) {
   background-color: #ffe836;
 }
-#layerPopup .popup_login .content_box .sns li:nth-child(2) {
+#loginPopupLayer .popup_login .content_box .sns li:nth-child(2) {
   background-color: #3e65a4;
 }
-#layerPopup .popup_login .content_box .sns li:nth-child(3) {
+#loginPopupLayer .popup_login .content_box .sns li:nth-child(3) {
   background-color: #00cf40;
 }
-#layerPopup .popup_login .content_box .sns li:nth-child(3) img {
+#loginPopupLayer .popup_login .content_box .sns li:nth-child(3) img {
   width: 36px;
   height: 36px;
 }
-#layerPopup .popup_login .content_box .sns li:nth-child(4) {
+#loginPopupLayer .popup_login .content_box .sns li:nth-child(4) {
   background-color: #f4f4f4;
 }
-#layerPopup .popup_login .content_box .sns li:nth-child(4) img {
+#loginPopupLayer .popup_login .content_box .sns li:nth-child(4) img {
   width: 25px;
   height: 25px;
   left: 10px;
 }
-#layerPopup .popup_login .content_box::before {
+#loginPopupLayer .popup_login .content_box::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -302,7 +302,7 @@ footer .footer .footer_logo {
   top: 100%;
   left: 0px;
 }
-#layerPopup .popup_login .content_box::after {
+#loginPopupLayer .popup_login .content_box::after {
   content: "";
   position: absolute;
   top: 100%;

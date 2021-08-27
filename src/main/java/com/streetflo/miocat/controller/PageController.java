@@ -25,8 +25,9 @@ public class PageController {
         System.out.println("메인화면");
 
         if(user!=null){
-            model.addAttribute("userName", user.getName());
-            System.out.println(user.getName());
+            model.addAttribute("userName", user.getId()
+            );
+            System.out.println(user.getId());
         }
 
         return "index.tile";

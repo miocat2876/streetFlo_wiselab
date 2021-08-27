@@ -174,14 +174,52 @@ $(function () {
         $(".nav_search_sub").slideToggle(400);
     })
 
-//sns popup
-    $("#layerPopup").hide();
+//login popup
+    $("#loginPopupLayer").hide();
     $(".nav_login").click(function () {
-        $("#layerPopup").show();
+        $("#loginPopupLayer").show();
     })
     $(".popup_login .close").click(function () {
-        $("#layerPopup").hide();
+        $("#loginPopupLayer").hide();
     })
+
+//signUp popup
+    $("#signUpPopupLayer1").hide();
+    $("#signUpPopupLayer2").hide();
+    $(".nav_signUp").click(function () {
+        $("#signUpPopupLayer1").show();
+    })
+    $(".popup_login .close").click(function () {
+        $("#signUpPopupLayer1").hide();
+        $("#signUpPopupLayer2").hide();
+    })
+    $(".signUpbtn li").first().click(function () {
+        alert("선생님");
+        $("#signUpPopupLayer1").hide();
+        $("#signUpPopupLayer2").show();
+
+        $.ajax({
+            url: './join?memType=teacher',
+            success: function (data) {
+                console.log(data);
+            }
+        })
+
+    })
+    $(".signUpbtn li").last().click(function () {
+        alert("학생");
+        $("#signUpPopupLayer1").hide();
+        $("#signUpPopupLayer2").show();
+
+        $.ajax({
+            url: './join?memType=student',
+            success: function (data) {
+                console.log(data);
+            }
+        })
+
+    })
+
 
 
 

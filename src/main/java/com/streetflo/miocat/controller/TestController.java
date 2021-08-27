@@ -3,9 +3,15 @@ package com.streetflo.miocat.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class TestController {
@@ -67,6 +73,19 @@ public class TestController {
         String data = "[{'name' : '김하연','genre' : '크럼핑','level' : 'Master','content1' : '유익한 수업 재밌는 커리큘럼','content2' : '다양한 강사 선생님','content3' : '좋은 시설'},{'name' : '김경민','genre' : '미어캣','level' : 'Master','content1' : '테스트','content2' : '','content3' : ''}]";
 
         return data;
+
+    }
+
+
+
+    @GetMapping("/test10")
+    public String test10(HttpServletRequest request, @RequestParam("type") String type){
+
+        HttpSession session = request.getSession();
+        String value = "선생님";
+        session.setAttribute("type", value);
+
+        return "forward:/oauth2/authorization/kakao";
 
     }
 

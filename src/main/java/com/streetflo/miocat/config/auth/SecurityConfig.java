@@ -3,6 +3,7 @@ package com.streetflo.miocat.config.auth;
 
 import com.streetflo.miocat.domain.user.Role;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,20 +11,26 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizationRequestResolver;
+import org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestResolver;
+import org.springframework.security.oauth2.core.endpoint.OAuth2AuthorizationRequest;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.function.Consumer;
 
 @RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Override
-//    public void configure(WebSecurity web) throws Exception {
-//            // 보안예외처리 (WebSecurity) - 리소스 인증 범위 풀어줌
-//        web.ignoring().antMatchers("/js/**","/css/**","/images/**","/font/**","/html/**");
-//    }
 
         private final CustomOAuth2UserService customOAuth2UserService;
 
+        @Autowired
+        private ClientRegistrationRepository clientRegistrationRepository;
+
+        private HttpServletRequest request;
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
@@ -38,42 +45,32 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .logoutSuccessUrl("/")
                     .and()
-                    .oauth2Login()
+                    .oauth2Login(oauth2 -> oauth2
+                            .authorizationEndpoint(authorization -> authorization
+                                    .authorizationRequestResolver(
+                                            authorizationRequestResolver(this.clientRegistrationRepository)))
                     .userInfoEndpoint()
-                    .userService(customOAuth2UserService);
+                    .userService(customOAuth2UserService));
         }
 
-//
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        // 보안 처리 (HttpSecurity)
-//        http.authorizeRequests()
-//                .antMatchers("/admin/**").hasRole("ADMIN")
-//                .antMatchers("/**", "/h2-console/**").permitAll()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login/form")
-//                .usernameParameter("userId")
-//                .passwordParameter("password")
-//                .loginProcessingUrl("/login/perform")
-//                .defaultSuccessUrl("/login/success")
-//                .failureUrl("/login/fail")
-//                .and()
-//                .logout()
-//                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                .logoutSuccessUrl("/login/logout")
-//                .invalidateHttpSession(true)
-//                .and()
-//                .exceptionHandling().accessDeniedPage("/login/denied");
-//    }
+        private OAuth2AuthorizationRequestResolver authorizationRequestResolver(
+                ClientRegistrationRepository clientRegistrationRepository) {
+
+            DefaultOAuth2AuthorizationRequestResolver authorizationRequestResolver =
+                    new DefaultOAuth2AuthorizationRequestResolver(
+                            clientRegistrationRepository, "/oauth2/authorization");
+            authorizationRequestResolver.setAuthorizationRequestCustomizer(authorizationRequestCustomizer());
+            return  authorizationRequestResolver;
+        }
+
+        private Consumer<OAuth2AuthorizationRequest.Builder> authorizationRequestCustomizer() {
+            return customizer -> customizer
+                    .additionalParameters(params -> params.put("prompt", "consent"));
+        }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public LoginService loginService() {
-//        return new LoginService();
-//    }
 }
