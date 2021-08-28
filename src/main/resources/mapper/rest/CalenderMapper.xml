@@ -3,23 +3,134 @@
 
 <mapper namespace="com.streetflo.miocat.dao.rest.CalenderMapper">
 
+
+    <select id="calenderFind" parameterType="CalenderDto" resultType="CalenderDto">
+
+        WITH RECURSIVE CALENDER AS
+        (
+            SELECT FRIST_DAY AS LVL
+              FROM(SELECT CASE WHEN FRIST_WEEK != 0
+                          THEN DATE_FORMAT(#{date},'%e ') - FRIST_WEEK
+                          ELSE FRIST_WEEK + 1
+                      END AS FRIST_DAY
+                     FROM (SELECT DATE_FORMAT(LAST_DAY(#{date} - INTERVAL 1 MONTH) + INTERVAL 1 DAY,'%w') AS FRIST_WEEK
+                             FROM DUAL) AS TEMP
+                ) AS TEMP
+             UNION ALL
+            SELECT LVL + 1
+              FROM (SELECT CASE WHEN LAST_DAY != 6
+                                THEN LAST_DAY + 6 - LAST_WEEK
+                                ELSE LAST_DAY
+                            END AS LAST_DAY
+                      FROM (SELECT DATE_FORMAT(LAST_DAY(#{date}),'%w') AS LAST_WEEK
+                                 , DATE_FORMAT(LAST_DAY(#{date}),'%d') LAST_DAY
+                              FROM DUAL) AS TEMP
+                  ) AS TEMP
+            INNER JOIN CALENDER
+               ON <![CDATA[ LVL < TEMP.LAST_DAY  ]]>
+        )
+        SELECT CASE WHEN <![CDATA[ LVL > 0 AND  LVL < DATE_FORMAT(LAST_DAY(#{date}),'%d') + 1 ]]>
+                    THEN LVL
+                    ELSE ''
+                END AS 'day'
+          FROM CALENDER
+    </select>
+
     <select id="scheduleFind" parameterType="CalenderDto" resultType="ScheduleDto">
 
-        SELECT SEQ
-             , DATE_FORMAT(START_TIME,'%e') as 'day'
-             , MEMBER_SEQ
-             , CONTENT
-             , SCHEDULE_DT
-             , DISTINCTION
-             , START_TIME
-             , END_TIME
-             , GENRE
-             , LEVEL
-          FROM SCHEDULE
-         WHERE MEMBER_SEQ = #{memberSeq}
-           AND DATE_FORMAT(START_TIME,'%Y') = ${year}
-           AND DATE_FORMAT(START_TIME,'%c') = ${month}
-
+        WITH RECURSIVE SCHEDULE_ALL AS
+        (
+            SELECT 1 AS LVL
+              FROM  (SELECT 'test' TEST
+                       FROM DUAL
+                     ) AS TEMP
+             UNION ALL
+            SELECT LVL + 1
+              FROM (SELECT 'test' TEST
+                      FROM DUAL
+                    ) AS TEMP
+             INNER JOIN SCHEDULE_ALL
+                ON LVL <![CDATA[ < 31 ]]>
+        )
+        SELECT S.DAY
+             , S.SEQ
+             , S.MEMBER_SEQ
+             , S.CONTENT
+             , S.DISTINCTION
+             , S.START_DAY
+             , S.END_DAY
+             , S.START_TIME
+             , S.END_TIME
+             , S.LEVEL
+             , S.STATE
+          FROM (SELECT SA.DAY
+                     , S.SEQ
+                     , S.MEMBER_SEQ
+                     , S.CONTENT
+                     , S.DISTINCTION
+                     , S.START_DAY
+                     , S.END_DAY
+                     , S.START_TIME
+                     , S.END_TIME
+                     , S.LEVEL
+                     , 1 AS STATE
+                  FROM (SELECT SEQ
+                             , MEMBER_SEQ
+                             , CONTENT
+                             , DISTINCTION
+                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m') = DATE_FORMAT(START_DAY,'%y-%m')
+                                    THEN START_DAY
+                                    ELSE LAST_DAY(#{date} - interval 1 month) + interval 1 DAY
+                                END AS START_DAY
+                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m') = DATE_FORMAT(END_DAY,'%y-%m')
+                                    THEN END_DAY
+                                    ELSE LAST_DAY(#{date})
+                                END AS END_DAY
+                             , START_TIME
+                             , END_TIME
+                             , LEVEL
+                          FROM SCHEDULE
+                         WHERE MEMBER_SEQ = #{memberSeq}
+                           AND DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
+                       ) AS S
+                     , (SELECT LVL AS 'DAY'
+                          FROM SCHEDULE_ALL) SA
+                         WHERE DATE_FORMAT(S.START_DAY,'%e') <![CDATA[ <= SA.DAY ]]>
+                           AND DATE_FORMAT(S.END_DAY,'%e') >= SA.DAY
+                           AND DATE_FORMAT(LAST_DAY(#{date} - INTERVAL 1 MONTH) + INTERVAL SA.DAY DAY,'%w')
+                                IN(SELECT WEEK
+                                     FROM SCHEDULE_WEEK SW
+                                    WHERE SW.SCHEDULE_SEQ = S.SEQ
+                                   )
+                 UNION ALL
+                SELECT DATE_FORMAT(SS.SUBSCRIBE_DT,'%e') AS DAY
+                     , S.SEQ
+                     , S.MEMBER_SEQ
+                     , S.CONTENT
+                     , S.DISTINCTION
+                     , SS.SUBSCRIBE_DT AS START_DAY
+                     , NULL AS END_DAY
+                     , S.START_TIME
+                     , S.END_TIME
+                     , S.LEVEL
+                     , 2 AS STATE
+                  FROM (SELECT SCHEDULE_SEQ
+                             , SUBSCRIBE_DT
+                          FROM SCHEDULE_SUBSCRIBE
+                         WHERE SEQ = #{memberSeq}
+                        ) SS
+                 INNER JOIN (SELECT SEQ
+                                  , MEMBER_SEQ
+                                  , CONTENT
+                                  , DISTINCTION
+                                  , START_TIME
+                                  , END_TIME
+                                  , LEVEL
+                               FROM SCHEDULE
+                              WHERE DATE_FORMAT(#{date},'%y-%m-%d') BETWEEN DATE_FORMAT(START_DAY,'%y-%m-%d') AND DATE_FORMAT(END_DAY,'%y-%m-%d')
+                              ) S
+                   ON (SS.SCHEDULE_SEQ = S.SEQ)
+              ) AS S
     </select>
 
     <insert id="scheduleAdd" parameterType="ScheduleDto">
@@ -28,17 +139,19 @@
                     (MEMBER_SEQ
                    , CONTENT
                    , DISTINCTION
+                   , START_DAY
+                   , END_DAY
                    , START_TIME
                    , END_TIME
-                   , GENRE
                    , LEVEL
                     )
              VALUES(#{memberSeq}
                   , #{content}
-                  , #{distinct }
-                  , #{startTime}
-                  , #{endTime}
-                  , #{genre}
+                  , #{distinction}
+                  , #{startDay}
+                  , #{endDay}
+                  , STR_TO_DATE(#{startTime},'%T')
+                  , STR_TO_DATE(#{endTime},'%T')
                   , #{level}
                   )
 
@@ -47,3 +160,6 @@
 
 
 </mapper>
+
+
+

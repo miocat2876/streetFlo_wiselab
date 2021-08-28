@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CalenderService {
 
-    List<ScheduleDto> scheduleFind(CalenderDto calenderDto);
+    List<CalenderDto> scheduleFind(CalenderDto calenderDto);
 
     int scheduleAdd(ScheduleDto dto);
 

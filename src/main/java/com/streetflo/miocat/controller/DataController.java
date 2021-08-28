@@ -20,7 +20,7 @@ public class DataController {
     private CalenderService calenderService;
 
     @RequestMapping("scheduleFind")
-    public List<ScheduleDto> scheduleFind(@RequestBody CalenderDto dto){
+    public List<CalenderDto> scheduleFind(@RequestBody CalenderDto dto){
 
         return calenderService.scheduleFind(dto);
 
