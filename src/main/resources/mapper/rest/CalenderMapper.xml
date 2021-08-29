@@ -105,8 +105,8 @@
                                      , SD.END_TIME
                                      , SD.LEVEL
                                      , 1 AS TYPE
-                                 FROM SCHEDULE SD
-                                INNER JOIN SUBSCRIBE SC
+                                 FROM SCHEDULE AS SD
+                                INNER JOIN SUBSCRIBE AS SC
                                    ON SD.MEMBER_SEQ = SC.SUBSCRIBE_MEMBER
                                 WHERE 'stu' = (SELECT MEMBER_CLASS
                                                  FROM MEMBER
@@ -125,15 +125,15 @@
                                  FROM SCHEDULE
                                 WHERE MEMBER_SEQ = #{memberSeq}
                                 ) AS S
-                         WHERE DATE_FORMAT('2021-08-02','%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
+                         WHERE DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
                          ) AS S
                      , (SELECT LVL AS 'DAY'
-                          FROM SCHEDULE_ALL) SA
+                          FROM SCHEDULE_ALL) AS SA
                          WHERE DATE_FORMAT(S.START_DAY,'%e') <![CDATA[ <= SA.DAY ]]>
                            AND DATE_FORMAT(S.END_DAY,'%e') >= SA.DAY
                            AND DATE_FORMAT(LAST_DAY(#{date} - INTERVAL 1 MONTH) + INTERVAL SA.DAY DAY,'%w')
                             IN (SELECT WEEK
-                                  FROM SCHEDULE_WEEK SW
+                                  FROM SCHEDULE_WEEK AS SW
                                  WHERE SW.SCHEDULE_SEQ = S.SEQ
                                  )
                  UNION ALL
@@ -153,7 +153,7 @@
                              , TYPE
                           FROM SCHEDULE_SUBSCRIBE
                          WHERE MEMBER_SEQ = #{memberSeq}
-                        ) SS
+                        ) AS SS
                  INNER JOIN (SELECT SEQ
                                   , MEMBER_SEQ
                                   , CONTENT
@@ -163,7 +163,7 @@
                                   , LEVEL
                                FROM SCHEDULE
                               WHERE DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
-                              ) S
+                              ) AS S
                    ON (SS.SCHEDULE_SEQ = S.SEQ)
               ) AS S,(SELECT @rowid:=0) AS RI;
     </select>
