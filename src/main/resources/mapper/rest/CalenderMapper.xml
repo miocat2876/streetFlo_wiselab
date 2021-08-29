@@ -83,11 +83,11 @@
                              , MEMBER_SEQ
                              , CONTENT
                              , DISTINCTION
-                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m') = DATE_FORMAT(START_DAY,'%y-%m')
+                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m') <![CDATA[ <= ]]> DATE_FORMAT(START_DAY,'%y-%m')
                                     THEN START_DAY
                                     ELSE LAST_DAY(#{date} - interval 1 month) + interval 1 DAY
                                 END AS START_DAY
-                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m') = DATE_FORMAT(END_DAY,'%y-%m')
+                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m')<![CDATA[ <= ]]> DATE_FORMAT(END_DAY,'%y-%m')
                                     THEN END_DAY
                                     ELSE LAST_DAY(#{date})
                                 END AS END_DAY

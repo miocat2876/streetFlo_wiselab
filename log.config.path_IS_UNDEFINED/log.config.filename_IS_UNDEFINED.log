@@ -9718,3 +9718,824 @@ DEBUG 21-08-29 19:07:51[restartedMain] [ResolverUtil:256] - Checking to see if c
 DEBUG 21-08-29 19:07:51[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
 DEBUG 21-08-29 19:07:51[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
 DEBUG 21-08-29 19:07:51[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:51[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-08-29 19:07:51[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-08-29 19:07:51[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-29 19:07:51[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4148eb98, org.springframework.security.web.context.SecurityContextPersistenceFilter@26207de0, org.springframework.security.web.header.HeaderWriterFilter@b89d899, org.springframework.security.web.authentication.logout.LogoutFilter@ae77968, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@20f0ceee, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6e4f1b6a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@51db025, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@35592899, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@161795a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@539fdae3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13f80762, org.springframework.security.web.session.SessionManagementFilter@57b03c81, org.springframework.security.web.access.ExceptionTranslationFilter@521c4377, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c110e96]
+INFO  21-08-29 19:07:52[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-29 19:07:52[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-29 19:07:52[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-29 19:07:52[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-29 19:07:52[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-29 19:07:52[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-29 19:07:52[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-29 19:07:52[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-29 19:07:52[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-29 19:07:52[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 1.98 seconds (JVM running for 1286.898)
+INFO  21-08-29 19:07:52[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-08-29 19:07:54[Thread-8] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-08-29 19:07:54[Thread-8] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-29 19:07:54[Thread-8] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-08-29 19:07:54[Thread-8] [HikariDataSource:350] - HikariPool-2 - Shutdown initiated...
+INFO  21-08-29 19:07:54[Thread-8] [HikariDataSource:352] - HikariPool-2 - Shutdown completed.
+INFO  21-08-29 19:07:55[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 30096 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-29 19:07:55[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 42 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-29 19:07:55[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+INFO  21-08-29 19:07:55[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e68da351] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-29 19:07:55[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-29 19:07:55[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-08-29 19:07:55[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-08-29 19:07:55[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-29 19:07:55[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-29 19:07:56[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-29 19:07:56[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-29 19:07:56[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1093 ms
+INFO  21-08-29 19:07:56[restartedMain] [HikariDataSource:110] - HikariPool-3 - Starting...
+INFO  21-08-29 19:07:56[restartedMain] [HikariDataSource:123] - HikariPool-3 - Start completed.
+INFO  21-08-29 19:07:56[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/streetFlo?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-29 19:07:56[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-29 19:07:56[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-08-29 19:07:56[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-29 19:07:56[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 19:07:56[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-08-29 19:07:57[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-08-29 19:07:57[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-29 19:07:57[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2971885a, org.springframework.security.web.context.SecurityContextPersistenceFilter@48138d90, org.springframework.security.web.header.HeaderWriterFilter@420efd0b, org.springframework.security.web.authentication.logout.LogoutFilter@4e72dda, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5a612998, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3ff4367b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6367033e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@230caa4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79e94e32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cba12a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70f27a5d, org.springframework.security.web.session.SessionManagementFilter@25fae2, org.springframework.security.web.access.ExceptionTranslationFilter@25028921, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e348879]
+INFO  21-08-29 19:07:57[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-29 19:07:57[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-29 19:07:57[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-29 19:07:57[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-29 19:07:57[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-29 19:07:57[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-29 19:07:57[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-29 19:07:57[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-29 19:07:57[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-29 19:07:57[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 2.458 seconds (JVM running for 1292.119)
+INFO  21-08-29 19:07:57[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-08-29 19:13:37[http-nio-9090-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6c9a52a9
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5e1e5112
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:547] - Completed initialization in 3 ms
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-9-1, memberSeq=1, year=2021, month=10, schedule=null)]
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=21/09/, memberSeq=0, year=0, month=0, schedule=null), CalenderDto(day=, date (truncated)...]
+DEBUG 21-08-29 19:13:37[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 19:13:38[http-nio-9090-exec-2] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 19:13:38[http-nio-9090-exec-2] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 19:13:38[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 19:13:38[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 19:13:38[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 19:13:38[http-nio-9090-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 19:13:39[http-nio-9090-exec-3] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 19:13:39[http-nio-9090-exec-3] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 19:13:39[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-7-1, memberSeq=1, year=2021, month=8, schedule=null)]
+DEBUG 21-08-29 19:13:39[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 19:13:39[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=21/07/, memberSeq=0, year=0, month=0, schedule=null), CalenderDto(day=, date (truncated)...]
+DEBUG 21-08-29 19:13:39[http-nio-9090-exec-3] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 19:13:41[http-nio-9090-exec-4] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 19:13:41[http-nio-9090-exec-4] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 19:13:41[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-4] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-5] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-5] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-9-1, memberSeq=1, year=2021, month=10, schedule=null)]
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=21/09/, memberSeq=0, year=0, month=0, schedule=null), CalenderDto(day=, date (truncated)...]
+DEBUG 21-08-29 19:13:42[http-nio-9090-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-7] [DispatcherServlet:91] - OPTIONS "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-7] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-7] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-8] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-8] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-8] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-8] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-8] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:10:18[http-nio-9090-exec-8] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-9] [DispatcherServlet:91] - OPTIONS "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-9] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-9] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-10] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-10] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-10] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[0], seq=0, memberSeq=1, content=test, schedule=nu (truncated)...]
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-10] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-10] [RequestResponseBodyMethodProcessor:91] - Writing [1]
+DEBUG 21-08-29 20:10:45[http-nio-9090-exec-10] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:10:47[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:10:47[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:10:47[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:10:47[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:10:47[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:10:47[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:11:45[http-nio-9090-exec-2] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:11:45[http-nio-9090-exec-2] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:11:45[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:11:45[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:11:45[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:11:45[http-nio-9090-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:11:46[http-nio-9090-exec-3] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:11:46[http-nio-9090-exec-3] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:11:46[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:11:46[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:11:46[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:11:46[http-nio-9090-exec-3] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[], seq=0, memberSeq=1, content=test, schedule=nul (truncated)...]
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [DispatcherServlet:1101] - Failed to complete request: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleWeekAdd-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO SCHEDULE_WEEK                   ( SCHEDULE_SEQ                   , WEEK                   )             VALUES
+### Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+ERROR 21-08-29 20:12:01[http-nio-9090-exec-4] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleWeekAdd-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO SCHEDULE_WEEK                   ( SCHEDULE_SEQ                   , WEEK                   )             VALUES
+### Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5] with root cause
+java.sql.SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1683)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1545)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1508)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:318)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:220)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy104.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy137.scheduleWeekAdd(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy138.scheduleWeekAdd(Unknown Source)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl.scheduleAdd(CalenderServiceImpl.java:53)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl$$FastClassBySpringCGLIB$$13e9e638.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl$$EnhancerBySpringCGLIB$$5ff5abe4.scheduleAdd(<generated>)
+	at com.streetflo.miocat.controller.DataController.scheduleAdd(DataController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [DispatcherServlet:91] - "ERROR" dispatch for POST "/error", parameters={}
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [HttpEntityMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sun Aug 29 20:12:01 KST 2021, status=500, error=Internal Server Error, exception=org.spri (truncated)...]
+DEBUG 21-08-29 20:12:01[http-nio-9090-exec-4] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 500
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[], seq=0, memberSeq=1, content=test, schedule=nul (truncated)...]
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [DispatcherServlet:1101] - Failed to complete request: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleWeekAdd-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO SCHEDULE_WEEK                   ( SCHEDULE_SEQ                   , WEEK                   )             VALUES
+### Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+ERROR 21-08-29 20:12:12[http-nio-9090-exec-5] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleWeekAdd-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO SCHEDULE_WEEK                   ( SCHEDULE_SEQ                   , WEEK                   )             VALUES
+### Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5] with root cause
+java.sql.SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1683)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1545)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1508)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:318)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:220)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy104.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy137.scheduleWeekAdd(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy138.scheduleWeekAdd(Unknown Source)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl.scheduleAdd(CalenderServiceImpl.java:53)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl$$FastClassBySpringCGLIB$$13e9e638.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl$$EnhancerBySpringCGLIB$$5ff5abe4.scheduleAdd(<generated>)
+	at com.streetflo.miocat.controller.DataController.scheduleAdd(DataController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [DispatcherServlet:91] - "ERROR" dispatch for POST "/error", parameters={}
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [HttpEntityMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sun Aug 29 20:12:12 KST 2021, status=500, error=Internal Server Error, exception=org.spri (truncated)...]
+DEBUG 21-08-29 20:12:12[http-nio-9090-exec-5] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 500
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-6] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-6] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-6] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[0], seq=0, memberSeq=1, content=test, schedule=nu (truncated)...]
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-6] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-6] [RequestResponseBodyMethodProcessor:91] - Writing [1]
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-6] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-7] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-7] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-7] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=null, memberSeq=1, year=0, month=0, schedule=null)]
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-7] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-7] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=null, memberSeq=0, year=0, month=0, schedule=null)]]
+DEBUG 21-08-29 20:12:25[http-nio-9090-exec-7] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:12:53[http-nio-9090-exec-8] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:12:53[http-nio-9090-exec-8] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:12:53[http-nio-9090-exec-8] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:12:53[http-nio-9090-exec-8] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:12:53[http-nio-9090-exec-8] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:12:53[http-nio-9090-exec-8] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:12:55[http-nio-9090-exec-9] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:12:55[http-nio-9090-exec-9] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:12:55[http-nio-9090-exec-9] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:12:55[http-nio-9090-exec-9] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:12:55[http-nio-9090-exec-9] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:12:55[http-nio-9090-exec-9] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[], seq=0, memberSeq=1, content=test, schedule=nul (truncated)...]
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [DispatcherServlet:1101] - Failed to complete request: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleWeekAdd-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO SCHEDULE_WEEK                   ( SCHEDULE_SEQ                   , WEEK                   )             VALUES
+### Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+ERROR 21-08-29 20:13:07[http-nio-9090-exec-10] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+### The error may involve com.streetflo.miocat.dao.rest.CalenderMapper.scheduleWeekAdd-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO SCHEDULE_WEEK                   ( SCHEDULE_SEQ                   , WEEK                   )             VALUES
+### Cause: java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=1524) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5] with root cause
+java.sql.SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1683)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1545)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1508)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:318)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:220)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy104.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy137.scheduleWeekAdd(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy138.scheduleWeekAdd(Unknown Source)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl.scheduleAdd(CalenderServiceImpl.java:53)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl$$FastClassBySpringCGLIB$$13e9e638.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.streetflo.miocat.service.rest.impl.CalenderServiceImpl$$EnhancerBySpringCGLIB$$5ff5abe4.scheduleAdd(<generated>)
+	at com.streetflo.miocat.controller.DataController.scheduleAdd(DataController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [DispatcherServlet:91] - "ERROR" dispatch for POST "/error", parameters={}
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [RequestMappingHandlerMapping:510] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [HttpEntityMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [HttpEntityMethodProcessor:91] - Writing [{timestamp=Sun Aug 29 20:13:07 KST 2021, status=500, error=Internal Server Error, exception=org.spri (truncated)...]
+DEBUG 21-08-29 20:13:07[http-nio-9090-exec-10] [DispatcherServlet:1127] - Exiting from "ERROR" dispatch, status 500
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[0], seq=0, memberSeq=1, content=test, schedule=nu (truncated)...]
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing [1]
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-2] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-2] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=null, memberSeq=1, year=0, month=0, schedule=null)]
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=null, memberSeq=0, year=0, month=0, schedule=null)]]
+DEBUG 21-08-29 20:13:12[http-nio-9090-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:13:59[http-nio-9090-exec-3] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:13:59[http-nio-9090-exec-3] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:13:59[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:13:59[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:13:59[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:13:59[http-nio-9090-exec-3] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:14:01[http-nio-9090-exec-4] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:14:01[http-nio-9090-exec-4] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:14:01[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:14:01[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:14:01[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:14:01[http-nio-9090-exec-4] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:14:02[http-nio-9090-exec-5] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:14:02[http-nio-9090-exec-5] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:14:02[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:14:02[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:14:02[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:14:02[http-nio-9090-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-6] [DispatcherServlet:91] - POST "/scheduleAdd", parameters={}
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-6] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleAdd(ScheduleDto)
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-6] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [ScheduleDto(serachMonth=0, day=0, date=null, week=[0], seq=0, memberSeq=1, content=test, schedule=nu (truncated)...]
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-6] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-6] [RequestResponseBodyMethodProcessor:91] - Writing [1]
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-6] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-7] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-7] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-7] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-7] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-7] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:14:21[http-nio-9090-exec-7] [DispatcherServlet:1131] - Completed 200 OK
+INFO  21-08-29 20:25:04[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 48932 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-29 20:25:04[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-29 20:25:04[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-08-29 20:25:04[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 90 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-29 20:25:06[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces.
+INFO  21-08-29 20:25:06[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$eda295d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-29 20:25:06[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-29 20:25:07[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-08-29 20:25:07[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-08-29 20:25:07[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-29 20:25:07[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-29 20:25:07[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-29 20:25:07[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-29 20:25:07[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2787 ms
+INFO  21-08-29 20:25:07[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-08-29 20:25:07[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-08-29 20:25:07[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/streetFlo?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-29 20:25:07[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-29 20:25:08[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-08-29 20:25:08[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-08-29 20:25:08[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-08-29 20:25:09[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-29 20:25:09[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-08-29 20:25:09[restartedMain] [LogFactory:135] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 21-08-29 20:25:09[restartedMain] [VFS:77] - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-29 20:25:09[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-08-29 20:25:09[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-08-29 20:25:09[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-29 20:25:09[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75941eba, org.springframework.security.web.context.SecurityContextPersistenceFilter@5133099b, org.springframework.security.web.header.HeaderWriterFilter@6bc62971, org.springframework.security.web.authentication.logout.LogoutFilter@f7cf4bc, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@725f2a14, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@224fcf57, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2794361e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@611c0744, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@463ef5ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@343239d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d4a49fb, org.springframework.security.web.session.SessionManagementFilter@393f732f, org.springframework.security.web.access.ExceptionTranslationFilter@5be0506, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bdc4ba8]
+INFO  21-08-29 20:25:09[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-29 20:25:09[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-29 20:25:10[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-29 20:25:10[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-29 20:25:10[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-29 20:25:10[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-29 20:25:10[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-29 20:25:10[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-29 20:25:10[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-29 20:25:10[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 6.719 seconds (JVM running for 9.059)
+INFO  21-08-29 20:25:14[http-nio-9090-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3c9f490d
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@eab82bf
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:547] - Completed initialization in 3 ms
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:25:14[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-29 20:37:39[http-nio-9090-exec-3] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-29 20:37:39[http-nio-9090-exec-3] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-29 20:37:39[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=1, year=2021, month=9, schedule=null)]
+DEBUG 21-08-29 20:37:40[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-29 20:37:40[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-29 20:37:40[http-nio-9090-exec-3] [DispatcherServlet:1131] - Completed 200 OK
