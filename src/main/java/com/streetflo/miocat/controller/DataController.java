@@ -2,6 +2,7 @@ package com.streetflo.miocat.controller;
 
 import com.streetflo.miocat.dto.rest.CalenderDto;
 import com.streetflo.miocat.dto.table.ScheduleDto;
+import com.streetflo.miocat.dto.table.ScheduleSubscribeDto;
 import com.streetflo.miocat.service.rest.CalenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +33,17 @@ public class DataController {
         return calenderService.scheduleAdd(dto);
 
     }
+
+    @RequestMapping("scheduleSubscribeAdd")
+    public int scheduleSubscribeAdd(@RequestBody ScheduleSubscribeDto dto){
+
+        return calenderService.scheduleSubscribeAdd(dto);
+
+    }
+
+
+
+
 //
 //    @RequestMapping("noticelist")
 ////    public String noticeList(@LoginUser SessionUser user){

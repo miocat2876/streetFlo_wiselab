@@ -8,9 +8,13 @@ import java.util.ArrayList;
 @Data
 public class CalenderDto {
     private String day;
+    private String date;
     private int memberSeq;
     private int year;
     private int month;
-    private String date;
     private ArrayList<ScheduleDto> schedule;
+
+
+
+
 }   

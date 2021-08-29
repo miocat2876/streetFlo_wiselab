@@ -8,4 +8,5 @@ public class ScheduleSubscribeDto {
     private int seq;
     private int memberSeq;
     private int scheduleSeq;
+    private String subscribeDt;
 }

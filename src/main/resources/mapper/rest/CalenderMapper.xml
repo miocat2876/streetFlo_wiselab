@@ -29,11 +29,14 @@
             INNER JOIN CALENDER
                ON <![CDATA[ LVL < TEMP.LAST_DAY  ]]>
         )
-        SELECT CASE WHEN <![CDATA[ LVL > 0 AND  LVL < DATE_FORMAT(LAST_DAY(#{date}),'%d') + 1 ]]>
-                    THEN LVL
-                    ELSE ''
-                END AS 'day'
-          FROM CALENDER
+        SELECT C.DAY AS 'day'
+             , CONCAT(DATE_FORMAT(#{date},"%y/%m"),'/',C.DAY) AS 'date'
+          FROM (SELECT CASE WHEN <![CDATA[ LVL > 0 AND  LVL < DATE_FORMAT(LAST_DAY(#{date}),'%d') + 1 ]]>
+                            THEN LVL
+                            ELSE ''
+                        END AS 'day'
+                  FROM CALENDER
+                ) AS C
     </select>
 
     <select id="scheduleFind" parameterType="CalenderDto" resultType="ScheduleDto">
@@ -52,17 +55,19 @@
              INNER JOIN SCHEDULE_ALL
                 ON LVL <![CDATA[ < 31 ]]>
         )
-        SELECT S.DAY
-             , S.SEQ
-             , S.MEMBER_SEQ
-             , S.CONTENT
-             , S.DISTINCTION
-             , S.START_DAY
-             , S.END_DAY
-             , S.START_TIME
-             , S.END_TIME
-             , S.LEVEL
-             , S.STATE
+        SELECT S.DAY                                          AS 'day'
+             , CONCAT(DATE_FORMAT(#{date},"%y/%m"),'/',S.DAY) AS 'date'
+             , S.SEQ                                          AS 'seq'
+             , S.MEMBER_SEQ                                   AS 'memberSeq'
+             , S.CONTENT                                      AS 'content'
+             , S.DISTINCTION                                  AS 'distinction'
+             , S.START_DAY                                    AS 'startDay'
+             , S.END_DAY                                      AS 'endDay'
+             , DATE_FORMAT(S.START_TIME,'%k:%i')              AS 'startTime'
+             , DATE_FORMAT(S.END_TIME,'%k:%i')                AS 'endTime'
+             , S.LEVEL                                        AS 'level'
+             , S.STATE                                        AS 'state'
+             , @ROWID:=@ROWID+1                               AS 'key'
           FROM (SELECT SA.DAY
                      , S.SEQ
                      , S.MEMBER_SEQ
@@ -98,10 +103,10 @@
                          WHERE DATE_FORMAT(S.START_DAY,'%e') <![CDATA[ <= SA.DAY ]]>
                            AND DATE_FORMAT(S.END_DAY,'%e') >= SA.DAY
                            AND DATE_FORMAT(LAST_DAY(#{date} - INTERVAL 1 MONTH) + INTERVAL SA.DAY DAY,'%w')
-                                IN(SELECT WEEK
-                                     FROM SCHEDULE_WEEK SW
-                                    WHERE SW.SCHEDULE_SEQ = S.SEQ
-                                   )
+                            IN(SELECT WEEK
+                                 FROM SCHEDULE_WEEK SW
+                                WHERE SW.SCHEDULE_SEQ = S.SEQ
+                                )
                  UNION ALL
                 SELECT DATE_FORMAT(SS.SUBSCRIBE_DT,'%e') AS DAY
                      , S.SEQ
@@ -117,7 +122,7 @@
                   FROM (SELECT SCHEDULE_SEQ
                              , SUBSCRIBE_DT
                           FROM SCHEDULE_SUBSCRIBE
-                         WHERE SEQ = #{memberSeq}
+                         WHERE MEMBER_SEQ = #{memberSeq}
                         ) SS
                  INNER JOIN (SELECT SEQ
                                   , MEMBER_SEQ
@@ -127,23 +132,23 @@
                                   , END_TIME
                                   , LEVEL
                                FROM SCHEDULE
-                              WHERE DATE_FORMAT(#{date},'%y-%m-%d') BETWEEN DATE_FORMAT(START_DAY,'%y-%m-%d') AND DATE_FORMAT(END_DAY,'%y-%m-%d')
+                              WHERE DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
                               ) S
                    ON (SS.SCHEDULE_SEQ = S.SEQ)
-              ) AS S
+              ) AS S,(SELECT @rowid:=0) AS RI;
     </select>
 
     <insert id="scheduleAdd" parameterType="ScheduleDto">
 
         INSERT INTO SCHEDULE
-                    (MEMBER_SEQ
-                   , CONTENT
-                   , DISTINCTION
-                   , START_DAY
-                   , END_DAY
-                   , START_TIME
-                   , END_TIME
-                   , LEVEL
+                  ( MEMBER_SEQ
+                  , CONTENT
+                  , DISTINCTION
+                  , START_DAY
+                  , END_DAY
+                  , START_TIME
+                  , END_TIME
+                  , LEVEL
                     )
              VALUES(#{memberSeq}
                   , #{content}
@@ -155,6 +160,42 @@
                   , #{level}
                   )
 
+    </insert>
+
+    <insert id="scheduleWeekAdd" parameterType="ScheduleDto">
+
+        INSERT INTO SCHEDULE_WEEK
+                  ( SCHEDULE_SEQ
+                  , WEEK
+                  )
+            VALUES
+            <foreach collection="week" item="item" separator=",">
+                ( (SELECT SEQ FROM SCHEDULE WHERE MEMBER_SEQ = #{memberSeq} ORDER BY SCHEDULE DESC LIMIT 1)
+                , #{item}
+                )
+            </foreach>
+
+
+
+    </insert>
+
+    <insert id="scheduleSubscribeAdd" parameterType="ScheduleSubscribeDto">
+        INSERT INTO SCHEDULE_SUBSCRIBE
+                  ( MEMBER_SEQ
+                  , SCHEDULE_SEQ
+                  , SUBSCRIBE_DT
+                  )
+             SELECT #{memberSeq}
+                  , #{scheduleSeq}
+                  , #{subscribeDt}
+               FROM DUAL
+              WHERE EXISTS (SELECT 'test'
+                              FROM SCHEDULE S
+                             WHERE SEQ = #{scheduleSeq}
+                               AND DATE_FORMAT(#{subscribeDt},'%y-%m-%d') BETWEEN DATE_FORMAT(START_DAY,'%y-%m-%d')
+                                                                              AND DATE_FORMAT(END_DAY,'%y-%m-%d')
+                               AND DATE_FORMAT(NOW(),'%y-%m-%d') <![CDATA[ <= DATE_FORMAT(END_DAY,'%y-%m-%d') ]]>
+                             );
 
     </insert>
 
