@@ -10,6 +10,7 @@ public class ScheduleDto {
     private int day;
     private String date;
     private ArrayList<Integer> week;
+    private String type;
 
     private int seq;
     private int memberSeq;
@@ -23,5 +24,5 @@ public class ScheduleDto {
     private String genre;
     private String level;
     private String key;
-    private String state;
+
 }
