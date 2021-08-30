@@ -383,3 +383,113 @@ DEBUG 21-08-30 02:22:06[http-nio-9090-exec-5] [RequestResponseBodyMethodProcesso
 DEBUG 21-08-30 02:22:06[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
 DEBUG 21-08-30 02:22:06[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
 DEBUG 21-08-30 02:22:06[http-nio-9090-exec-5] [DispatcherServlet:1131] - Completed 200 OK
+WARN  21-08-30 09:27:40[HikariPool-1 housekeeper] [HikariPool:787] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h42m19s219ms789µs800ns).
+INFO  21-08-30 19:05:25[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 30680 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-08-30 19:05:25[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-08-30 19:05:25[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-08-30 19:05:25[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 71 ms. Found 0 JDBC repository interfaces.
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-08-30 19:05:27[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interfaces.
+INFO  21-08-30 19:05:27[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$5667522f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-08-30 19:05:27[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-08-30 19:05:28[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-08-30 19:05:28[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-08-30 19:05:28[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-08-30 19:05:28[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-08-30 19:05:28[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-08-30 19:05:28[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-08-30 19:05:28[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2765 ms
+INFO  21-08-30 19:05:28[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-08-30 19:05:29[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-08-30 19:05:29[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/streetFlo?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-08-30 19:05:29[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-08-30 19:05:29[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.27.Final
+INFO  21-08-30 19:05:29[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-08-30 19:05:29[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-08-30 19:05:30[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-08-30 19:05:30[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-08-30 19:05:30[restartedMain] [LogFactory:135] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 21-08-30 19:05:30[restartedMain] [VFS:77] - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+DEBUG 21-08-30 19:05:30[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-08-30 19:05:31[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-08-30 19:05:31[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-08-30 19:05:31[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-08-30 19:05:31[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51433479, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fb6e62f, org.springframework.security.web.header.HeaderWriterFilter@6cee156f, org.springframework.security.web.authentication.logout.LogoutFilter@147dbb7f, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2ac32120, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1857ac5c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5b83f3a0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7fa6a4df, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f64f7a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21076c1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d1e09a4, org.springframework.security.web.session.SessionManagementFilter@6f9908f3, org.springframework.security.web.access.ExceptionTranslationFilter@5d6879e1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4870097f]
+INFO  21-08-30 19:05:31[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-08-30 19:05:31[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-08-30 19:05:32[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-08-30 19:05:32[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-08-30 19:05:32[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+WARN  21-08-30 19:05:32[restartedMain] [MustacheAutoConfiguration:65] - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+INFO  21-08-30 19:05:32[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-08-30 19:05:32[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-08-30 19:05:32[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-08-30 19:05:32[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 8.041 seconds (JVM running for 10.659)
+INFO  21-08-30 19:05:35[http-nio-9090-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:519] - Detected StandardServletMultipartResolver
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:543] - Detected AcceptHeaderLocaleResolver
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:568] - Detected FixedThemeResolver
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:718] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1bf10ced
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:782] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3967c67d
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:542] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+INFO  21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:547] - Completed initialization in 4 ms
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:91] - OPTIONS "/scheduleFind", parameters={}
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=4, year=2021, month=9, schedule=null)]
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-30 19:05:35[http-nio-9090-exec-1] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-30 19:05:36[http-nio-9090-exec-2] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-30 19:05:36[http-nio-9090-exec-2] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-30 19:05:36[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-9-1, memberSeq=4, year=2021, month=10, schedule=null)]
+DEBUG 21-08-30 19:05:36[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-30 19:05:36[http-nio-9090-exec-2] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=21/09/, memberSeq=0, year=0, month=0, schedule=null), CalenderDto(day=, date (truncated)...]
+DEBUG 21-08-30 19:05:36[http-nio-9090-exec-2] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-30 19:05:37[http-nio-9090-exec-3] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-30 19:05:37[http-nio-9090-exec-3] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-30 19:05:37[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=4, year=2021, month=9, schedule=null)]
+DEBUG 21-08-30 19:05:37[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-30 19:05:37[http-nio-9090-exec-3] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-30 19:05:37[http-nio-9090-exec-3] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-30 19:05:38[http-nio-9090-exec-4] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-30 19:05:38[http-nio-9090-exec-4] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-30 19:05:38[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-7-1, memberSeq=4, year=2021, month=8, schedule=null)]
+DEBUG 21-08-30 19:05:38[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-30 19:05:38[http-nio-9090-exec-4] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=, date=21/07/, memberSeq=0, year=0, month=0, schedule=null), CalenderDto(day=, date (truncated)...]
+DEBUG 21-08-30 19:05:38[http-nio-9090-exec-4] [DispatcherServlet:1131] - Completed 200 OK
+DEBUG 21-08-30 19:05:39[http-nio-9090-exec-5] [DispatcherServlet:91] - POST "/scheduleFind", parameters={}
+DEBUG 21-08-30 19:05:39[http-nio-9090-exec-5] [RequestMappingHandlerMapping:510] - Mapped to com.streetflo.miocat.controller.DataController#scheduleFind(CalenderDto)
+DEBUG 21-08-30 19:05:39[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Read "application/json;charset=UTF-8" to [CalenderDto(day=null, date=2021-8-1, memberSeq=4, year=2021, month=9, schedule=null)]
+DEBUG 21-08-30 19:05:39[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:255] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+DEBUG 21-08-30 19:05:39[http-nio-9090-exec-5] [RequestResponseBodyMethodProcessor:91] - Writing [[CalenderDto(day=1, date=21/08/1, memberSeq=0, year=0, month=0, schedule=[ScheduleDto(serachMonth=0, (truncated)...]
+DEBUG 21-08-30 19:05:39[http-nio-9090-exec-5] [DispatcherServlet:1131] - Completed 200 OK

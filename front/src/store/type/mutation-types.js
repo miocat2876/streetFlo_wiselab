@@ -1,0 +1,5 @@
+const SET_CALENDER_DATA = 'SET_CALENDER_DATA';
+
+export {
+    SET_CALENDER_DATA,
+}
