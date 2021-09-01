@@ -234,8 +234,26 @@
 
 
 
-SELECT S.DAY             AS 'day'          
-	  , S.DAY             AS 'date'         
+SET @memberSeq = 4;
+set @date = '2021-08-01';
+
+
+WITH RECURSIVE SCHEDULE_ALL AS
+        (
+            SELECT 1 AS LVL
+              FROM  (SELECT 'test' TEST
+                       FROM DUAL
+                     ) AS TEMP
+             UNION ALL
+            SELECT LVL + 1
+              FROM (SELECT 'test' TEST
+                      FROM DUAL
+                    ) AS TEMP
+             INNER JOIN SCHEDULE_ALL
+                ON LVL  < 31 
+        )
+ SELECT S.DAY             AS 'day'          
+	  , S.DATE            AS 'date'         
       , S.SEQ             AS 'seq'          
 	  , S.MEMBER_SEQ      AS 'memberSeq'    
 	  , S.CONTENT         AS 'content'      
@@ -361,7 +379,7 @@ SELECT S.DAY             AS 'day'
                    ON (SS.SCHEDULE_SEQ = S.SEQ)
               ) AS S
        )AS S,(SELECT @rowid:=0) AS RI
-  GROUP BY CONCAT(S.DAY, S.MEMBER_SEQ, S.CONTENT, S.DISTINCTION, S.START_TIME, S.END_TIME, S.LEVEL, S.TYPE);
+  GROUP BY CONCAT(S.DAY, S.SEQ, S.MEMBER_SEQ, S.CONTENT, S.DISTINCTION, S.START_TIME, S.END_TIME, S.LEVEL);
 
 
 
