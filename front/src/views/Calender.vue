@@ -4,8 +4,17 @@
       <div class="left">
         <div class="top">
           <h1>Calendar</h1>
-          <h3><a class="mon_before" @click="calenderPrev"></a>{{ computedMonthNames }}, {{ year }}<a class="mon_after" @click="calenderNext"></a></h3>
-          <a class="add_bt" v-if="state === 'mypage'" :class="[addBt ? 'on' : '']" @click="addBt = !addBt">Add Class</a>
+          <h3>
+            <a class="mon_before" @click="calenderPrev"></a>{{ computedMonthNames }}, {{ year
+            }}<a class="mon_after" @click="calenderNext"></a>
+          </h3>
+          <a
+            class="add_bt"
+            v-if="state === 'mypage'"
+            :class="[addBt ? 'on' : '']"
+            @click="addBt = !addBt"
+            >Add Class</a
+          >
           <ul class="add_class" :style="[addBt ? 'display : block' : 'display : none']">
             <li class="date">
               <div class="title_box">
@@ -127,8 +136,15 @@
       <div class="right" :style="[state !== 'mypage' ? 'min-height: auto' : '']">
         <table>
           <tr v-for="n in Math.ceil(computedMakeCaledar.length / 7)" :key="n">
-            <td :class="[item.schedule ? 'able' : '']" v-for="item in computedMakeCaledar.slice((n - 1) * 7, 7 * n)" :key="item.date">
-              <p :class="[item.schedule ? 'calendar_tooltip' : '']" :style="[state !== 'mypage' ? 'padding: 4px' : '']">
+            <td
+              :class="[item.schedule ? 'able' : '']"
+              v-for="item in computedMakeCaledar.slice((n - 1) * 7, 7 * n)"
+              :key="item.key"
+            >
+              <p
+                :class="[item.schedule ? 'calendar_tooltip' : '']"
+                :style="[state !== 'mypage' ? 'padding: 4px' : '']"
+              >
                 {{ item.day }}
               </p>
               <div id="calendar" v-if="item.schedule">
@@ -151,7 +167,9 @@
                         >
                         <span v-if="state === 'mypage'">{{ schedule.content }}</span>
                       </span>
-                      <a v-if="state !== 'mypage'" @click="scheduleSubscribeAdd(schedule)"> 임시 상세등록 </a>
+                      <a v-if="state !== 'mypage'" @click="scheduleSubscribeAdd(schedule)">
+                        임시 상세등록
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -218,7 +236,20 @@
         return this.data;
       },
       computedMonthNames() {
-        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const monthNames = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December',
+        ];
         return monthNames[this.month - 1];
       },
     },

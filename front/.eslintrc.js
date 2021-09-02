@@ -8,12 +8,12 @@ module.exports = {
   ],
   rules: {
     //https://eslint.vuejs.org/rules/html-closing-bracket-newline.html
-    'vue/html-closing-bracket-newline': [
-      'error',
-      {
-        multiline: 'never',
-      },
-    ],
+    // 'vue/html-closing-bracket-newline': [
+    //   'error',
+    //   {
+    //     //multiline: 'never',
+    //   },
+    // ],
     // https://eslint.vuejs.org/rules/html-self-closing.html
     'vue/html-self-closing': [
       'error',
@@ -25,5 +25,6 @@ module.exports = {
         },
       },
     ],
+
   },
 };
