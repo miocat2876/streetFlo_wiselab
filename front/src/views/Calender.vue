@@ -192,7 +192,7 @@
     async created() {
       let agrument = {
         year: this.year,
-        month: this.month + 1,
+        month: this.month,
         memberSeq: this.id,
         date: `${this.year}-${this.month}-${this.day}`,
       };
@@ -268,7 +268,7 @@
 
         let agrument = {
           year: this.year,
-          month: this.month + 1,
+          month: this.month,
           memberSeq: this.id,
           date: `${this.year}-${this.month}-${this.day}`,
         };
@@ -287,7 +287,7 @@
 
         let agrument = {
           year: this.year,
-          month: this.month + 1,
+          month: this.month,
           memberSeq: this.id,
           date: `${this.year}-${this.month}-${this.day}`,
         };
@@ -320,7 +320,7 @@
 
         let agrument2 = {
           year: this.year,
-          month: this.month + 1,
+          month: this.month,
           memberSeq: this.id,
           date: `${this.year}-${this.month}-${this.day}`,
         };
