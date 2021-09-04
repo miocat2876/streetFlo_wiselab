@@ -1,9 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Calender from "../views/Calender.vue";
+import Home from '@/views/Home'
 
 const routes = [
   {
     path: "/",
+    name: "Home",
+    component: Home,
+    meta: {
+      title: 'Street-flo'
+    }
+  },
+  {
+    path: "/Calender",
     name: "Calender",
     component: Calender,
   },

@@ -1,11 +1,12 @@
 
 module.exports = {
+  // 지원하려는 JS 언어 옵션을 지정!
   parserOptions: {
     parser: '@babel/eslint-parser'
   },
   extends: [
     // https://eslint.vuejs.org/rules/#priority-b-strongly-recommended-improving-readability-for-vue-js-3-x
-    'plugin:vue/strongly-recommended'
+    "plugin:vue/base"
   ],
   rules: {
     // https://eslint.vuejs.org/rules/html-closing-bracket-newline.html
