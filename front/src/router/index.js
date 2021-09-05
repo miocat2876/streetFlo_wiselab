@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import Mypage from '../views/Mypage.vue';
+import Teacher from '../views/Teacher.vue';
 
 const routes = [
   {
