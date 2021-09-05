@@ -10,7 +10,7 @@
           </h3>
           <a
             class="add_bt"
-            v-if="state === 'mypage'"
+            v-if="state === 'detail'"
             :class="[addBt ? 'on' : '']"
             @click="addBt = !addBt"
             >Add Class</a
@@ -133,7 +133,7 @@
           </ul>
         </div>
       </div>
-      <div class="right" :style="[state !== 'mypage' ? 'min-height: auto' : '']">
+      <div class="right" :style="[state !== 'detail' ? 'min-height: auto' : '']">
         <table>
           <tr v-for="n in Math.ceil(computedMakeCaledar.length / 7)" :key="n">
             <td
@@ -143,7 +143,7 @@
             >
               <p
                 :class="[item.schedule ? 'calendar_tooltip' : '']"
-                :style="[state !== 'mypage' ? 'padding: 4px' : '']"
+                :style="[state !== 'detail' ? 'padding: 4px' : '']"
               >
                 {{ item.day }}
               </p>
@@ -161,13 +161,13 @@
                       </h3>
                       <p>[{{ schedule.level }}]</p>
                       <span>
-                        <span v-if="state !== 'mypage'">
+                        <span v-if="state !== 'detail'">
                           Class Level:
                           {{ schedule.level }}</span
                         >
-                        <span v-if="state === 'mypage'">{{ schedule.content }}</span>
+                        <span v-if="state === 'detail'">{{ schedule.content }}</span>
                       </span>
-                      <a v-if="state !== 'mypage'" @click="scheduleSubscribeAdd(schedule)">
+                      <a v-if="state !== 'detail'" @click="scheduleSubscribeAdd(schedule)">
                         임시 상세등록
                       </a>
                     </li>
@@ -187,7 +187,7 @@
 
   export default {
     props: {
-      propsState: String,
+      state: String,
     },
     async created() {
       let agrument = {
@@ -196,7 +196,6 @@
         memberSeq: this.id,
         date: `${this.year}-${this.month}-${this.day}`,
       };
-      this.state = 'mypage';
       try {
         console.log(agrument);
         const {data: result} = await scheduleFind(agrument);
@@ -205,6 +204,8 @@
       } catch (e) {
         console.log(e);
       }
+
+      console.log('====>111', this.state);
     },
     data: function () {
       const date = new Date();
@@ -218,7 +219,6 @@
         month: month + 1,
         data: [],
         addBt: false,
-        state: this.propsState,
         startDay: '',
         endDay: '',
         checkedDays: [],
