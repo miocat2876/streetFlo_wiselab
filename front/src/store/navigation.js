@@ -11,7 +11,7 @@ export default {
     }
   },
   actions: {
-    onNav ({ commit } ){
+    onNav ({ commit }){
       commit('updateState', {
         [`isShowNav`]: true
       })

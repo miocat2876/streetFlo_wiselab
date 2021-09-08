@@ -56,12 +56,17 @@ header {
       width: 35vh;
       height: 100vh;
       background-color: black;
+      margin-right: -100%;
       transition: 0.4s;
       text-align: right;
       position: absolute;
       right: 0;
       top: 0;
       z-index: 100;
+
+      &.show {
+        margin-right: 0;
+      }
   
       .nav {
         width: 100%;
