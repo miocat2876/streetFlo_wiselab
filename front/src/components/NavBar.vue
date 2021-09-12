@@ -34,13 +34,17 @@
             /></a>
           </div>
           <ul class="nav_menu">
-            <li class="nav_list nav_login">
+            <li 
+              v-if="!user"
+              class="nav_list nav_login"
+            >
               <a
                 href="javascript:void(0)"
                 @click="onLogin()"
               >Log-In</a>
             </li>
             <li
+              v-if="!user"
               class="nav_list nav_signUp"
             >
               <a
@@ -49,9 +53,11 @@
               >Sign-Up</a>
             </li>
             <li 
+              v-if="user"
               class="nav_list"
             >
               <a 
+                @click="handleClickSignOut"
                 href="javascript:void(0)"
               >Log-Out</a>
             </li>
@@ -91,6 +97,7 @@
     
 
     <div
+      v-if="!user"
       id="loginPopupLayer"
       :class="{ show: isShowLogin }"
     >
@@ -136,6 +143,7 @@
                 class="google"
               />
               <a 
+                @click="handleClickSignIn"
                 href="javascript:void(0)"
               >Google</a>
             </li>
@@ -146,6 +154,7 @@
 
 
     <div
+      v-if="!user"
       id="signUpPopupLayer1"
       :class="{ show: isShowSignUp }"
     >
@@ -172,6 +181,7 @@
 
 
     <div
+      v-if="!user"
       id="signUpPopupLayer2"
       :class="{ show: isShowSignUp }"
     >
@@ -229,11 +239,17 @@
 
 
 <script>
+import { inject, toRefs } from "vue";
 
 
 export default {
+  name: "NavBar",
+  props: {
+    msg: String,
+  },
   data () {
     return {
+      user: '',
       navigations: {}
     }
   },
@@ -259,6 +275,58 @@ export default {
         requestName: 'navigations'
       })
       this.done = true
+    },
+     async handleClickSignIn(){
+      try {
+        const googleUser = await this.$gAuth.signIn();
+        if (!googleUser) {
+          return null;
+        }
+        console.log("googleUser", googleUser);
+        this.user = googleUser.getBasicProfile().getEmail();
+        console.log("getId", this.user);
+        console.log("getBasicProfile", googleUser.getBasicProfile());
+        console.log("getAuthResponse", googleUser.getAuthResponse());
+        console.log(
+          "getAuthResponse",
+          this.$gAuth.instance.currentUser.get().getAuthResponse()
+        );
+
+      } catch (error) {
+        //on fail do something
+        console.error(error);
+        return null;
+      }
+    },
+    async handleClickGetAuthCode(){
+      try {
+        const authCode = await this.$gAuth.getAuthCode();
+        console.log("authCode", authCode);
+      } catch(error) {
+        //on fail do something
+        console.error(error);
+        return null;
+      }
+    },
+    async handleClickSignOut() {
+      try {
+        await this.$gAuth.signOut();
+        console.log("isAuthorized", this.Vue3GoogleOauth.isAuthorized);
+        this.user = "";
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    setup(props) {
+    const { isSignIn } = toRefs(props);
+    const Vue3GoogleOauth = inject("Vue3GoogleOauth");
+
+    const handleClickLogin = () => {};
+    return {
+      Vue3GoogleOauth,
+      handleClickLogin,
+      isSignIn,
+    };
     },
     onNav() {
       this.$store.dispatch('navigation/onNav')
