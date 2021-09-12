@@ -38,7 +38,7 @@
 
     <insert id="join" parameterType="MemberDto">
         INSERT into MEMBER(
-            ID,
+            MEM_NAME,
             MAIL_ADDRESS,
             PROFILE_CONTENT,
             MEMBER_CLASS
