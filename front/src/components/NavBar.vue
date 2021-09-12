@@ -35,12 +35,30 @@
           </div>
           <ul class="nav_menu">
             <li class="nav_list nav_login">
-              <a href="javascript:void(0)">Log-In</a>
+              <a
+                href="javascript:void(0)"
+                @click="onLogin()"
+              >Log-In</a>
             </li>
-            <li class="nav_list nav_signUp">
-              <a href="javascript:void(0)">Sign-Up</a>
+            <li
+              class="nav_list nav_signUp"
+            >
+              <a
+                href="javascript:void(0)"
+                @click="onSignUp()"
+              >Sign-Up</a>
             </li>
-            <li class="nav_list">
+            <li 
+              class="nav_list"
+            >
+              <a 
+                href="javascript:void(0)"
+              >Log-Out</a>
+            </li>
+            <li 
+              v-if="user"
+              class="nav_list"
+            >
               <a href="/calendarTeacher">Mypage</a>
             </li>
             <li class="nav_list nav_search">
@@ -73,13 +91,17 @@
     
 
     <div
-      v-if="false"
       id="loginPopupLayer"
+      :class="{ show: isShowLogin }"
     >
       <div class="popup_login">
         <div class="title_bar">
           <h2>SNS Log-In</h2>
-          <a class="close"></a>
+          <a
+            class="close"
+            href="javascript:void(0)"
+            @click="offLogin()"
+          ></a>
         </div>
         <div class="content_box">
           <ul class="sns">
@@ -89,7 +111,7 @@
                 alt="kakao"
               /> <a href="/oauth2/authorization/kakao">KakaoTalk</a>
             </li>
-               
+            <!--                
             <li>
               <a href="/oauth2/authorization/facebook">
                 <div
@@ -107,13 +129,15 @@
                 src="@/images/line.svg"
                 alt="line"
               /> <a href="/oauth2/authorization/naver">Line</a>
-            </li>
+            </li> -->
             <li>
               <img
                 src="@/images/google.svg"
                 class="google"
               />
-              <a href="/oauth2/authorization/google">Google</a>
+              <a 
+                href="javascript:void(0)"
+              >Google</a>
             </li>
           </ul>
         </div>
@@ -122,13 +146,17 @@
 
 
     <div
-      v-if="false"
       id="signUpPopupLayer1"
+      :class="{ show: isShowSignUp }"
     >
       <div class="popup_login">
         <div class="title_bar">
           <h2>SNS Sign-Up</h2>
-          <a class="close"></a>
+          <a
+            class="close"
+            href="javascript:void(0)"
+            @click="offSignUp()"
+          ></a>
         </div>
         <div class="content_box">
           <ul class="signUpbtn">
@@ -144,13 +172,17 @@
 
 
     <div
-      v-if="false"
       id="signUpPopupLayer2"
+      :class="{ show: isShowSignUp }"
     >
       <div class="popup_login">
         <div class="title_bar">
           <h2>SNS Sign-Up</h2>
-          <a class="close"></a>
+          <a
+            class="close"
+            href="javascript:void(0)"
+            @click="offSignUp()"
+          ></a>
         </div>
         <div class="content_box">
           <ul class="sns">
@@ -160,7 +192,7 @@
                 alt="kakao"
               /> <a href="/oauth2/authorization/kakao">KakaoTalk</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="/oauth2/authorization/facebook">
                 <div
                   class="fb-login-button"
@@ -177,13 +209,15 @@
                 src="@/images/line.svg"
                 alt="line"
               /> <a href="/oauth2/authorization/naver">Line</a>
-            </li>
+            </li> -->
             <li>
               <img
                 src="@/images/google.svg"
                 class="google"
               />
-              <a href="/oauth2/authorization/google">Google</a>
+              <a 
+                href="javascript:void(0)"
+              >Google</a>
             </li>
           </ul>
         </div>
@@ -206,11 +240,19 @@ export default {
   computed: {
     isShowNav () {
       return this.$store.state.navigation.isShowNav
+    },
+    isShowLogin(){
+      return this.$store.state.navigation.isShowLogin
+    },
+    isShowSignUp(){
+      return this.$store.state.navigation.isShowSignUp
     }
   },
   created () {
     this.init()
   },
+
+
   methods: {
     async init () {
       this.navigations = await this.$fetch({
@@ -223,6 +265,18 @@ export default {
     },
     offNav () {
       this.$store.dispatch('navigation/offNav')
+    },
+    onLogin() {
+      this.$store.dispatch('navigation/onLogin')
+    },
+    offLogin() {
+      this.$store.dispatch('navigation/offLogin')
+    },
+    onSignUp() {
+      this.$store.dispatch('navigation/onSignUp')
+    },
+    offSignUp() {
+      this.$store.dispatch('navigation/offSignUp')
     }
   }
 }
