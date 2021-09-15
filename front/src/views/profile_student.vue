@@ -8,14 +8,14 @@
             <div class="top edit_profile clear">
                 <div class="left">
                     <a>
-                        <img src="/resources/assets/profile_img.png" alt="profile_img">
+                        <img src="@/images/profile_img.png" alt="profile_img"/>
                     </a>
                 </div>
                 <div class="right">
                     <ul>
                         <li>
                             <div class="title_box">
-                                <h4>이름:</h4> 
+                                <h4>이름/닉네임:</h4> 
                             </div>
                             <div class="value_box name">
                                 <input class="w100"/>
@@ -45,7 +45,10 @@
                             <div class="value_box level">
                                 <div class="combo_box">
                                     <select>
-                                        <option>select</option>
+                                        <option value="">Class Level</option>
+                                        <option value="beginner">-Beginner</option>
+                                        <option value="intermediate">-Intermediate</option>
+                                        <option value="master">-Master</option>
                                     </select>
                                 </div>
                             </div>
@@ -65,13 +68,13 @@
                     </li>
                 </ul>
             </div>
-            <a class="save_bt">Save >></a>
+            <a class="save_bt" @click="profileStudentAdd()">Save >></a>
         </div>
     </div>
 </template>
 
 <script>
-import { profileStudent } from '../api'
+import { profileStudentAdd } from '../api'
 
 export default {
     props: {
@@ -81,8 +84,13 @@ export default {
       let agrument = {
         
       };
-    }
+    },
+    method:{
+        profileStudentAdd() {
+            console.log("test");
+        },
+    },
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style lang="scss"></style>

@@ -14,8 +14,8 @@ const scheduleSubscribeAdd = (data) => {
   return axios.post(`${commonUrl}/scheduleSubscribeAdd`, data);
 };
 
-const profileStudent = (data) => {
-  return axios.post(`${commonUrl}/profileStudent`, data);
+const profileStudentAdd = (data) => {
+  return axios.post(`${commonUrl}/profileStudentAdd`, data);
 };
 
-export { scheduleFind, scheduleAdd, scheduleSubscribeAdd, profileStudent };
+export { scheduleFind, scheduleAdd, scheduleSubscribeAdd, profileStudentAdd };
