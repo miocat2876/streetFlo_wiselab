@@ -41,6 +41,13 @@ public class DataController {
 
     }
 
+     @RequestMapping("profileStudentAdd")
+    public int profileStudentAdd(@RequestBody profileStudentDto dto){
+
+        return calenderService.profileStudentAdd(dto);
+
+    }
+
 
 
 

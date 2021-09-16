@@ -29,12 +29,19 @@
                                 <div class="combo_box">
                                     <select>
                                         <option>select</option>
+                                        <option>Breaking</option>
+                                        <option>hiphop</option>
+                                        <option>Waacking</option>
                                     </select>
                                 </div>
                                 <p>/</p>
                                 <div class="combo_box">
                                     <select>
                                         <option>select</option>
+                                        <option>class1</option>
+                                        <option>class2</option>
+                                        <option>class3</option>
+                                        <option>class4</option>
                                     </select>
                                 </div>
                             </div>
