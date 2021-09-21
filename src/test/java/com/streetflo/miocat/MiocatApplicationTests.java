@@ -8,6 +8,7 @@ class MiocatApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("테스트임다");
     }
 
 }
