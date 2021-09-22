@@ -4,10 +4,17 @@ plugins {
     id 'java'
     id 'war'
 }
+ext{
+    junitJupiterVersion = '5.7.1'
+    junitPlatformVersion = '1.7.1'
+    junitVintageVersion = '5.7.1'
+}
 ext['tomcat.version'] = '9.0.30'
 group = 'com.streetFlo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+
 
 configurations {
     compileOnly {
@@ -22,7 +29,6 @@ repositories {
 
 dependencies {
 
-
     implementation 'org.springframework.boot:spring-boot-starter-batch'
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -32,7 +38,6 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     compile 'com.h2database:h2'
-    compile 'org.springframework.boot:spring-boot-starter-mustache'
     compile 'org.springframework.boot:spring-boot-starter-mail'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     annotationProcessor 'org.projectlombok:lombok'
@@ -60,6 +65,18 @@ dependencies {
 
     // ojdbc8 file import
     compile files("src/main/webapp/WEB-INF/lib/ojdbc8.jar")
+    
+    //parameterizedTest Junit 다중 파라미터 테스트 라이브러리
+    //parameterizedTest (name = "parameter displayName")
+    //valueSource (param = {value,value})
+    testCompile('org.junit.jupiter:junit-jupiter-params:5.5.1')
+
+    testImplementation "org.junit.platform:junit-platform-runner:${junitPlatformVersion}" // 테스트엔진 api
+    testImplementation "org.junit.vintage:junit-vintage-engine:${junitVintageVersion}" //3 4 버전
+    testImplementation "org.junit.jupiter:junit-jupiter-migrationsupport:${junitVintageVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}" // 5버전
+    testImplementation "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}" // 다중 파라미터
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
 }
 
 test {
