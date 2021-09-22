@@ -28,8 +28,7 @@ public class CalenderController {
     	 * 3. 스케줄 DB 조회 1달 기준
     	 * 4. json타입으로 리턴 (스케줄에 대한 상세 값 포함)
     	 */
-    	
-    	
+
 
 		return null;
     }

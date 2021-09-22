@@ -5,17 +5,25 @@
         <div class="top">
           <h1>Calendar</h1>
           <h3>
-            <a class="mon_before" @click="calenderPrev"></a>{{ computedMonthNames }}, {{ year
-            }}<a class="mon_after" @click="calenderNext"></a>
+            <a
+              class="mon_before"
+              @click="calenderPrev"
+            ></a>{{ computedMonthNames }}, {{ year
+            }}<a
+              class="mon_after"
+              @click="calenderNext"
+            ></a>
           </h3>
           <a
             class="add_bt"
             v-if="state === 'detail'"
             :class="[addBt ? 'on' : '']"
             @click="addBt = !addBt"
-            >Add Class</a
+          >Add Class</a>
+          <ul
+            class="add_class"
+            :style="[addBt ? 'display : block' : 'display : none']"
           >
-          <ul class="add_class" :style="[addBt ? 'display : block' : 'display : none']">
             <li class="date">
               <div class="title_box">
                 <h4>Date:</h4>
@@ -33,31 +41,66 @@
                   <label @click="computedEverydayToggle()">매일</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="mon" value="0" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="mon"
+                    value="0"
+                    v-model="checkedDays"
+                  />
                   <label for="mon">일</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="tue" value="1" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="tue"
+                    value="1"
+                    v-model="checkedDays"
+                  />
                   <label for="tue">월</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="wed" value="2" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="wed"
+                    value="2"
+                    v-model="checkedDays"
+                  />
                   <label for="wed">화</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="thu" value="3" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="thu"
+                    value="3"
+                    v-model="checkedDays"
+                  />
                   <label for="thu">수</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="fri" value="4" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="fri"
+                    value="4"
+                    v-model="checkedDays"
+                  />
                   <label for="fri">목</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="sat" value="5" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="sat"
+                    value="5"
+                    v-model="checkedDays"
+                  />
                   <label for="sat">금</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="sun" value="6" v-model="checkedDays" />
+                  <input
+                    type="checkbox"
+                    id="sun"
+                    value="6"
+                    v-model="checkedDays"
+                  />
                   <label for="sun">토</label>
                 </li>
               </ul>
@@ -95,14 +138,21 @@
               <div class="value_box">
                 <div class="combo_box">
                   <select v-model="level">
-                    <option value="select">select</option>
-                    <option value="test">test</option>
+                    <option value="select">
+                      select
+                    </option>
+                    <option value="test">
+                      test
+                    </option>
                   </select>
                 </div>
               </div>
             </li>
             <li>
-              <a class="save_bt" @click="scheduleAdd()">Save >></a>
+              <a
+                class="save_bt"
+                @click="scheduleAdd()"
+              >Save >></a>
             </li>
           </ul>
         </div>
@@ -122,9 +172,13 @@
               <ul class="week clear">
                 <li>매일</li>
                 <li>월</li>
-                <li class="on">화</li>
+                <li class="on">
+                  화
+                </li>
                 <li>수</li>
-                <li class="on">목</li>
+                <li class="on">
+                  목
+                </li>
                 <li>금</li>
                 <li>토</li>
                 <li>일</li>
@@ -133,9 +187,15 @@
           </ul>
         </div>
       </div>
-      <div class="right" :style="[state !== 'detail' ? 'min-height: auto' : '']">
+      <div
+        class="right"
+        :style="[state !== 'detail' ? 'min-height: auto' : '']"
+      >
         <table>
-          <tr v-for="n in Math.ceil(computedMakeCaledar.length / 7)" :key="n">
+          <tr
+            v-for="n in Math.ceil(computedMakeCaledar.length / 7)"
+            :key="n"
+          >
             <td
               :class="[item.schedule ? 'able' : '']"
               v-for="item in computedMakeCaledar.slice((n - 1) * 7, 7 * n)"
@@ -147,13 +207,19 @@
               >
                 {{ item.day }}
               </p>
-              <div id="calendar" v-if="item.schedule">
+              <div
+                id="calendar"
+                v-if="item.schedule"
+              >
                 <div class="top">
                   <h2>{{ item.date }}</h2>
                 </div>
                 <div class="bottom">
                   <ul>
-                    <li v-for="schedule in item.schedule" :key="schedule.key">
+                    <li
+                      v-for="schedule in item.schedule"
+                      :key="schedule.key"
+                    >
                       <h3>
                         {{ schedule.startTime }}-{{ schedule.endTime }}
                         상태 :
@@ -163,11 +229,13 @@
                       <span>
                         <span v-if="state !== 'detail'">
                           Class Level:
-                          {{ schedule.level }}</span
-                        >
+                          {{ schedule.level }}</span>
                         <span v-if="state === 'detail'">{{ schedule.content }}</span>
                       </span>
-                      <a v-if="state !== 'detail'" @click="scheduleSubscribeAdd(schedule)">
+                      <a
+                        v-if="state !== 'detail'"
+                        @click="scheduleSubscribeAdd(schedule)"
+                      >
                         임시 상세등록
                       </a>
                     </li>
