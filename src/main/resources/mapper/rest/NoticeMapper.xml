@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.streetflo.miocat.dao.rest.NoticeDao">
+<mapper namespace="com.streetflo.miocat.dao.rest.NoticeMapper">
 
-    <select id="test2" resultType="TestDto">
+    <insert id="NoticeAdd" parameterType="NoticeDto">
 
-        SELECT 'test' test FROM DUAL
+        INSERT INTO NOTICE_BOARD
+        (
+          SCHEDULE_SEQ
+        , MEMBER_SEQ
+        , CONTENT
+        , BOARD_CREATE_DT
+        )
+        VALUES(#{scheSeq}
+              , #{memberSeq}
+              , #{content}
+              , #{distinction}
+              , #{startDay}
+              , #{endDay}
+              , STR_TO_DATE(#{startTime},'%T')
+              , STR_TO_DATE(#{endTime},'%T')
+              , #{level}
+              )
 
-    </select>
+    </insert>
 
 
 
