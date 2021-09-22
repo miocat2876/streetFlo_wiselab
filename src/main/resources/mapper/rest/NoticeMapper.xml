@@ -6,9 +6,3 @@
     <select id="test2" resultType="TestDto">
 
         SELECT 'test' test FROM DUAL
-
-    </select>
-
-
-
-</mapper>
