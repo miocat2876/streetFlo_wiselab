@@ -3,6 +3,14 @@ import Home from '@/views/Home';
 import Mypage from '@/views/Mypage';
 import LoginTest from '@/views/LoginTest'
 
+const requireAuth = () => (to, from, next) => {
+  if (this.$store.state.id !== '') {
+    return next();
+  }
+  alert('로그인이 필요한 페이지입니다.');
+  next('/');
+};
+
 const routes = [
     {
       path: '/',
@@ -22,32 +30,19 @@ const routes = [
     {
       path: '/MyPageOauth',
       name: 'MyPageOauth',
-      component: Mypage,
-      beforeEnter: function(to, from, next) { 
-        if (to.matched.some(function(routeInfo) {
-        return routeInfo.meta.authRequired;
-      })) {
-        alert('Login Please!');
-      } else {
-        console.log("routing success : '" + to.path + "'");
-      };
-      }
+      component: Mypage, 
+      beforeEnter: requireAuth()
     },
     {
       path: '/about',
       name: 'About',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
+      component: () => import('@/views/About.vue'),
     },
   ];
 
-  const router = createRouter({
+const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes,
-  });
-
-
+});
 
 export default router;
