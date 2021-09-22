@@ -78,7 +78,7 @@
               <a href="javascript:void(0)">FAQ</a>
             </li>
             <li class="nav_list">
-              <a href="javascript:void(0)">About Us</a>
+              <a href="/about">About Us</a>
             </li>
           </ul>
           <div class="nav_sns">
