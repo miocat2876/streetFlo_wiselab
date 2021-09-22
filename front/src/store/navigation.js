@@ -1,7 +1,9 @@
 export default {
   namespaced: true,
   state: () => ({
-    isShowNav: false
+    isShowNav: false,
+    isShowLogin: false,
+    isShowSignUp: false
   }),
   mutations: {
     updateState (state, payload) {
@@ -11,7 +13,7 @@ export default {
     }
   },
   actions: {
-    onNav ({ commit } ){
+    onNav ({ commit }){
       commit('updateState', {
         [`isShowNav`]: true
       })
@@ -19,6 +21,26 @@ export default {
     offNav ({ commit } ) {
       commit('updateState', {
         [`isShowNav`]: false
+      })
+    },
+    onLogin({commit}) {
+      commit('updateState', {
+        [`isShowLogin`]: true
+      })
+    },
+    offLogin({commit}) {
+      commit('updateState', {
+        [`isShowLogin`]: false
+      })
+    },
+    onSignUp({commit}) {
+      commit('updateState', {
+        [`isShowSignUp`]: true
+      })
+    },
+    offSignUp({commit}) {
+      commit('updateState', {
+        [`isShowSignUp`]: false
       })
     }
   }
