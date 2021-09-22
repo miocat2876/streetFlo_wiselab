@@ -66,3 +66,201 @@ INFO  21-09-22 08:48:37[restartedMain] [OptionalLiveReloadServer:58] - LiveReloa
 INFO  21-09-22 08:48:37[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
 INFO  21-09-22 08:48:37[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
 INFO  21-09-22 08:48:37[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 5.559 seconds (JVM running for 7.259)
+INFO  21-09-22 12:27:20[Thread-18] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-09-22 12:27:20[Thread-18] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-09-22 12:27:20[Thread-18] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-09-22 12:27:20[Thread-18] [HikariDataSource:350] - HikariPool-5 - Shutdown initiated...
+INFO  21-09-22 12:27:20[Thread-18] [HikariDataSource:352] - HikariPool-5 - Shutdown completed.
+INFO  21-09-22 12:27:20[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 25352 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-09-22 12:27:20[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+INFO  21-09-22 12:27:20[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$49765b25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-09-22 12:27:20[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-09-22 12:27:20[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-09-22 12:27:20[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-09-22 12:27:20[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-09-22 12:27:20[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-09-22 12:27:20[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-09-22 12:27:20[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-09-22 12:27:20[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 629 ms
+INFO  21-09-22 12:27:20[restartedMain] [HikariDataSource:110] - HikariPool-6 - Starting...
+INFO  21-09-22 12:27:20[restartedMain] [HikariDataSource:123] - HikariPool-6 - Start completed.
+INFO  21-09-22 12:27:20[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/streetFlo?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-09-22 12:27:21[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-09-22 12:27:21[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-09-22 12:27:21[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-09-22 12:27:21[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-09-22 12:27:21[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-22 12:27:21[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-09-22 12:27:21[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62d45521, org.springframework.security.web.context.SecurityContextPersistenceFilter@77a3c1b1, org.springframework.security.web.header.HeaderWriterFilter@7bf68ba7, org.springframework.security.web.authentication.logout.LogoutFilter@4aa221ea, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2ccb22b3, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1f8a954e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ff5b287, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@50f68696, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fe46518, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@300062f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25dde881, org.springframework.security.web.session.SessionManagementFilter@3a1ea48b, org.springframework.security.web.access.ExceptionTranslationFilter@1de2b5a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ce9df22]
+INFO  21-09-22 12:27:21[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-09-22 12:27:21[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-09-22 12:27:21[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-09-22 12:27:21[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-09-22 12:27:21[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-09-22 12:27:21[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-09-22 12:27:21[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-09-22 12:27:21[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-09-22 12:27:21[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 1.155 seconds (JVM running for 682.513)
+INFO  21-09-22 12:27:21[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-09-22 12:27:20[Thread-18] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-09-22 12:27:20[Thread-18] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-09-22 12:27:20[Thread-18] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-09-22 12:27:20[Thread-18] [HikariDataSource:350] - HikariPool-5 - Shutdown initiated...
+INFO  21-09-22 12:27:20[Thread-18] [HikariDataSource:352] - HikariPool-5 - Shutdown completed.
+INFO  21-09-22 12:27:20[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 25352 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-09-22 12:27:20[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-09-22 12:27:20[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+INFO  21-09-22 12:27:20[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$49765b25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-09-22 12:27:20[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-09-22 12:27:20[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-09-22 12:27:20[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-09-22 12:27:20[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-09-22 12:27:20[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-09-22 12:27:20[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-09-22 12:27:20[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-09-22 12:27:20[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 629 ms
+INFO  21-09-22 12:27:20[restartedMain] [HikariDataSource:110] - HikariPool-6 - Starting...
+INFO  21-09-22 12:27:20[restartedMain] [HikariDataSource:123] - HikariPool-6 - Start completed.
+INFO  21-09-22 12:27:20[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/streetFlo?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-09-22 12:27:21[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-09-22 12:27:21[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-09-22 12:27:21[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-09-22 12:27:21[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:27:21[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-09-22 12:27:21[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-22 12:27:21[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-09-22 12:27:21[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62d45521, org.springframework.security.web.context.SecurityContextPersistenceFilter@77a3c1b1, org.springframework.security.web.header.HeaderWriterFilter@7bf68ba7, org.springframework.security.web.authentication.logout.LogoutFilter@4aa221ea, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2ccb22b3, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1f8a954e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ff5b287, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@50f68696, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fe46518, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@300062f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25dde881, org.springframework.security.web.session.SessionManagementFilter@3a1ea48b, org.springframework.security.web.access.ExceptionTranslationFilter@1de2b5a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ce9df22]
+INFO  21-09-22 12:27:21[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-09-22 12:27:21[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-09-22 12:27:21[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-09-22 12:27:21[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-09-22 12:27:21[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-09-22 12:27:21[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-09-22 12:27:21[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-09-22 12:27:21[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-09-22 12:27:21[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 1.155 seconds (JVM running for 682.513)
+INFO  21-09-22 12:27:21[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-09-22 12:29:33[Thread-26] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-09-22 12:29:33[Thread-26] [TilesAccess:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-09-22 12:29:33[Thread-26] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-09-22 12:29:33[Thread-26] [HikariDataSource:350] - HikariPool-6 - Shutdown initiated...
+INFO  21-09-22 12:29:33[Thread-26] [HikariDataSource:352] - HikariPool-6 - Shutdown completed.
+INFO  21-09-22 12:29:33[restartedMain] [MiocatApplication:55] - Starting MiocatApplication using Java 11.0.11 on DESKTOP-EUJHUPH with PID 25352 (C:\Users\kim\IdeaProjects\streetFlo\build\classes\java\main started by kim in C:\Users\kim\IdeaProjects\streetFlo)
+INFO  21-09-22 12:29:33[restartedMain] [MiocatApplication:664] - The following profiles are active: oauth,dev,ssl
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationExtensionSupport:349] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.streetflo.miocat.domain.user.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationDelegate:250] - Multiple Spring Data modules found, entering strict repository configuration mode!
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-09-22 12:29:33[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+INFO  21-09-22 12:29:33[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$49765b25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-09-22 12:29:33[restartedMain] [AnnotationActionEndpointMapping:236] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+INFO  21-09-22 12:29:33[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 9090 (http)
+INFO  21-09-22 12:29:33[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-9090"]
+INFO  21-09-22 12:29:33[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-09-22 12:29:33[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+INFO  21-09-22 12:29:33[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-09-22 12:29:33[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-09-22 12:29:33[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 610 ms
+INFO  21-09-22 12:29:33[restartedMain] [HikariDataSource:110] - HikariPool-7 - Starting...
+INFO  21-09-22 12:29:33[restartedMain] [HikariDataSource:123] - HikariPool-7 - Start completed.
+INFO  21-09-22 12:29:33[restartedMain] [H2ConsoleAutoConfiguration:68] - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://kkm1640.iptime.org:9504/streetFlo?characterEncoding=UTF-8&serverTimezone=UTC'
+INFO  21-09-22 12:29:33[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-09-22 12:29:33[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-09-22 12:29:33[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-09-22 12:29:33[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.TestDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.CalenderDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ContactDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.MemberDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.NoticeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.ReviewDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.rest.SearchDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.AcademyDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.FaqDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.GenreInfoDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.LogDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.Member2Dto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhoneAddressDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.PhotoDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.RecommendBoardDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ReviewKeywordDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleSubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.ScheduleWeekDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.SubscribeDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.TagDto matches criteria [is assignable to Object]
+DEBUG 21-09-22 12:29:34[restartedMain] [ResolverUtil:256] - Checking to see if class com.streetflo.miocat.dto.table.UrlDto matches criteria [is assignable to Object]
+WARN  21-09-22 12:29:34[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-22 12:29:34[restartedMain] [TilesAccess:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+INFO  21-09-22 12:29:34[restartedMain] [DefaultSecurityFilterChain:51] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63447c3e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fe4629a, org.springframework.security.web.header.HeaderWriterFilter@6155ceae, org.springframework.security.web.authentication.logout.LogoutFilter@4921adc9, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@25e4603, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6c83419c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4864a050, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@58f95946, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b56cc54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4439432e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e77204, org.springframework.security.web.session.SessionManagementFilter@3147b2d3, org.springframework.security.web.access.ExceptionTranslationFilter@6e3f5329, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45bfd73f]
+INFO  21-09-22 12:29:34[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+DEBUG 21-09-22 12:29:34[restartedMain] [RequestMappingHandlerAdapter:625] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+DEBUG 21-09-22 12:29:34[restartedMain] [RequestMappingHandlerMapping:349] - 24 mappings in 'requestMappingHandlerMapping'
+DEBUG 21-09-22 12:29:34[restartedMain] [SimpleUrlHandlerMapping:173] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+DEBUG 21-09-22 12:29:34[restartedMain] [ExceptionHandlerExceptionResolver:307] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+INFO  21-09-22 12:29:34[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-09-22 12:29:34[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-9090"]
+INFO  21-09-22 12:29:34[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 9090 (http) with context path ''
+INFO  21-09-22 12:29:34[restartedMain] [MiocatApplication:61] - Started MiocatApplication in 1.129 seconds (JVM running for 815.414)
+INFO  21-09-22 12:29:34[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
