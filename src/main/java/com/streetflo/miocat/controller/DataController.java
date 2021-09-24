@@ -20,6 +20,10 @@ public class DataController {
     @Autowired
     private CalenderService calenderService;
 
+/*
+    @Autowired
+    private ProfileService profileService;
+*/
     @RequestMapping("scheduleFind")
     public List<CalenderDto> scheduleFind(@RequestBody CalenderDto dto){
 
@@ -41,12 +45,9 @@ public class DataController {
 
     }
 
-     @RequestMapping("profileStudentAdd")
-    public int profileStudentAdd(@RequestBody profileStudentDto dto){
 
-        return calenderService.profileStudentAdd(dto);
 
-    }
+
 
 
 

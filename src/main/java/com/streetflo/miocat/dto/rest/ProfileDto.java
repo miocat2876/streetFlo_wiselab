@@ -5,11 +5,11 @@ import lombok.Data;
 
 
 @Data
-public class profileDto {
+public class ProfileDto {
     
-    private String name;
-    private String type1;
-    private String type2;
+    private String studentName;
+    private String genre1;
+    private String genre2;
     private String classLevel;
-    private String memo;    
+    private String studentContent;    
 }   
