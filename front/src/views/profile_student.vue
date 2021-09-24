@@ -18,7 +18,7 @@
                                 <h4>이름/닉네임:</h4> 
                             </div>
                             <div class="value_box name">
-                                <input class="w100"/>
+                                <input v-model="studentName" class="w100"/>
                             </div>
                         </li>
                         <li>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="value_box interest">
                                 <div class="combo_box">
-                                    <select>
+                                    <select v-model="genre1">
                                         <option>select</option>
                                         <option>Breaking</option>
                                         <option>hiphop</option>
@@ -36,7 +36,7 @@
                                 </div>
                                 <p>/</p>
                                 <div class="combo_box">
-                                    <select>
+                                    <select v-model="genre2">
                                         <option>select</option>
                                         <option>class1</option>
                                         <option>class2</option>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="value_box level">
                                 <div class="combo_box">
-                                    <select>
+                                    <select v-model="classLevel">
                                         <option value="">Class Level</option>
                                         <option value="beginner">-Beginner</option>
                                         <option value="intermediate">-Intermediate</option>
@@ -70,7 +70,7 @@
                             <h4>소개글<br/>(300자 내외)</h4>
                         </div>
                         <div class="value_box">
-                            <textarea></textarea>
+                            <textarea v-model="studentContent"></textarea>
                         </div>
                     </li>
                 </ul>
@@ -81,22 +81,41 @@
 </template>
 
 <script>
-import { profileStudentAdd } from '../api'
+import { profileStudentAdd} from '../api'
 
 export default {
     props: {
-      propsState: String,
+        propsState: String,
     },
     async created() {
       let agrument = {
         
       };
     },
-    method:{
-        profileStudentAdd() {
-            console.log("test");
+    data: function() {
+        return {
+            studentName    : ''
+          , genre1         : []
+          , genre2         : []
+          , classLevel     : []
+          , studentContent : ''
+        };
+    },
+    methods: {
+        async profileStudentAdd() {
+            let agrument = {
+                  studentName    : this.studentName
+                , genre1         : this.genre1
+                , genre2         : this.genre2
+                , classLevel     : this.classLevel
+                , studentContent : this.studentContent
+            }; 
+            console.log(agrument);
+
+            const {data} = await profileStudentAdd(agrument);
         },
     },
+    
 };
 </script>
 

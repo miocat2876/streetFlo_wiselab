@@ -4,6 +4,7 @@ import com.streetflo.miocat.dto.rest.CalenderDto;
 import com.streetflo.miocat.dto.table.ScheduleDto;
 import com.streetflo.miocat.dto.table.ScheduleSubscribeDto;
 import com.streetflo.miocat.service.rest.CalenderService;
+import com.streetflo.miocat.service.rest.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,10 @@ public class DataController {
     @Autowired
     private CalenderService calenderService;
 
+/*
+    @Autowired
+    private ProfileService profileService;
+*/
     @RequestMapping("scheduleFind")
     public List<CalenderDto> scheduleFind(@RequestBody CalenderDto dto){
 
@@ -41,12 +46,12 @@ public class DataController {
 
     }
 
-     @RequestMapping("profileStudentAdd")
-    public int profileStudentAdd(@RequestBody profileStudentDto dto){
 
-        return calenderService.profileStudentAdd(dto);
-
+    @RequestMapping("profileStudentAdd")
+    public int profileStudentAdd(@RequestBody ProfileDto dto){
+        return profileService.profileStudentAdd(dto);
     }
+
 
 
 
