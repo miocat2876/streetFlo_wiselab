@@ -54,12 +54,12 @@ public class NoticeController {
 	}
 
 
-	@PostMapping(path = "/noticeInsertTest")
-	public String noticeInsert(Model model) {
+// 	@PostMapping(path = "/noticeInsertTest")
+// 	public String noticeInsert(Model model) {
 
 
-		return null;
-	}
+// 		return null;
+// 	}
 
 
 
