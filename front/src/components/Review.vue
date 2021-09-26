@@ -64,12 +64,15 @@ export default {
   methods: {
     async init() {
       const _this = this
-      const { data } = await this.$fetch({
-        method:'GET',
-        url: 'http://localhost:9090/reviewTest'
+      const data  = await this.$axios.get('/reviewTest')
+      .then((res)=>{
+          this.items = res.data
+          console.log(res.data)
       })
-       this.items = data
-       console.log(data)
+      .catch((err)=>{
+				console.log(err);
+			})
+    
     }
   }
 }

@@ -17,8 +17,8 @@ const app = createApp(App);
 let gauthClientId = process.env.VUE_APP_GOOGLE_OAUTH_PATH
 const gAuthOptions = { clientId: gauthClientId, scope: 'email', prompt: 'consent', fetch_basic_profile: false }
 
-axios.defaults.baseURL = "http://localhost:9090";
-app.config.globalProperties.axios = axios;
+app.config.globalProperties.$axios = axios;
+axios.defaults.baseURL = 'http://localhost:9090';
 
 app.use(store).use(router).use(GAuth, gAuthOptions).use(fetch);
 

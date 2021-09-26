@@ -109,13 +109,21 @@ export default {
 	methods:{
     async init() {
     const _this = this
-    const { data } = await this.$fetch({
-      method:'GET',
-      url: 'http://localhost:9090/noticeTest'
-    })
-      this.items = data
-      console.log(data)
-    },
+    const data = 
+     await this.$axios.get('/noticeTest')
+      .then((res)=>{
+          this.items = res.data
+          console.log(res.data)
+      })
+      .catch((err)=>{
+				console.log(err);
+			})
+  },
+
+
+
+
+
 		myPage(){ 
 			this.$router.push({path:'./Mypage',query:this.body});
 		}
