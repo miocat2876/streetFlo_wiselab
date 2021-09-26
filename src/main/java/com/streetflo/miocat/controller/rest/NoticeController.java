@@ -10,7 +10,10 @@ import com.streetflo.miocat.util.page.Page;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,8 +31,40 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NoticeController {
 
+
+	@GetMapping("/noticeTest")
+	public List<Map> reviewReadTest(Model model) {
+
+
+		List<Map> list = new ArrayList<>(2);
+
+		Map<String, String> result1 = new HashMap<String, String>();
+		result1.put("lect", "어떤 수업~");
+		result1.put("cont", "공지 내용~~");
+
+		Map<String, String> result2 = new HashMap<String, String>();
+		result2.put("lect", "어떤 수업!!");
+		result2.put("cont", "공지 내용!!");
+
+		list.add(result1);
+		list.add(result2);
+
+		return list;
+
+	}
+
+
+// 	@PostMapping(path = "/noticeInsertTest")
+// 	public String noticeInsert(Model model) {
+
+
+// 		return null;
+// 	}
+
+
+
 	@GetMapping(path = "/test8")
-    public String noticeRead(NoticeDto dto, Model model, @LoginUser SessionUser user) {
+    public String noticeRead(NoticeDto dto, Model model) {
     	
     	
     	//https://gracelove91.tistory.com/24 프로퍼티 세팅하기
@@ -45,7 +80,10 @@ public class NoticeController {
 		return page.process().toString();
     }
 
-    public String noticeInsert(Model model, @LoginUser SessionUser user) {
+
+
+
+    public String noticeInsert(Model model, String userId) {
     	
     	
     	/* 1. 회원 pk 받음
@@ -54,12 +92,14 @@ public class NoticeController {
     	 * 4. DB 입력
     	 * 5. 성공값 반환
     	 */
+
+
     	
     	
 		return null;
     }
 
-    public String noticeDelete(Model model, @LoginUser SessionUser user) {
+    public String noticeDelete(Model model) {
     	
     	/* 1. 회원 pk 받음
     	 * 2. 회원 검증

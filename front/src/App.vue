@@ -1,20 +1,20 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
   <div>
-    <r-n-b></r-n-b>
+    <nav-bar></nav-bar>
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import RNB from '@/components/RNB'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+
 
 export default {
   components:{
-    RNB
+    NavBar,
+    Footer
   }
 }
 </script>

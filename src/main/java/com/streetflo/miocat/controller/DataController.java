@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//https://leejisoo860911.tistory.com/2
 @RestController
 //@RequestMapping(value = "/teacher/") -> 이 부분 학생 / 선생님 분리 고민 중
 public class DataController {

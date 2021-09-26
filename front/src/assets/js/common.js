@@ -150,38 +150,6 @@ $(function () {
     });
 
 
-// show menu
-     $(".menu_toggle").click(function () {
-
-        $("nav").stop().animate({
-            "margin-right": 0
-
-        }, 500)
-       
-    })
-    $(".nav_toggle").click(function () {
-        $("nav").stop().animate({
-            "margin-right": "-100%"
-
-        }, 500)
-    })
-
-//toggle sub menu
-    
-    $(".nav_search").click(function () {
-        $(".nav_search_sub").slideToggle(400);
-    })
-
-//sns popup
-    $("#layerPopup").hide();
-    $(".nav_login").click(function () {
-        $("#layerPopup").show();
-    })
-    $(".popup_login .close").click(function () {
-        $("#layerPopup").hide();
-    })
-
-
 
   
 

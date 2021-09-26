@@ -5,7 +5,7 @@ header {
     height: 40px;
     background-color: black;
     position: fixed;
-    z-index: 10;
+    z-index: 15;
   
     &::before {
       display: block;
@@ -63,6 +63,10 @@ header {
       right: 0;
       top: 0;
       z-index: 100;
+
+      &.show {
+        margin-right: 0;
+      }
   
       .nav {
         width: 100%;
@@ -176,184 +180,215 @@ footer {
   }
   
   /******index sns popup******/
-  
-  #layerPopup {
+
+  #signUpPopupLayer1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+  #signUpPopupLayer2 {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100vh;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
-  
-    .popup_login {
-      position: absolute;
-      z-index: 1000;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 846px;
-      height: auto;
-      margin: 0 auto;
-  
-      .title_bar {
-        position: relative;
-        height: 76px;
-        width: calc(100% - 152px);
-        line-height: 56px;
-        padding-top: 20px;
-        margin: 0px 76px;
-        text-align: center;
-        background-image: "@/images/popup_t.png";
-        background-repeat: repeat-x;
-  
-        h2 {
-          color: white;
-        }
-  
-        .close {
-          color: white;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+    
+  }
+  #loginPopupLayer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+
+  .popup_login {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 846px;
+    height: auto;
+    margin: 0 auto;
+    .title_bar {
+      position: relative;
+      height: 76px;
+      width: calc(100% - 152px);
+      line-height: 56px;
+      padding-top: 20px;
+      margin: 0px 76px;
+      text-align: center;
+      background-image: "@/images/popup_t.png";
+      background-repeat: repeat-x;
+      h2 {
+        color: white;
+      }
+      .close {
+        color: white;
+        position: absolute;
+        right: -24px;
+        top: 36px;
+        z-index: 10;
+        width: 2px;
+        height: 24px;
+        background-color: white;
+        transform: rotate(45deg);
+        &::before {
+          content: "";
           position: absolute;
-          right: -24px;
-          top: 36px;
-          z-index: 10;
+          right: 0px;
+          top: 0px;
           width: 2px;
           height: 24px;
           background-color: white;
-          transform: rotate(45deg);
-  
-          &::before {
-            content: "";
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            width: 2px;
-            height: 24px;
-            background-color: white;
-            transform: rotate(-90deg);
-          }
-        }
-  
-        &::before {
-          content: "";
-          position: absolute;
-          height: 76px;
-          width: 76px;
-          left: -76px;
-          top: 0px;
-          background-image: "@/images/popup_tl.png";
-        }
-  
-        &::after {
-          content: "";
-          position: absolute;
-          height: 76px;
-          width: 76px;
-          left: 100%;
-          top: 0px;
-          background-image: "@/images/popup_tl.png";
-          transform: scaleX(-1);
+          transform: rotate(-90deg);
         }
       }
-  
-      .content_box {
-        width: 100%;
-        padding: 0px 46px;
-        margin-bottom: 76px;
-        background-image: "@/images/popup_l.png", "@/images/popup_r.png";
-        background-repeat: repeat-y;
-        background-position: left, right;
-  
-        .sns {
-          display: flex;
-          flex-wrap: wrap;
-          width: 350px;
-          margin: auto;
-          padding-top: 40px;
-          background-color: white;
-  
-          li {
-            width: 48%;
-            height: 50px;
-            margin: 1%;
-            background-color: pink;
-            position: relative;
-  
+      &::before {
+        content: "";
+        position: absolute;
+        height: 76px;
+        width: 76px;
+        left: -76px;
+        top: 0px;
+        background-image: "@/images/popup_tl.png";
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: 76px;
+        width: 76px;
+        left: 100%;
+        top: 0px;
+        background-image: "@/images/popup_tl.png";
+        transform: scaleX(-1);
+      }
+    }
+    .content_box {
+      width: 100%;
+      padding: 0px 46px;
+      margin-bottom: 76px;
+      background-image: "@/images/popup_l.png", "@/images/popup_r.png";
+      background-repeat: repeat-y;
+      background-position: left, right;
+      .sns {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        margin: auto;
+        padding-top: 40px;
+        background-color: white;
+        li {
+          width: 48%;
+          height: 50px;
+          margin: 1%;
+          background-color: pink;
+          position: relative;
+          img {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+          }
+          a {
+            display: block;
+            background-color: white;
+            width: 70%;
+            height: 45px;
+            line-height: 45px;
+            float: right;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            right: 3px;
+            transform: translateY(-50%);
+          }
+          &:nth-child(1) {
+            background-color: #ffe836;
+          }
+          &:nth-child(4) {
+            background-color: #3e65a4;
+          }
+          &:nth-child(3) {
+            background-color: #00cf40;
             img {
-              display: block;
-              width: 40px;
-              height: 40px;
-              position: absolute;
-              top: 50%;
-              left: 5px;
-              transform: translateY(-50%);
+              width: 36px;
+              height: 36px;
             }
-  
-            a {
-              display: block;
-              background-color: white;
-              width: 70%;
-              height: 45px;
-              line-height: 45px;
-              float: right;
-              text-align: center;
-              position: absolute;
-              top: 50%;
-              right: 3px;
-              transform: translateY(-50%);
-            }
-  
-            &:nth-child(1) {
-              background-color: #ffe836;
-            }
-  
-            &:nth-child(2) {
-              background-color: #3e65a4;
-            }
-  
-            &:nth-child(3) {
-              background-color: #00cf40;
-  
-              img {
-                width: 36px;
-                height: 36px;
-              }
-            }
-  
-            &:nth-child(4) {
-              background-color: #f4f4f4;
-  
-              img {
-                width: 25px;
-                height: 25px;
-                left: 10px;
-              }
+          }
+          &:nth-child(2) {
+            background-color: #f4f4f4;
+            img {
+              width: 25px;
+              height: 25px;
+              left: 10px;
             }
           }
         }
-  
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 76px;
-          display: block;
-          background-image: "@/images/popup_bl.png", "@/images/popup_br.png";
-          background-position: left, right;
-          background-repeat: no-repeat;
-          top: 100%;
-          left: 0px;
+      }
+      .signUpbtn {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        margin: auto;
+        padding-top: 40px;
+        background-color: white;
+        li {
+          width: 48%;
+          height: 50px;
+          margin: 1%;
+          background-color: black;
+          color: white;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-  
-        &::after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 76px;
-          width: calc(100% - 152px);
-          height: 76px;
-          background-image: "@/images/popup_b.png";
-          background-repeat: repeat-x;
-        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 76px;
+        display: block;
+        background-image: "@/images/popup_bl.png", "@/images/popup_br.png";
+        background-position: left, right;
+        background-repeat: no-repeat;
+        top: 100%;
+        left: 0px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 76px;
+        width: calc(100% - 152px);
+        height: 76px;
+        background-repeat: repeat-x;
       }
     }
   }
+  

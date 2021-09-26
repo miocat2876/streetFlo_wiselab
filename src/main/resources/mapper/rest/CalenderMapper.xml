@@ -56,117 +56,134 @@
              INNER JOIN SCHEDULE_ALL
                 ON LVL <![CDATA[ < 31 ]]>
         )
-        SELECT S.DAY                                          AS 'day'
-             , CONCAT(DATE_FORMAT(#{date},"%y/%m"),'/',S.DAY) AS 'date'
-             , S.SEQ                                          AS 'seq'
-             , S.MEMBER_SEQ                                   AS 'memberSeq'
-             , S.CONTENT                                      AS 'content'
-             , S.DISTINCTION                                  AS 'distinction'
-             , S.START_DAY                                    AS 'startDay'
-             , S.END_DAY                                      AS 'endDay'
-             , DATE_FORMAT(S.START_TIME,'%k:%i')              AS 'startTime'
-             , DATE_FORMAT(S.END_TIME,'%k:%i')                AS 'endTime'
-             , S.LEVEL                                        AS 'level'
-             , S.TYPE                                         AS 'type'
-             , @ROWID:=@ROWID+1                               AS 'key'
-          FROM (SELECT SA.DAY
-                     , S.SEQ
-                     , S.MEMBER_SEQ
-                     , S.CONTENT
-                     , S.DISTINCTION
-                     , S.START_DAY
-                     , S.END_DAY
-                     , S.START_TIME
-                     , S.END_TIME
-                     , S.LEVEL
-                     , S.TYPE
-                  FROM (SELECT S.SEQ
+        SELECT S.DAY             AS 'day'
+             , S.DATE            AS 'date'
+             , S.SEQ             AS 'seq'
+             , S.MEMBER_SEQ      AS 'memberSeq'
+             , S.CONTENT         AS 'content'
+             , S.DISTINCTION     AS 'distinction'
+             , S.START_DAY       AS 'startDay'
+             , S.END_DAY         AS 'endDay'
+             , START_TIME        AS 'startTime'
+             , S.END_TIME        AS 'endTime'
+             , S.LEVEL           AS 'level'
+             , CASE WHEN COUNT(*) > 1
+                    THEN 3
+                    ELSE S.TYPE
+                END AS 'type'
+             , @ROWID:=@ROWID+1  AS 'key'
+          FROM (SELECT S.DAY                                        AS 'DAY'
+                     , CONCAT(DATE_FORMAT(@date,"%y/%m"),'/',S.DAY) AS 'DATE'
+                     , S.SEQ                                        AS 'SEQ'
+                     , S.MEMBER_SEQ                                 AS 'MEMBER_SEQ'
+                     , S.CONTENT                                    AS 'CONTENT'
+                     , S.DISTINCTION                                AS 'DISTINCTION'
+                     , S.START_DAY                                  AS 'START_DAY'
+                     , S.END_DAY                                    AS 'END_DAY'
+                     , DATE_FORMAT(S.START_TIME,'%k:%i')            AS 'START_TIME'
+                     , DATE_FORMAT(S.END_TIME,'%k:%i')              AS 'END_TIME'
+                     , S.LEVEL                                      AS 'LEVEL'
+                     , S.TYPE                                       AS 'TYPE'
+                  FROM (SELECT SA.DAY
+                             , S.SEQ
                              , S.MEMBER_SEQ
                              , S.CONTENT
                              , S.DISTINCTION
-                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m') <![CDATA[ <= ]]> DATE_FORMAT(S.START_DAY,'%y-%m')
-                                    THEN S.START_DAY
-                                    ELSE LAST_DAY(#{date} - interval 1 month) + interval 1 DAY
-                                END AS START_DAY
-                             , CASE WHEN DATE_FORMAT(#{date},'%y-%m')<![CDATA[ >= ]]> DATE_FORMAT(S.END_DAY,'%y-%m')
-                                    THEN S.END_DAY
-                                    ELSE LAST_DAY(#{date})
-                                END AS END_DAY
+                             , S.START_DAY
+                             , S.END_DAY
                              , S.START_TIME
                              , S.END_TIME
                              , S.LEVEL
                              , S.TYPE
-                          FROM (SELECT SD.SEQ
-                                     , SD.MEMBER_SEQ
-                                     , SD.CONTENT
-                                     , SD.DISTINCTION
-                                     , SD.START_DAY
-                                     , SD.END_DAY
-                                     , SD.START_TIME
-                                     , SD.END_TIME
-                                     , SD.LEVEL
-                                     , 1 AS TYPE
-                                 FROM SCHEDULE AS SD
-                                INNER JOIN SUBSCRIBE AS SC
-                                   ON SD.MEMBER_SEQ = SC.SUBSCRIBE_MEMBER
-                                WHERE 'stu' = (SELECT MEMBER_CLASS
-                                                 FROM MEMBER
-                                                WHERE SEQ = #{memberSeq})
-                                UNION ALL
-                               SELECT SEQ
-                                    , MEMBER_SEQ
-                                    , CONTENT
-                                    , DISTINCTION
-                                    , START_DAY
-                                    , END_DAY
-                                    , START_TIME
-                                    , END_TIME
-                                    , LEVEL
-                                    , 2 AS TYPE
-                                 FROM SCHEDULE
-                                WHERE MEMBER_SEQ = #{memberSeq}
-                                ) AS S
-                         WHERE DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
-                         ) AS S
-                     , (SELECT LVL AS 'DAY'
-                          FROM SCHEDULE_ALL) AS SA
-                         WHERE DATE_FORMAT(S.START_DAY,'%e') <![CDATA[ <= SA.DAY ]]>
-                           AND DATE_FORMAT(S.END_DAY,'%e') >= SA.DAY
-                           AND DATE_FORMAT(LAST_DAY(#{date} - INTERVAL 1 MONTH) + INTERVAL SA.DAY DAY,'%w')
-                            IN (SELECT WEEK
-                                  FROM SCHEDULE_WEEK AS SW
-                                 WHERE SW.SCHEDULE_SEQ = S.SEQ
-                                 )
-                 UNION ALL
-                SELECT DATE_FORMAT(SS.SUBSCRIBE_DT,'%e') AS DAY
-                     , S.SEQ
-                     , S.MEMBER_SEQ
-                     , S.CONTENT
-                     , S.DISTINCTION
-                     , SS.SUBSCRIBE_DT AS START_DAY
-                     , NULL AS END_DAY
-                     , S.START_TIME
-                     , S.END_TIME
-                     , S.LEVEL
-                     , SS.TYPE
-                  FROM (SELECT SCHEDULE_SEQ
-                             , SUBSCRIBE_DT
-                             , TYPE
-                          FROM SCHEDULE_SUBSCRIBE
-                         WHERE MEMBER_SEQ = #{memberSeq}
-                        ) AS SS
-                 INNER JOIN (SELECT SEQ
-                                  , MEMBER_SEQ
-                                  , CONTENT
-                                  , DISTINCTION
-                                  , START_TIME
-                                  , END_TIME
-                                  , LEVEL
-                               FROM SCHEDULE
-                              WHERE DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
-                              ) AS S
-                   ON (SS.SCHEDULE_SEQ = S.SEQ)
-              ) AS S,(SELECT @rowid:=0) AS RI
+                          FROM (SELECT S.SEQ
+                                     , S.MEMBER_SEQ
+                                     , S.CONTENT
+                                     , S.DISTINCTION
+                                     , CASE WHEN DATE_FORMAT(#{date},'%y-%m') <![CDATA[ <= ]]> DATE_FORMAT(S.START_DAY,'%y-%m')
+                                            THEN S.START_DAY
+                                            ELSE LAST_DAY(#{date} - interval 1 month) + interval 1 DAY
+                                        END AS START_DAY
+                                     , CASE WHEN DATE_FORMAT(#{date},'%y-%m')<![CDATA[ >= ]]> DATE_FORMAT(S.END_DAY,'%y-%m')
+                                            THEN S.END_DAY
+                                            ELSE LAST_DAY(#{date})
+                                        END AS END_DAY
+                                     , S.START_TIME
+                                     , S.END_TIME
+                                     , S.LEVEL
+                                     , S.TYPE
+                                  FROM (SELECT SD.SEQ
+                                             , SD.MEMBER_SEQ
+                                             , SD.CONTENT
+                                             , SD.DISTINCTION
+                                             , SD.START_DAY
+                                             , SD.END_DAY
+                                             , SD.START_TIME
+                                             , SD.END_TIME
+                                             , SD.LEVEL
+                                             , 1 AS TYPE
+                                         FROM SCHEDULE AS SD
+                                        INNER JOIN SUBSCRIBE AS SC
+                                           ON SD.MEMBER_SEQ = SC.SUBSCRIBE_MEMBER
+                                        WHERE 'stu' = (SELECT MEMBER_CLASS
+                                                         FROM MEMBER
+                                                        WHERE SEQ = #{memberSeq})
+                                        UNION ALL
+                                       SELECT SEQ
+                                            , MEMBER_SEQ
+                                            , CONTENT
+                                            , DISTINCTION
+                                            , START_DAY
+                                            , END_DAY
+                                            , START_TIME
+                                            , END_TIME
+                                            , LEVEL
+                                            , 2 AS TYPE
+                                         FROM SCHEDULE
+                                        WHERE MEMBER_SEQ = #{memberSeq}
+                                        ) AS S
+                                 WHERE DATE_FORMAT(#{date},'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')
+                                 ) AS S
+                             , (SELECT LVL AS 'DAY'
+                                  FROM SCHEDULE_ALL) AS SA
+                                 WHERE DATE_FORMAT(S.START_DAY,'%e') <![CDATA[ <= SA.DAY ]]>
+                                   AND DATE_FORMAT(S.END_DAY,'%e') >= SA.DAY
+                                   AND DATE_FORMAT(LAST_DAY(#{date} - INTERVAL 1 MONTH) + INTERVAL SA.DAY DAY,'%w')
+                                    IN (SELECT WEEK
+                                          FROM SCHEDULE_WEEK AS SW
+                                         WHERE SW.SCHEDULE_SEQ = S.SEQ
+                                         )
+                         UNION ALL
+                        SELECT DATE_FORMAT(SS.SUBSCRIBE_DT,'%e') AS DAY
+                             , S.SEQ
+                             , S.MEMBER_SEQ
+                             , S.CONTENT
+                             , S.DISTINCTION
+                             , SS.SUBSCRIBE_DT AS START_DAY
+                             , NULL AS END_DAY
+                             , S.START_TIME
+                             , S.END_TIME
+                             , S.LEVEL
+                             , SS.TYPE
+                          FROM (SELECT SCHEDULE_SEQ
+                                     , SUBSCRIBE_DT
+                                     , TYPE
+                                  FROM SCHEDULE_SUBSCRIBE
+                                 WHERE MEMBER_SEQ = #{memberSeq}
+                                ) AS SS
+                         INNER JOIN (SELECT SEQ
+                                          , MEMBER_SEQ
+                                          , CONTENT
+                                          , DISTINCTION
+                                          , START_TIME
+                                          , END_TIME
+                                          , LEVEL
+                                       FROM SCHEDULE
+                                      WHERE DATE_FORMAT(#{date},'%y-%m') <![CDATA[ <= DATE_FORMAT(START_DAY,'%y-%m') ]]>
+                                      ) AS S
+                           ON (SS.SCHEDULE_SEQ = S.SEQ)
+                      ) AS S
+              )AS S,(SELECT @rowid:=0) AS RI
+         GROUP BY S.DAY, S.SEQ, S.MEMBER_SEQ, S.CONTENT, S.DISTINCTION, S.START_TIME, S.END_TIME, S.LEVEL
     </select>
 
     <insert id="scheduleAdd" parameterType="ScheduleDto">
@@ -176,7 +193,6 @@
                   , CONTENT
                   , DISTINCTION
                   , START_DAY
-
                   , END_DAY
                   , START_TIME
                   , END_TIME
@@ -227,7 +243,7 @@
                                AND DATE_FORMAT(#{subscribeDt},'%y-%m-%d') BETWEEN DATE_FORMAT(START_DAY,'%y-%m-%d')
                                                                               AND DATE_FORMAT(END_DAY,'%y-%m-%d')
                                AND DATE_FORMAT(NOW(),'%y-%m-%d') <![CDATA[ <= DATE_FORMAT(END_DAY,'%y-%m-%d') ]]>
-                             );
+                             )
 
     </insert>
 
@@ -236,152 +252,6 @@
 
 
 
-<!--SET @memberSeq = 4;-->
-<!--set @date = '2021-08-01';-->
-
-
-<!--WITH RECURSIVE SCHEDULE_ALL AS-->
-<!--        (-->
-<!--            SELECT 1 AS LVL-->
-<!--              FROM  (SELECT 'test' TEST-->
-<!--                       FROM DUAL-->
-<!--                     ) AS TEMP-->
-<!--             UNION ALL-->
-<!--            SELECT LVL + 1-->
-<!--              FROM (SELECT 'test' TEST-->
-<!--                      FROM DUAL-->
-<!--                    ) AS TEMP-->
-<!--             INNER JOIN SCHEDULE_ALL-->
-<!--                ON LVL  < 31 -->
-<!--        )-->
-<!-- SELECT S.DAY             AS 'day'          -->
-<!--	  , S.DATE            AS 'date'         -->
-<!--      , S.SEQ             AS 'seq'          -->
-<!--	  , S.MEMBER_SEQ      AS 'memberSeq'    -->
-<!--	  , S.CONTENT         AS 'content'      -->
-<!-- 	  , S.DISTINCTION     AS 'distinction'  -->
-<!--	  , S.START_DAY       AS 'startDay'     -->
-<!--	  , S.END_DAY         AS 'endDay'       -->
-<!--	  , START_TIME        AS 'startTime'    -->
-<!--  	  , S.END_TIME        AS 'endTime'      -->
-<!--	  , S.LEVEL           AS 'level'        -->
-<!--	  , CASE WHEN COUNT(*) > 1-->
-<!--	         THEN 3-->
-<!--	         ELSE S.TYPE-->
-<!--	     END AS 'type'-->
-<!--	  , @ROWID:=@ROWID+1  AS 'key'-->
-<!--   FROM(SELECT S.DAY                                        AS 'DAY'  -->
-<!--             , CONCAT(DATE_FORMAT(@date,"%y/%m"),'/',S.DAY) AS 'DATE'-->
-<!--             , S.SEQ                                        AS 'SEQ'-->
-<!--             , S.MEMBER_SEQ                                 AS 'MEMBER_SEQ'-->
-<!--             , S.CONTENT                                    AS 'CONTENT'-->
-<!--             , S.DISTINCTION                                AS 'DISTINCTION'-->
-<!--             , S.START_DAY                                  AS 'START_DAY'-->
-<!--             , S.END_DAY                                    AS 'END_DAY'-->
-<!--             , DATE_FORMAT(S.START_TIME,'%k:%i')            AS 'START_TIME'-->
-<!--             , DATE_FORMAT(S.END_TIME,'%k:%i')              AS 'END_TIME'-->
-<!--             , S.LEVEL                                      AS 'LEVEL'-->
-<!--             , S.TYPE                                       AS 'TYPE'-->
-<!--          FROM (SELECT SA.DAY-->
-<!--                     , S.SEQ-->
-<!--                     , S.MEMBER_SEQ-->
-<!--                     , S.CONTENT-->
-<!--                     , S.DISTINCTION-->
-<!--                     , S.START_DAY-->
-<!--                     , S.END_DAY-->
-<!--                     , S.START_TIME-->
-<!--                     , S.END_TIME-->
-<!--                     , S.LEVEL-->
-<!--                     , S.TYPE-->
-<!--                  FROM (SELECT S.SEQ-->
-<!--                             , S.MEMBER_SEQ-->
-<!--                             , S.CONTENT-->
-<!--                             , S.DISTINCTION-->
-<!--                             , CASE WHEN DATE_FORMAT(@date,'%y-%m')  <= DATE_FORMAT(S.START_DAY,'%y-%m')-->
-<!--                                    THEN S.START_DAY-->
-<!--                                    ELSE LAST_DAY(@date - interval 1 month) + interval 1 DAY-->
-<!--                                END AS START_DAY-->
-<!--                             , CASE WHEN DATE_FORMAT(@date,'%y-%m') >=  DATE_FORMAT(S.END_DAY,'%y-%m')-->
-<!--                                    THEN S.END_DAY-->
-<!--                                    ELSE LAST_DAY(@date)-->
-<!--                                END AS END_DAY-->
-<!--                             , S.START_TIME-->
-<!--                             , S.END_TIME-->
-<!--                             , S.LEVEL-->
-<!--                             , S.TYPE-->
-<!--                          FROM (SELECT SD.SEQ-->
-<!--                                     , SD.MEMBER_SEQ-->
-<!--                                     , SD.CONTENT-->
-<!--                                     , SD.DISTINCTION-->
-<!--                                     , SD.START_DAY-->
-<!--                                     , SD.END_DAY-->
-<!--                                     , SD.START_TIME-->
-<!--                                     , SD.END_TIME-->
-<!--                                     , SD.LEVEL-->
-<!--                                     , 1 AS TYPE-->
-<!--                                 FROM SCHEDULE AS SD-->
-<!--                                INNER JOIN SUBSCRIBE AS SC-->
-<!--                                   ON SD.MEMBER_SEQ = SC.SUBSCRIBE_MEMBER-->
-<!--                                WHERE 'stu' = (SELECT MEMBER_CLASS-->
-<!--                                                 FROM MEMBER-->
-<!--                                                WHERE SEQ = @memberSeq)-->
-<!--                                UNION ALL-->
-<!--                               SELECT SEQ-->
-<!--                                    , MEMBER_SEQ-->
-<!--                                    , CONTENT-->
-<!--                                    , DISTINCTION-->
-<!--                                    , START_DAY-->
-<!--                                    , END_DAY-->
-<!--                                    , START_TIME-->
-<!--                                    , END_TIME-->
-<!--                                    , LEVEL-->
-<!--                                    , 2 AS TYPE-->
-<!--                                 FROM SCHEDULE-->
-<!--                                WHERE MEMBER_SEQ = @memberSeq-->
-<!--                                ) AS S-->
-<!--                         WHERE DATE_FORMAT(@date,'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')-->
-<!--                         ) AS S-->
-<!--                     , (SELECT LVL AS 'DAY'-->
-<!--                          FROM SCHEDULE_ALL) AS SA-->
-<!--                         WHERE DATE_FORMAT(S.START_DAY,'%e')  <= SA.DAY -->
-<!--                           AND DATE_FORMAT(S.END_DAY,'%e') >= SA.DAY-->
-<!--                           AND DATE_FORMAT(LAST_DAY(@date - INTERVAL 1 MONTH) + INTERVAL SA.DAY DAY,'%w')-->
-<!--                            IN (SELECT WEEK-->
-<!--                                  FROM SCHEDULE_WEEK AS SW-->
-<!--                                 WHERE SW.SCHEDULE_SEQ = S.SEQ-->
-<!--                                 )-->
-<!--                 UNION ALL-->
-<!--                SELECT DATE_FORMAT(SS.SUBSCRIBE_DT,'%e') AS DAY-->
-<!--                     , S.SEQ-->
-<!--                     , S.MEMBER_SEQ-->
-<!--                     , S.CONTENT-->
-<!--                     , S.DISTINCTION-->
-<!--                     , SS.SUBSCRIBE_DT AS START_DAY-->
-<!--                     , NULL AS END_DAY-->
-<!--                     , S.START_TIME-->
-<!--                     , S.END_TIME-->
-<!--                     , S.LEVEL-->
-<!--                     , SS.TYPE-->
-<!--                  FROM (SELECT SCHEDULE_SEQ-->
-<!--                             , SUBSCRIBE_DT-->
-<!--                             , TYPE-->
-<!--                          FROM SCHEDULE_SUBSCRIBE-->
-<!--                         WHERE MEMBER_SEQ = @memberSeq-->
-<!--                        ) AS SS-->
-<!--                 INNER JOIN (SELECT SEQ-->
-<!--                                  , MEMBER_SEQ-->
-<!--                                  , CONTENT-->
-<!--                                  , DISTINCTION-->
-<!--                                  , START_TIME-->
-<!--                                  , END_TIME-->
-<!--                                  , LEVEL-->
-<!--                               FROM SCHEDULE-->
-<!--                              WHERE DATE_FORMAT(@date,'%y-%m') BETWEEN DATE_FORMAT(START_DAY,'%y-%m') AND DATE_FORMAT(END_DAY,'%y-%m')-->
-<!--                              ) AS S-->
-<!--                   ON (SS.SCHEDULE_SEQ = S.SEQ)-->
-<!--              ) AS S-->
-<!--       )AS S,(SELECT @rowid:=0) AS RI-->
-<!--  GROUP BY S.DAY, S.SEQ, S.MEMBER_SEQ, S.CONTENT, S.DISTINCTION, S.START_TIME, S.END_TIME, S.LEVEL;-->
 
 
 
