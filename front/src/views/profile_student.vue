@@ -102,6 +102,7 @@ export default {
         };
     },
     methods: {
+        
         async profileStudentAdd() {
             let agrument = {
                   studentName    : this.studentName
@@ -113,8 +114,22 @@ export default {
             console.log(agrument);
 
             const {data} = await profileStudentAdd(agrument);
+            
         },
-    },
+       
+/*
+       async profileStudentAdd() {
+           console.log(data)
+      const _this = this
+      const { data } = await this.$fetch({
+        method:'GET',
+        url: 'http://localhost:9090/profileStudentAdd'
+      })
+       this.items = data
+       console.log(data)
+    }
+   */
+  },
     
 };
 </script>
