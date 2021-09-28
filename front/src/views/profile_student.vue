@@ -102,7 +102,7 @@ export default {
         };
     },
     methods: {
-        
+      
         async profileStudentAdd() {
             let agrument = {
                   studentName    : this.studentName
@@ -117,7 +117,7 @@ export default {
             
         },
        
-/*
+ /* 
        async profileStudentAdd() {
            console.log(data)
       const _this = this
