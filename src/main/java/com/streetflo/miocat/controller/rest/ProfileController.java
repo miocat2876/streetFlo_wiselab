@@ -23,10 +23,5 @@ public class ProfileController {
         return profileService.profileStudentAdd(dto);
     }
 
-
-
-
-
-
 }
 
