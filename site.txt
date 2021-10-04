@@ -1,0 +1,5 @@
+//http 통신
+//https://linkeverything.github.io/java/http-request/
+//https://brunch.co.kr/@springboot/401#comment
+//비동기
+//https://heekim0719.tistory.com/385
