@@ -12,5 +12,6 @@ public class AcademyDto {
 	private String addressDong;
 	private String addressDetail;
 	private String academyCreateDt;
+	private String tag;
 
 }

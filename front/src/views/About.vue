@@ -28,6 +28,7 @@
   .about h1{
     font-size: 50px;
     font-weight: bold;
+    text-align: center;
   }
   
  .about-img {
@@ -40,6 +41,10 @@
 .about-img img {
   max-width:100%; 
   height:auto;
+}
+
+.text{
+  text-align: center;
 }
 
 
