@@ -108,14 +108,21 @@ export default {
   },
 	methods:{
     async init() {
-    const _this = this
-    const { data } = await this.$fetch({
-      method:'GET',
-      url: 'http://localhost:9090/noticeTest'
-    })
-      this.items = data
-      console.log(data)
-    },
+    // const _this = this
+    // const data = 
+    //  await this.$axios.get('/noticeTest')
+    //   .then((res)=>{
+    //       this.items = res.data
+    //       console.log(res.data)
+    //   })
+    //   .catch((err)=>{
+		// 		console.log(err);
+		// 	}) // eslint-disable-line no-unused-vars
+  },
+
+
+
+
 		myPage(){ 
 			this.$router.push({path:'./Mypage',query:this.body});
 		}
@@ -131,7 +138,8 @@ export default {
 				,id:this.id
 			} 
 			
-      this.$axios.post(`${commonUrl}/notice`, this.form)
+      // this.$axios.post(`${commonUrl}/notice`, this.form)
+      this.$axios.post(`localhost:9090/notice`, this.form)
 			.then((res)=>{
 				if(res.data.success) {
 					alert('등록되었습니다.');
@@ -139,7 +147,7 @@ export default {
 				} else {
 					alert("등록을 실패했습니다. \n다시 등록해 주세요.");
 				}
-			})
+			}) 
 			.catch((err)=>{
         console.log(this.form);
 				console.log(err);

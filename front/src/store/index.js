@@ -1,13 +1,11 @@
-import { createStore } from "vuex";
-import {mutations} from "@/store/mutations.js";
-import {actions} from "@/store/actions.js";
+import Vue from 'vue'
+import Vuex from "vuex";
 import navigation from './navigation'
 
+Vue.use(Vuex)
 
-export default createStore({
+export default new Vuex.Store({
   modules: {
     navigation
-  },
-  mutations,
-  actions,
+  }
 });
