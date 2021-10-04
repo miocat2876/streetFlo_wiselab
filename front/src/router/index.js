@@ -1,7 +1,10 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import Home from '@/views/Home';
 import Mypage from '@/views/Mypage';
 import LoginTest from '@/views/LoginTest'
+
+Vue.use(VueRouter)
 
 const requireAuth = () => (to, from, next) => {
   if (this.$store.state.id !== '') {
@@ -11,7 +14,9 @@ const requireAuth = () => (to, from, next) => {
   next('/');
 };
 
-const routes = [
+
+export default new VueRouter({
+  routes: [
     {
       path: '/',
       name: 'Home',
@@ -38,11 +43,6 @@ const routes = [
       name: 'About',
       component: () => import('@/views/About.vue'),
     },
-  ];
+  ]
+})
 
-const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes,
-});
-
-export default router;

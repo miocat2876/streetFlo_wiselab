@@ -1,4 +1,4 @@
-# front
+# street-flo
 
 ## Project setup
 ```
@@ -7,27 +7,17 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
- serve
+npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
- build
-```
-
-### Run your unit tests
-```
- test:unit
-```
-
-### Run your end-to-end tests
-```
- test:e2e
+npm run build
 ```
 
 ### Lints and fixes files
 ```
- lint
+npm run lint
 ```
 
 ### Customize configuration
