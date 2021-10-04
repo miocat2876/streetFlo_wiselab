@@ -1,12 +1,16 @@
 package com.streetflo.miocat.controller;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.streetflo.miocat.dto.rest.CalenderDto;
+import com.streetflo.miocat.dto.table.AcademyDto;
 import com.streetflo.miocat.dto.table.ScheduleDto;
 import com.streetflo.miocat.dto.table.ScheduleSubscribeDto;
 import com.streetflo.miocat.service.rest.CalenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //https://leejisoo860911.tistory.com/2
@@ -41,6 +45,32 @@ public class DataController {
         return calenderService.scheduleSubscribeAdd(dto);
 
     }
+
+    //gson 사용법 구글 json 라이브러리
+    //https://soft.plusblog.co.kr/61
+    @RequestMapping("mapTest")
+    public String mapTest(@RequestBody ScheduleSubscribeDto dto){
+
+        List<String> list = new ArrayList<String>();
+        Gson gson = new Gson();
+        AcademyDto data = null;
+        for (int i = 0; i<5; i++){
+            data = new AcademyDto();
+            data.setSeq(i);
+            data.setAcademyName("제목"+i);
+            data.setAddressSido("제주특별자치도 ");
+            data.setAddressDong("제주시");
+            data.setAddressDetail("첨단로 24" + i);
+            String json = gson.toJson(data);
+            list.add(json);
+        }
+
+        System.out.println(list.toString());
+
+        return list.toString();
+
+    }
+
 
 
 

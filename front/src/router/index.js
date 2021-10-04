@@ -1,7 +1,8 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import Home from '@/views/Home';
 import Mypage from '@/views/Mypage';
-import LoginTest from '@/views/LoginTest'
+import AcademyList from '@/views/AcademyList';
+import LoginTest from '@/views/LoginTest';
 
 const requireAuth = () => (to, from, next) => {
   if (this.$store.state.id !== '') {
@@ -12,37 +13,43 @@ const requireAuth = () => (to, from, next) => {
 };
 
 const routes = [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/LoginTest',
-      name: 'LoginTest',
-      component: LoginTest
-    },
-    {
-      path: '/Mypage',
-      name: 'Mypage',
-      component: Mypage,
-    },
-    {
-      path: '/MyPageOauth',
-      name: 'MyPageOauth',
-      component: Mypage, 
-      beforeEnter: requireAuth()
-    },
-    {
-      path: '/about',
-      name: 'About',
-      component: () => import('@/views/About.vue'),
-    },
-  ];
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+  },
+  {
+    path: '/LoginTest',
+    name: 'LoginTest',
+    component: LoginTest,
+  },
+  {
+    path: '/Mypage',
+    name: 'Mypage',
+    component: Mypage,
+  },
+  {
+    path: '/AcademyList',
+    name: 'AcademyList',
+    component: AcademyList,
+    // beforeEnter: requireAuth(),
+  },
+  {
+    path: '/MyPageOauth',
+    name: 'MyPageOauth',
+    component: Mypage,
+    beforeEnter: requireAuth(),
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('@/views/About.vue'),
+  },
+];
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes,
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
 });
 
 export default router;

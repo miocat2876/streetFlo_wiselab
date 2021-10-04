@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.16.4",
     "vue": "^3.0.0",
+    "vue-kakao-sdk": "^0.2.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
@@ -72,7 +73,10 @@
           "jest": true
         }
       }
-    ]
+    ],
+    "globals": {
+      "kakao": false
+    }
   },
   "browserslist": [
     "> 1%",
