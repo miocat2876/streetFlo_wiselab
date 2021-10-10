@@ -7,14 +7,28 @@ public interface PageDto {
 	public abstract String getParamSearchCondition();
 	public abstract String getParamSearchValue();
 
+
+//			this.currentPage = bulider.currentPage == 0 ? 1 : bulider.currentPage;
+//		this.viewData = bulider.viewData == 0 ? defaultViewData : bulider.viewData;
+//		this.searchCondition = bulider.searchCondition == null ? "" : bulider.searchCondition;
+//		this.searchValue = bulider.searchValue == null ? "" : bulider.searchValue;
+
 	default public int getStartData() {
-		return (getParamCurrentPage() - 1) * getParamViewData() + 1;
+		int defaultViewData = 20;
+		int currentPage = getParamCurrentPage() == 0 ? 1 : getParamCurrentPage();
+		int viewData = getParamViewData() == 0 ? defaultViewData : getParamViewData();
+		return (currentPage - 1) * viewData + 1;
 	}
 	default public int getEndData() {
-		return getParamCurrentPage() * getParamViewData();
+		int defaultViewData = 20;
+		int currentPage = getParamCurrentPage() == 0 ? 1 : getParamCurrentPage();
+		int viewData = getParamViewData() == 0 ? defaultViewData : getParamViewData();
+
+		return currentPage * viewData;
 	}
 	default public int getViewData() {
-		return getParamViewData();
+		int defaultViewData = 20;
+		return getParamViewData() == 0 ? defaultViewData : getParamViewData();
 	}
 	default public String getSearchCondition() {
 		return getParamSearchCondition();
