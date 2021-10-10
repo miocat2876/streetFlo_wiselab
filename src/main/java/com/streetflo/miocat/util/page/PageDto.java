@@ -8,18 +8,20 @@ public interface PageDto {
 	public abstract String getParamSearchCondition();
 	public abstract String getParamSearchValue();
 
+	default public int CheckCurrentPage() {
+		return getParamCurrentPage() == 0 ? 1 : getParamCurrentPage();
+	}
+	default public int CheckParamViewData() {
+		return getParamViewData() == 0 ? defaultViewData : getParamViewData();
+	}
 	default public int getStartData() {
-		int currentPage = getParamCurrentPage() == 0 ? 1 : getParamCurrentPage();
-		int viewData = getParamViewData() == 0 ? defaultViewData : getParamViewData();
-		return (currentPage - 1) * viewData + 1;
+		return (CheckCurrentPage() - 1) * CheckParamViewData() + 1;
 	}
 	default public int getEndData() {
-		int currentPage = getParamCurrentPage() == 0 ? 1 : getParamCurrentPage();
-		int viewData = getParamViewData() == 0 ? defaultViewData : getParamViewData();
-		return currentPage * viewData;
+		return CheckCurrentPage() * CheckParamViewData();
 	}
 	default public int getViewData() {
-		return getParamViewData() == 0 ? defaultViewData : getParamViewData();
+		return CheckParamViewData();
 	}
 	default public String getSearchCondition() {
 		return getParamSearchCondition();
