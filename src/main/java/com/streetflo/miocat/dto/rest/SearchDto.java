@@ -9,27 +9,24 @@ public class SearchDto implements PageDto {
 
     private String test;
 
+
 	@Override
-	public int getCurrentPage() {
-		// TODO Auto-generated method stub
+	public int getParamCurrentPage() {
 		return 0;
 	}
 
 	@Override
-	public int getViewData() {
-		// TODO Auto-generated method stub
+	public int getParamViewData() {
 		return 0;
 	}
 
 	@Override
-	public String getSearchCondition() {
-		// TODO Auto-generated method stub
+	public String getParamSearchCondition() {
 		return null;
 	}
 
 	@Override
-	public String getSearchValue() {
-		// TODO Auto-generated method stub
+	public String getParamSearchValue() {
 		return null;
 	}
 }

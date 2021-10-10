@@ -13,8 +13,4 @@ public class CalenderDto {
     private int year;
     private int month;
     private ArrayList<ScheduleDto> schedule;
-
-
-
-
 }   

@@ -5,7 +5,7 @@ import java.util.List;
 import com.streetflo.miocat.util.page.ScrollPagingDto.ScrollPageingBulider;
 
 
-public class AbScrollPage implements Page {
+public class AbScrollPage<T extends PageDto> implements Page {
 	
 	
 	// 현재페이지
@@ -15,12 +15,12 @@ public class AbScrollPage implements Page {
 	//검색
 	//회원정보
 
-	private ScrollPagingDao dao;
-	private PageDto dto;
+	private final ScrollPagingService dao;
+	private final T dto;
 	
-	public AbScrollPage(PageDto dto,ScrollPagingDao dao) {
+	public AbScrollPage(T dto, ScrollPagingService service) {
 		this.dto = dto;
-		this.dao = dao;
+		this.dao = service;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -29,15 +29,14 @@ public class AbScrollPage implements Page {
 		return (List<PageDto>) dao.paging(bulid());
 	}
 	
-	private ScrollPagingDto bulid() {
-		
-		ScrollPageingBulider bulider = new ScrollPageingBulider();
-		
-		bulider.setCurrentPage(dto.getCurrentPage());
-		bulider.setViewData(dto.getViewData());
-		bulider.setSearchCondition(dto.getSearchCondition());
-		bulider.setSearchValue(dto.getSearchValue());
-		return bulider.bulid();
+	private T bulid() {
+
+//		this.currentPage = bulider.currentPage == 0 ? 1 : bulider.currentPage;
+//		this.viewData = bulider.viewData == 0 ? defaultViewData : bulider.viewData;
+//		this.searchCondition = bulider.searchCondition == null ? "" : bulider.searchCondition;
+//		this.searchValue = bulider.searchValue == null ? "" : bulider.searchValue;
+
+		return dto;
 
 	}
 
