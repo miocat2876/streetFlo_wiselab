@@ -16,7 +16,7 @@
            AND ADDRESS_SIDO = #{searchCondition}
            AND ACADEMY_NAME LIKE '%'||#{searchValue}||'%'
          ORDER BY SEQ
-         LIMIT 10 OFFSET #{nextSeq} -- 0 10 20 30
+         LIMIT {viewData} OFFSET #{startData} -- 0 10 20 30
     </select>
 
 
