@@ -5,18 +5,18 @@
 
     <select id="academyAddressFind" resultType="AcademyListDto">
 
-        SELECT SEQ
-             , MEMBER_SEQ
-             , ACADEMY_NAME
-             , ADDRESS_SIDO
-             , ADDRESS_DONG
-             , ADDRESS_DETAIL
+        SELECT SEQ              AS 'seq'
+             , MEMBER_SEQ       AS 'memberSeq'
+             , ACADEMY_NAME     AS 'academyName'
+             , ADDRESS_SIDO     AS 'addressSido'
+             , ADDRESS_DONG     AS 'addressDong'
+             , ADDRESS_DETAIL   AS 'addressDetail'
           FROM ACADEMY
          WHERE SEQ > #{seq}
            AND ADDRESS_SIDO = #{searchCondition}
            AND ACADEMY_NAME LIKE '%'||#{searchValue}||'%'
          ORDER BY SEQ
-         LIMIT {viewData} OFFSET #{startData} -- 0 10 20 30
+         LIMIT #{viewData} OFFSET #{startData}
     </select>
 
 
