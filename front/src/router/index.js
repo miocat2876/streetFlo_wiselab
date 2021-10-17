@@ -3,7 +3,6 @@ import VueRouter from "vue-router";
 import Home from "@/views/Home";
 import Mypage from "@/views/Mypage";
 import AcademyList from "@/views/AcademyList";
-import LoginTest from "@/views/LoginTest";
 
 Vue.use(VueRouter);
 
@@ -21,11 +20,6 @@ export default new VueRouter({
       path: "/",
       name: "Home",
       component: Home,
-    },
-    {
-      path: "/LoginTest",
-      name: "LoginTest",
-      component: LoginTest,
     },
     {
       path: "/Mypage",
