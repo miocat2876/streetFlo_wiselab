@@ -1,16 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from '../store/index.js';
 import Home from "@/views/Home";
+import OauthRedirect from "@/components/oauth/Redirect";
 import Mypage from "@/views/Mypage";
 import AcademyList from "@/views/AcademyList";
 
 Vue.use(VueRouter);
 
 const requireAuth = () => (to, from, next) => {
-  if (this.$store.state.id !== "") {
+  if (store.state.token !== "") {
     return next();
   }
-  alert("로그인이 필요한 페이지입니다.");
+  alert("로그인하십시오.")
   next("/");
 };
 
@@ -31,6 +33,11 @@ export default new VueRouter({
       name: "MyPageOauth",
       component: Mypage,
       beforeEnter: requireAuth(),
+    },
+    {
+      path: '/oauth/redirect',
+      name: 'OauthRedrect',
+      component: OauthRedirect
     },
     {
       path: "/AcademyList",

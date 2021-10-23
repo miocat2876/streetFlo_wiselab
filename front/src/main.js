@@ -3,7 +3,7 @@ import App from "./App.vue";
 import store from "./store";
 import router from "./router";
 import axios from "axios";
-import GAuth from 'vue-google-oauth2';
+// import GAuth from 'vue-google-oauth2';
 
 axios.defaults.baseURL = 'http://localhost:9090'
 
@@ -11,10 +11,10 @@ Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false;
 
-let gauthClientId = process.env.VUE_APP_GOOGLE_OAUTH_PATH
-const gAuthOptions = { clientId: gauthClientId, scope: 'email', prompt: 'consent', fetch_basic_profile: false }
+// let gauthClientId = process.env.VUE_APP_GOOGLE_OAUTH_PATH
+// const gAuthOptions = { clientId: gauthClientId, scope: 'email', prompt: 'consent', fetch_basic_profile: false }
 
-Vue.use(GAuth, gAuthOptions);
+// Vue.use(GAuth, gAuthOptions);
 
 new Vue({
   store,

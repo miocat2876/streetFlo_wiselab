@@ -55,8 +55,6 @@ public class MemberController {
     	MemberDto user = new MemberDto();
 		user.setMemType(memType);
 
-		httpSession.setAttribute("user", user);
-
     }
 
 

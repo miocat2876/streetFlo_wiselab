@@ -11,7 +11,7 @@
           </div>
           <div class="info">
             <h2 class="name">
-              Selene Lee <span>Edit Profile >></span>
+              {{ userName }} <span>Edit Profile >></span>
             </h2>
             <div class="age">
               <p>개인강사/ 25세, 여자</p>
@@ -44,13 +44,18 @@
 </template>
 
 <script>
+
+  import { mapGetters } from 'vuex'
   import Calender from '@/components/TeacherCalender';
   import Notice from '@/components/Notice';
   import Review from '@/components/Review';
-  
 
   export default {
-    computed: {},
+
+    
+    computed: {
+      ...mapGetters(['token', 'userName']),
+    },
     components: {
       Calender,
       Notice,

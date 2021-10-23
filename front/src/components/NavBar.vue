@@ -1,8 +1,13 @@
 <template>
   <div>
     <header class="w-100">
-      <div class="content_1200 menu">
-        <a class="menu_title">Menu</a> 
+      <div
+        class="content_1200 menu"
+        @click="onNav()"
+      >
+        <a 
+          class="menu_title"
+        >Menu</a> 
         <a
           href="javascript:void(0)"
           class="menu_toggle"
@@ -12,39 +17,60 @@
             alt="menubar"
           /></a>
         <h1 class="logo">
-          <a href="/">[Street-Flo]</a>
+          <a href="#/">[Street-Flo]</a>
         </h1>
       </div>
-      <nav
-        id="nav"
-        v-if="done"
-        :class="{ show: isShowNav }"
-      >
+      <nav :class="{ show: isShowNav }">
         <div class="nav">
           <div class="nav_title">
             <a href="javascript:void(0)">Menu</a> 
             <a
               href="javascript:void(0)"
               class="nav_toggle"
+              @click="offNav()"
             ><img
               src="@/images/menu-black.svg"
               alt="menubar"
             /></a>
           </div>
           <ul class="nav_menu">
-            <li class="nav_list nav_login">
-              <a href="javascript:void(0)">Log-In</a>
+            <li 
+              v-if="!isSignIn"
+              @click="onLogin()"
+              class="nav_list nav_login"
+            >
+              <a
+                href="javascript:void(0)"
+              >Log-In</a>
             </li>
-            <li class="nav_list nav_signUp">
-              <a href="javascript:void(0)">Sign-Up</a>
+            <li
+              v-if="!isSignIn"
+              @click="onSignUp()"
+              class="nav_list nav_signUp"
+            >
+              <a
+                href="javascript:void(0)"
+              >Sign-Up</a>
             </li>
-            <li class="nav_list">
-              <a href="/calendarTeacher">Mypage</a>
+            <li 
+              v-if="!isSignIn"
+              @click="handleClickSignOut"
+              class="nav_list"
+            >
+              <a 
+                href="javascript:void(0)"
+              >Log-Out</a>
+            </li>
+            <li 
+              v-if="!isSignIn"
+              class="nav_list"
+            >
+              <a href="#/mypage">Mypage</a>
             </li>
             <li class="nav_list nav_search">
-              <a href="/instructorList">Search</a>
+              <a href="#/instructorList">Search</a>
               <ul class="nav_search_sub">
-                <li><a href="/instructorList">Teacher</a></li>
+                <li><a href="#/instructorList">Teacher</a></li>
                 <li><a href="javascript:void(0)">Academy</a></li>
               </ul>
             </li>
@@ -52,7 +78,7 @@
               <a href="javascript:void(0)">FAQ</a>
             </li>
             <li class="nav_list">
-              <a href="/about">About Us</a>
+              <a href="#/about">About Us</a>
             </li>
           </ul>
           <div class="nav_sns">
@@ -71,13 +97,17 @@
     
 
     <div
-      v-if="false"
       id="loginPopupLayer"
+      :class="{ show: isShowLogin }"
     >
       <div class="popup_login">
         <div class="title_bar">
           <h2>SNS Log-In</h2>
-          <a class="close"></a>
+          <a
+            class="close"
+            href="javascript:void(0)"
+            @click="offLogin()"
+          ></a>
         </div>
         <div class="content_box">
           <ul class="sns">
@@ -85,11 +115,11 @@
               <img
                 src="@/images/kakao.svg"
                 alt="kakao"
-              /> <a href="/oauth2/authorization/kakao">KakaoTalk</a>
+              /> <a href="#/oauth2/authorization/kakao">KakaoTalk</a>
             </li>
-               
+            <!--                
             <li>
-              <a href="/oauth2/authorization/facebook">
+              <a href="#/oauth2/authorization/facebook">
                 <div
                   class="fb-login-button"
                   data-width=""
@@ -104,14 +134,16 @@
               <img
                 src="@/images/line.svg"
                 alt="line"
-              /> <a href="/oauth2/authorization/naver">Line</a>
-            </li>
+              /> <a href="#/oauth2/authorization/naver">Line</a>
+            </li> -->
             <li>
               <img
                 src="@/images/google.svg"
                 class="google"
               />
-              <a href="/oauth2/authorization/google">Google</a>
+              <a 
+                href="http://localhost:9090/oauth2/authorization/google?redirect_uri=http://localhost:8080/oauth/redirect"
+              >Google</a>
             </li>
           </ul>
         </div>
@@ -120,13 +152,17 @@
 
 
     <div
-      v-if="false"
       id="signUpPopupLayer1"
+      :class="{ show: isShowSignUp }"
     >
       <div class="popup_login">
         <div class="title_bar">
           <h2>SNS Sign-Up</h2>
-          <a class="close"></a>
+          <a
+            class="close"
+            href="javascript:void(0)"
+            @click="offSignUp()"
+          ></a>
         </div>
         <div class="content_box">
           <ul class="signUpbtn">
@@ -142,13 +178,17 @@
 
 
     <div
-      v-if="false"
       id="signUpPopupLayer2"
+      :class="{ show: isShowSignUp }"
     >
       <div class="popup_login">
         <div class="title_bar">
           <h2>SNS Sign-Up</h2>
-          <a class="close"></a>
+          <a
+            class="close"
+            href="javascript:void(0)"
+            @click="offSignUp()"
+          ></a>
         </div>
         <div class="content_box">
           <ul class="sns">
@@ -156,10 +196,10 @@
               <img
                 src="@/images/kakao.svg"
                 alt="kakao"
-              /> <a href="/oauth2/authorization/kakao">KakaoTalk</a>
+              /> <a href="#/oauth2/authorization/kakao">KakaoTalk</a>
             </li>
-            <li>
-              <a href="/oauth2/authorization/facebook">
+            <!-- <li>
+              <a href="#/oauth2/authorization/facebook">
                 <div
                   class="fb-login-button"
                   data-width=""
@@ -174,14 +214,16 @@
               <img
                 src="@/images/line.svg"
                 alt="line"
-              /> <a href="/oauth2/authorization/naver">Line</a>
-            </li>
+              /> <a href="#/oauth2/authorization/naver">Line</a>
+            </li> -->
             <li>
               <img
                 src="@/images/google.svg"
                 class="google"
               />
-              <a href="/oauth2/authorization/google">Google</a>
+              <a 
+                href="http://localhost:9090/oauth2/authorization/google?redirect_uri=http://localhost:8080/oauth/redirect"
+              >Google</a>
             </li>
           </ul>
         </div>
@@ -193,33 +235,80 @@
 
 
 <script>
-
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 
 export default {
   data () {
     return {
-      navigations: {}
+      navigations: {},
+      isSignIn: store.state.token == null
     }
   },
   computed: {
     isShowNav () {
       return this.$store.state.navigation.isShowNav
+    },
+    isShowLogin(){
+      return this.$store.state.navigation.isShowLogin
+    },
+    isShowSignUp(){
+      return this.$store.state.navigation.isShowSignUp
     }
   },
   created () {
     this.init()
   },
   methods: {
+    ...mapMutations(['setToken']),
+
+    ...mapGetters(['getToken']),
     async init () {
-      this.navigations = await this.$fetch({
+      this.navigations = await this.$axios({
         requestName: 'navigations'
       })
       this.done = true
     },
+    onNav() {
+      this.$store.dispatch('navigation/onNav')
+    },
     offNav () {
       this.$store.dispatch('navigation/offNav')
+    },
+    onLogin() {
+      this.$store.dispatch('navigation/onLogin')
+    },
+    offLogin() {
+      this.$store.dispatch('navigation/offLogin')
+    },
+    onSignUp() {
+      this.$store.dispatch('navigation/onSignUp')
+    },
+    offSignUp() {
+      this.$store.dispatch('navigation/offSignUp')
+    },
+
+    async handleClickSignIn(){
+      try {
+        this.$store.dispatch('navigation/offLogin')
+        this.$store.dispatch('navigation/offSignUp')
+      } catch (error) {
+        console.error(error);
+        return null;
+      }
+    },
+
+    async handleClickSignOut(){
+      try {
+        await this.$store.state.token == null;
+      } catch (error) {
+      }
     }
+  },
+    mounted(){
+    let that = this
+    let checkGauthLoad = setInterval(function(){
+      // that.isSignIn = that.$gAuth.isAuthorized
+    }, 1000);
   }
 }
 </script>
-    
