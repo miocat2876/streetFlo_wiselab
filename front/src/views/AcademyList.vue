@@ -4,7 +4,9 @@
       <div class="content_1200">
         <div class="title_box">
           <h1>Dance Academy</h1>
-          머터리얼 테스트<span class="material-icons"> settings </span>
+          <a>asdasd</a> 머터리얼 테스트<span class="material-icons">
+            settings
+          </span>
         </div>
       </div>
       <div class="content-wrap">

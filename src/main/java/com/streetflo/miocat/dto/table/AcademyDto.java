@@ -14,4 +14,6 @@ public class AcademyDto {
 	private String academyCreateDt;
 	private String tag;
 
+
+
 }
