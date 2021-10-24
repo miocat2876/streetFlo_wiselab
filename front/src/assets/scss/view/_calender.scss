@@ -394,7 +394,7 @@
 .calender_teacther {
     padding-top: 70px;
   
-    .top {
+    .wrap {
       height: 200px;
       background-color: black;
   
@@ -570,13 +570,10 @@
               height: 100%;
               overflow-y: hidden;
   
-              .swiper-wrapper {
-                width: 100%;
-                height: 100%;
-  
                 .swiper-slide {
                   // margin-right: 230px !important;
                   // margin-left: -65px !important;
+                  width: auto;
   
                   .review_box {
                     width: 400px;
@@ -710,29 +707,36 @@
                 }
               }
   
-              .swiper-button-next {
-                background-color: white;
-                transform: translateY(-40%);
-                width: 100px;
-                height: 100%;
-                right: 0 !important;
-  
-                &::after {
-                  color: #00ffa8;
-                }
-              }
-  
-              .swiper-button-prev {
-                background-color: white;
-                transform: translateY(-40%);
-                width: 100px;
-                height: 100%;
-                left: 0 !important;
-  
-                &::after {
-                  color: #00ffa8;
-                }
-              }
+
+
+          }
+        }
+
+        .swiper-button{
+
+          top: calc(50% - 20px);
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          .swiper-button-prev {
+            //background-color: white;
+            //transform: translateY(-40%);
+            //width: 100px;
+            //height: 100%;
+            //left: 0;
+            &::after {
+              color: #00ffa8;
+            }
+          }
+          .swiper-button-next {
+            //background-color: white;
+            //transform: translateY(-40%);
+            //width: 100px;
+            //height: 100%;
+            //right: -30px;
+            &::after {
+              color: #00ffa8;
             }
           }
         }
@@ -787,11 +791,12 @@
           }
   
           .swiper-button-next {
-            background-color: white;
-            transform: translateY(-40%);
-            width: 100px;
-            height: 100%;
-            right: 0 !important;
+            //background-color: white;
+            //transform: translateY(-40%);
+            //width: 100px;
+            //height: 100%;
+            //right: 0 !important;
+            position: absolute !important;
   
             &::after {
               color: #00ffa8;
@@ -799,11 +804,12 @@
           }
   
           .swiper-button-prev {
-            background-color: white;
-            transform: translateY(-40%);
-            width: 100px;
-            height: 100%;
+            //background-color: white;
+            //transform: translateY(-40%);
+            //width: 100px;
+            //height: 100%;
             left: 0 !important;
+            position: absolute !important;
   
             &::after {
               color: #00ffa8;
