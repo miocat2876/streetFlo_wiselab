@@ -142,6 +142,9 @@
 
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+//스와이퍼 참고
+//https://negabaro.github.io/archive/vue-awesome-swiper
+//http://labs.brandi.co.kr/2021/08/02/choihs.html
 export default {
   components: { Swiper, SwiperSlide },
   data() {
