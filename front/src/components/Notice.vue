@@ -39,72 +39,6 @@
             <div class="border-bottom"></div>
           </div>
         </swiper-slide>
-        <swiper-slide>
-          <div class="review_box">
-            <div class="border-top"></div>
-            <div class="border-middle">
-              <div class="notice">
-                <div class="notice_title">
-                  <p>공지수업:</p>
-                  <div>
-                    <select class="box" v-model="selected">
-                      <option v-for="option in options" :key="option.title">
-                        {{ option.title }}
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div class="notice_content">
-                  <p>내용 (200자 내외):</p>
-                  <div>
-                    <textarea
-                      v-model.trim="cont"
-                      ref="cont"
-                      class="box"
-                    ></textarea>
-                  </div>
-                </div>
-                <a href="javascript:void(0);" @click="postNotice">
-                  <button>Send >></button></a
-                >
-              </div>
-            </div>
-            <div class="border-bottom"></div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="review_box">
-            <div class="border-top"></div>
-            <div class="border-middle">
-              <div class="notice">
-                <div class="notice_title">
-                  <p>공지수업:</p>
-                  <div>
-                    <select class="box" v-model="selected">
-                      <option v-for="option in options" :key="option.title">
-                        {{ option.title }}
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div class="notice_content">
-                  <p>내용 (200자 내외):</p>
-                  <div>
-                    <textarea
-                      v-model.trim="cont"
-                      ref="cont"
-                      class="box"
-                    ></textarea>
-                  </div>
-                </div>
-                <a href="javascript:void(0);" @click="postNotice">
-                  <button>Send >></button></a
-                >
-              </div>
-            </div>
-            <div class="border-bottom"></div>
-          </div>
-        </swiper-slide>
         <swiper-slide
           class="swiper-slide"
           v-for="item in items"
@@ -177,23 +111,23 @@ export default {
   },
   methods: {
     async init() {
-      // const _this = this
-      // const data =
-      //  await this.$axios.get('/noticeTest')
-      //   .then((res)=>{
-      //       this.items = res.data
-      //       console.log(res.data)
-      //   })
-      //   .catch((err)=>{
-      // 		console.log(err);
-      // 	}) // eslint-disable-line no-unused-vars
+      const _this = this;
+      const data = await this.$axios
+        .get("/noticeTest")
+        .then(res => {
+          this.items = res.data;
+          console.log(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+        }); // eslint-disable-line no-unused-vars
     },
 
     myPage() {
       this.$router.push({ path: "./Mypage", query: this.body });
     },
     postNotice() {
-      if (!this.selected == "null") {
+      if (!this.selected === "null") {
         alert("강의를 선택하세요.");
         return;
       }
