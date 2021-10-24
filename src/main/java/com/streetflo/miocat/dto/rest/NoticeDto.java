@@ -24,4 +24,19 @@ public class NoticeDto implements PageDto {
 	public String getParamSearchValue() {
 		return null;
 	}
+
+	@Override
+	public void setParamCurrentPage(int getCurrentPage) {
+
+	}
+
+	@Override
+	public void setParamSearchCondition(String searchCondition) {
+
+	}
+
+	@Override
+	public void setParamSearchValue(String searchValue) {
+
+	}
 }

@@ -8,22 +8,21 @@ public class AcademyLIstDto extends AcademyDto implements PageDto {
 	private int getCurrentPage;
 	private String searchCondition;
 	private String searchValue;
-
-	public void setGetCurrentPage(int getCurrentPage) {
+	@Override
+	public void setParamCurrentPage(int getCurrentPage) {
 		this.getCurrentPage = getCurrentPage;
-	}
-	public void setSearchCondition(String searchCondition) {
+	}@Override
+	public void setParamSearchCondition(String searchCondition) {
 		this.searchCondition = searchCondition;
 	}
-	public void setSearchValue(String searchValue) {
+	@Override
+	public void setParamSearchValue(String searchValue) {
 		this.searchValue = searchValue;
 	}
-
 	@Override
 	public int getParamCurrentPage() {
 		return this.getCurrentPage;
 	}
-
 	@Override
 	public int getParamViewData() {
 		return 10;
