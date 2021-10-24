@@ -2,7 +2,6 @@ package com.streetflo.miocat.config.auth;
 
 import com.streetflo.miocat.config.auth.dto.OAuthAttributes;
 import com.streetflo.miocat.dao.rest.MemberDao;
-import com.streetflo.miocat.domain.user.UserRepository;
 import com.streetflo.miocat.dto.rest.MemberDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,21 +39,29 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
+        System.out.println("registrationId" + registrationId);
+        System.out.println("userNameAttributeName" + userNameAttributeName);
+
         String none = "none";
         //  TODO 시큐리티 권한 부분 하드코딩 -> 수정 필요
 
-        MemberDto user = (MemberDto) httpSession.getAttribute("user");
-
-        System.out.println("user" + user);
+        MemberDto user = new MemberDto();
 
         user.setId(attributes.getName());
         user.setEmail(attributes.getEmail());
         user.setPicture(attributes.getPicture());
+        user.setPlatform(registrationId);
+        user.setUniqueIdentifier(Integer.toString(attributes.getName().hashCode()));
+        user.setMemType("student");
+        user.setAccessCode("access" + attributes.getName() + "from" + registrationId);
 
         System.out.println("user" + user);
 
-        httpSession.setAttribute("user", user);
+        httpSession.setAttribute("username", user.getId());
+
         saveOrUpdate(user);
+
+
 
         return new DefaultOAuth2User(
                 Collections.singleton(new SimpleGrantedAuthority(none)),
@@ -71,10 +78,13 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         n.setEmail(attributes.getEmail());
         n.setPicture(attributes.getPicture());
         n.setMemType(attributes.getMemType());
+        n.setUniqueIdentifier(attributes.getUniqueIdentifier());
+        n.setPlatform(attributes.getPlatform());
+        n.setAccessCode(attributes.getAccessCode());
 
         dao.save(n);
         return n;
     }
 
-    }
+}
 
