@@ -2,7 +2,7 @@
     <div class="comp_hashtag" @click="setHashtags" ref="group">
         <p class="help" v-if="helpVisible"></p>
 
-        <div class="tags" v-if="!helpVisible">
+        <div class="hashTags" v-if="!helpVisible">
           <input
             type="text"
             class="fake"
