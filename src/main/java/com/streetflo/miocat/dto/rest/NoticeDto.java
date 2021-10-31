@@ -4,28 +4,39 @@ import com.streetflo.miocat.util.page.PageDto;
 
 public class NoticeDto implements PageDto {
 
+
 	@Override
-	public int getCurrentPage() {
-		// TODO Auto-generated method stub
-		return 2;
+	public int getParamCurrentPage() {
+		return 0;
 	}
 
 	@Override
-	public int getViewData() {
-		// TODO Auto-generated method stub
-		return 5;
+	public int getParamViewData() {
+		return 0;
 	}
 
 	@Override
-	public String getSearchCondition() {
-		// TODO Auto-generated method stub
+	public String getParamSearchCondition() {
 		return null;
 	}
 
 	@Override
-	public String getSearchValue() {
-		// TODO Auto-generated method stub
+	public String getParamSearchValue() {
 		return null;
 	}
 
+	@Override
+	public void setParamCurrentPage(int getCurrentPage) {
+
+	}
+
+	@Override
+	public void setParamSearchCondition(String searchCondition) {
+
+	}
+
+	@Override
+	public void setParamSearchValue(String searchValue) {
+
+	}
 }

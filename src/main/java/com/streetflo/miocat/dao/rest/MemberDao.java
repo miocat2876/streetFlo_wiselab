@@ -1,36 +1,21 @@
 package com.streetflo.miocat.dao.rest;
 
 
-import com.streetflo.miocat.config.auth.dto.OAuthAttributes;
-import com.streetflo.miocat.domain.user.User;
 import com.streetflo.miocat.dto.rest.MemberDto;
-import com.streetflo.miocat.util.page.ScrollPagingDao;
-import com.streetflo.miocat.util.page.ScrollPagingDto;
-
-import java.util.ArrayList;
-
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Mapper
 @Repository
-public class MemberDao implements ScrollPagingDao {
+public class MemberDao {
 
 	@Autowired
 	private SqlSession sql;
 
-	private static String namespace = "com.streetflo.miocat.dao.rest.MemberDao";
-
-	@Override
-	public ArrayList<?> paging(ScrollPagingDto pagingDto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	private static String namespace = "com.streetflo.mapper.rest.member";
 
 	public void save(MemberDto n) {
+		System.out.println(n.getEmail());
 		sql.insert(namespace + ".join", n);
 	}
 

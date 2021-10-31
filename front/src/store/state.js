@@ -1,5 +1,7 @@
 export default{
-    calenderData : {},
+    userName: "",
+    token: "",
+    calenderData : {}
 }
 
   

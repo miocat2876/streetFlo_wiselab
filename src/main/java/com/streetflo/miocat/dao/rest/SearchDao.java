@@ -1,7 +1,8 @@
 package com.streetflo.miocat.dao.rest;
 
 
-import com.streetflo.miocat.util.page.ScrollPagingDao;
+import com.streetflo.miocat.util.page.PageDto;
+import com.streetflo.miocat.util.page.ScrollPagingService;
 import com.streetflo.miocat.util.page.ScrollPagingDto;
 
 import java.util.ArrayList;
@@ -11,11 +12,6 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public class SearchDao implements ScrollPagingDao {
+public class SearchDao  {
 
-	@Override
-	public ArrayList<?> paging(ScrollPagingDto pagingDto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

@@ -30,6 +30,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         @Autowired
         private ClientRegistrationRepository clientRegistrationRepository;
 
+
+        @Autowired
+        private oAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
+
+        @Autowired
+        private oAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
+
         private HttpServletRequest request;
         @Override
         protected void configure(HttpSecurity http) throws Exception {
@@ -50,7 +57,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                                     .authorizationRequestResolver(
                                             authorizationRequestResolver(this.clientRegistrationRepository)))
                     .userInfoEndpoint()
-                    .userService(customOAuth2UserService));
+                    .userService(customOAuth2UserService).and()
+                     .successHandler(oAuth2AuthenticationSuccessHandler)
+                     .failureHandler(oAuth2AuthenticationFailureHandler)
+                    );
         }
 
         private OAuth2AuthorizationRequestResolver authorizationRequestResolver(

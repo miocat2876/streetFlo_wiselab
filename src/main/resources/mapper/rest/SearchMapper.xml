@@ -5,8 +5,18 @@
 
     <select id="test2" resultType="TestDto">
 
-        SELECT 'test' test FROM DUAL
-
+        SELECT SEQ
+             , MEMBER_SEQ
+             , ACADEMY_NAME
+             , ADDRESS_SIDO
+             , ADDRESS_DONG
+             , ADDRESS_DETAIL
+          FROM ACADEMY
+         WHERE SEQ > #{seq}
+           AND ADDRESS_SIDO = #{addressSido}
+           AND ACADEMY_NAME LIKE '%'||#{academyName}||'%'
+         ORDER BY SEQ
+         LIMIT 10 OFFSET #{nextSeq} -- 0 10 20 30
     </select>
 
 

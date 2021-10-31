@@ -50,34 +50,6 @@ public class DataController {
 
     }
 
-    //gson 사용법 구글 json 라이브러리
-    //https://soft.plusblog.co.kr/61
-    @RequestMapping("mapTest")
-    public String mapTest(@RequestBody ScheduleSubscribeDto dto){
-
-        List<String> list = new ArrayList<String>();
-        Gson gson = new Gson();
-        AcademyDto data = null;
-        for (int i = 0; i<5; i++){
-            data = new AcademyDto();
-            data.setSeq(i);
-            data.setAcademyName("제목"+i);
-            data.setAddressSido("제주특별자치도 ");
-            data.setAddressDong("제주시");
-            data.setAddressDetail("첨단로 24" + i);
-            String json = gson.toJson(data);
-            list.add(json);
-        }
-
-        System.out.println(list.toString());
-
-        return list.toString();
-
-    }
-
-
-
-
 
 
 

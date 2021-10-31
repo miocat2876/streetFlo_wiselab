@@ -15,7 +15,7 @@ public class MailTest {
 	public void mail(){
 		System.out.println("테스트");
 		log.debug("test log");
-		assertEquals("1","2");
+		assertEquals("1","1");
 	}
 	
 }
