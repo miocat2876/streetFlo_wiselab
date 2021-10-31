@@ -34,6 +34,9 @@ public class AcademyListController {
 	@RequestMapping("mapTest")
 	public List<AcademyDto> mapTest(@RequestBody AcademyLIstDto dto){
 
+
+		System.out.println(dto.getParamSearchValue());
+
 		return academyService.academyAddressFind(dto);
 
 

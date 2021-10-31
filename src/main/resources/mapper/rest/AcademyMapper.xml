@@ -14,7 +14,7 @@
           FROM ACADEMY
          WHERE SEQ > #{seq}
            AND ADDRESS_SIDO = #{searchCondition}
-           AND ACADEMY_NAME LIKE '%'||#{searchValue}||'%'
+           AND ACADEMY_NAME LIKE CONCAT('%', #{searchValue}, '%')
          ORDER BY SEQ
          LIMIT #{viewData} OFFSET #{startData}
     </select>
