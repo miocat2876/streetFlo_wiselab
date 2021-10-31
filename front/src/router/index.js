@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import store from '../store/index.js';
 import Home from "@/views/Home";
-import OauthRedirect from "@/components/oauth/Redirect";
+// import OauthRedirect from "@/components/oauth/Redirect";
 import Mypage from "@/views/Mypage";
 import AcademyList from "@/views/AcademyList";
 
@@ -34,11 +34,11 @@ export default new VueRouter({
       component: Mypage,
       beforeEnter: requireAuth(),
     },
-    {
-      path: '/oauth/redirect',
-      name: 'OauthRedrect',
-      component: OauthRedirect
-    },
+    // {
+    //   path: '/oauth/redirect',
+    //   name: 'OauthRedrect',
+    //   component: OauthRedirect
+    // },
     {
       path: "/AcademyList",
       name: "AcademyList",
