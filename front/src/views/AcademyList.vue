@@ -167,7 +167,8 @@ export default {
     },
     async scroll(e){
       let target = e.target
-      if(target.scrollTop + target.offsetHeight >= target.scrollHeight){
+      console.dir(this.searchList.length);
+      if(Math.ceil(target.scrollTop + target.offsetHeight) >= target.scrollHeight){
         this.searchData.seq = this.searchList[this.searchList.length-1].seq
         this.getSearchList();
       }
