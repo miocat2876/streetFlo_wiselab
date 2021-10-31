@@ -23,5 +23,10 @@ public class ProfileController {
         return profileService.profileStudentAdd(dto);
     }
 
+    @RequestMapping("profileTeacherAdd")
+    public void profileTeacherAdd(@RequestBody ProfileDto dto){
+        profileService.profileTeacherAdd(dto);
+        profileService.profileTeacherInstaAdd(dto);
+    }
 }
 

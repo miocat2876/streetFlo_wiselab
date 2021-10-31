@@ -11,7 +11,7 @@
       padding-top: 20px;
       margin: 0px 76px;
       text-align: center;
-      background-image: url('images/popup_t.png');
+      background-image: "@/images/popup_t.png";
       background-repeat: repeat-x;
   
       &::before {
@@ -21,7 +21,7 @@
         width: 76px;
         left: -76px;
         top: 0px;
-        background-image: url('images/popup_tl.png');
+        background-image: "@/images/popup_tl.png";
       }
   
       &::after {
@@ -31,7 +31,7 @@
         width: 76px;
         left: 100%;
         top: 0px;
-        background-image: url('images/popup_tl.png');
+        background-image: "@/images/popup_tl.png";
         transform: scaleX(-1);
       }
   
@@ -68,7 +68,7 @@
       width: 100%;
       padding: 0px 46px;
       margin-bottom: 76px;
-      background-image: url('images/popup_l.png'),url('images/popup_r.png');
+      background-image: "@/images/popup_l.png","@/images/popup_r.png";
       background-repeat: repeat-y;
       background-position: left, right;
   
@@ -78,7 +78,7 @@
         width: 100%;
         height: 76px;
         display: block;
-        background-image: url('images/popup_bl.png'), url('images/popup_br.png');
+        background-image: "@/images/popup_bl.png", "@/images/popup_br.png";
         background-position: left, right;
         background-repeat: no-repeat;
         top: 100%;
@@ -92,7 +92,7 @@
         left: 76px;
         width: calc(100% - 152px);
         height: 76px;
-        background-image: url('images/popup_b.png');
+        background-image: "@/images/popup_b.png";
         background-repeat: repeat-x;
       }
   

@@ -53,33 +53,9 @@
                             <div class="title_box">
                                 <h4>Tags:</h4>
                             </div>
-                            <div class="value_box tag">
-                                <div class="combo_box">
-                                    <select v-model="tag1">
-                                        <option>select</option>
-                                        <option>tag1-1</option>
-                                        <option>tah1-2</option>
-                                        <option>tag1-3</option>
-                                    </select>
-                                </div>
-                                <p>/</p>
-                                <div class="combo_box">
-                                    <select>
-                                        <option>select</option>
-                                        <option>tag2-1</option>
-                                        <option>tah2-2</option>
-                                        <option>tag2-3</option>
-                                    </select>
-                                </div>
-                                <p>/</p>
-                                <div class="combo_box">
-                                    <select>
-                                        <option>select</option>
-                                        <option>tag3-1</option>
-                                        <option>tah3-2</option>
-                                        <option>tag3-3</option>
-                                    </select>
-                                </div>
+                            <div class="value_box">
+                            <Hashtags :placeholder="해시태그를입력하세요"></Hashtags>
+                             <!--    <input class="w100" v-model="teacherTag" @keyup.enter="splitTag" placeholder="태그를입력하세요(5개)"/> -->
                             </div>
                         </li>
                     </ul>
@@ -152,33 +128,62 @@
 </template>
 
 <script>
-import { profileTeacherAdd } from '../api'
+import { profileTeacherAdd} from '../api'
+import Hashtags from '@/components/hashTagBar'
 
 export default {
     props: {
         propsState: String,
     },
     async created() {
-      let agrument = {
-        
+      let argument = {
+
       };
     },
     data: function() {
         return {
-          
+            teacherName     : ''
+          , genre1          : []
+          , genre2          : []
+          , teacherTag      : []
+          , instaId         : ''
+          , utubeId         : ''
+          , email           : ''
+          , teacherSiteAddr : ''
+          , loca1           : ''
+          , loca2           : ''
+          , loca3           : ''
+          , teacherContent  : ''
         };
     },
     methods: {
-        async profileTeacherAdd() {
-            let agrument = {
-                  
-            }; 
-            console.log(agrument);
-
-            
+        async splitTag() {
+            console.log("111");
         },
-    },
-    
+        async profileTeacherAdd() {
+            let argument = {
+                  teacherName    : this.teacherName
+                , genre1         : this.genre1
+                , genre2         : this.genre2
+                , tags           : this.teacherTag
+                , instaId        : this.instaId
+                , youtubeId      : this.utubeId
+                , email          : this.email1 + "@" +this.email2
+                , website        : this.teacherSiteAddr
+                , loca1          : this.teacherLocation
+                , loca2          : this.teacherLocation
+                , loca3          : this.teacherLocation
+                , teacherContent : this.teacherContent
+            };
+            console.log(argument);
+
+            const {data} = await profileTeacherAdd(argument);
+        }
+  },
+  components: {
+      Hashtags: Hashtags,
+   },
+
 };
 </script>
 

@@ -4,6 +4,8 @@ import Home from "@/views/Home";
 import Mypage from "@/views/Mypage";
 import AcademyList from "@/views/AcademyList";
 import LoginTest from "@/views/LoginTest";
+import ProfileStudent from "@/views/profile_student";
+import ProfileTeacher from "@/views/profile_teacher";
 
 Vue.use(VueRouter);
 
@@ -47,6 +49,16 @@ export default new VueRouter({
       path: "/about",
       name: "About",
       component: () => import("@/views/About.vue"),
+    },
+    {
+      path: "/ProfileStudent",
+      name: "ProfileStudent",
+      component: () => import("@/views/profile_student.vue"),
+    },
+    {
+      path: "/ProfileTeacher",
+      name: "ProfileTeacher",
+      component: () => import("@/views/profile_teacher.vue"),
     },
   ],
 });

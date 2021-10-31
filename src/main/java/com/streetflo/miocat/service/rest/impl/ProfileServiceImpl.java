@@ -22,5 +22,15 @@ public class ProfileServiceImpl implements ProfileService {
         return profileMapper.profileStudentAdd(dto);
     }
 
+    @Override
+    public int profileTeacherAdd(ProfileDto dto) {
+        return profileMapper.profileTeacherAdd(dto);
+    }
+
+    @Override
+    public int profileTeacherInstaAdd(ProfileDto dto){
+        return profileMapper.profileTeacherInstaAdd(dto);
+    }
+
 
 }

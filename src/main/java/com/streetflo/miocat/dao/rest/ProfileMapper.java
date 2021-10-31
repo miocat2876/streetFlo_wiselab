@@ -11,6 +11,13 @@ import java.util.List;
 @Repository
 public interface ProfileMapper {
 
+    // 학생정보 추가
     int profileStudentAdd(ProfileDto dto);
+
+    // 선생님정보 추가
+    int profileTeacherAdd(ProfileDto dto);
+
+    // 선생님사이트 추가
+    int profileTeacherInstaAdd(ProfileDto dto);
 
 }

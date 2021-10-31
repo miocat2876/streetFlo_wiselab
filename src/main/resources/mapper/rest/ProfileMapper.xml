@@ -26,4 +26,48 @@
                    )
     </insert>
 
+    <insert id="profileTeacherAdd" parameterType="ProfileDto">
+        INSERT INTO MEMBER
+        ( PLATFORM
+        , UNIQUE_IDENTIFIER
+        , NAME
+        , MAIL_ADDRESS
+        , MEMBER_CLASS
+        , NICK_NAME
+        , PROFILE_CONTENT
+        , ALARM_YN
+        , MEMBER_CREATE_DT
+        , MEMBER_UPDATE_DT)
+        VALUES
+        ( 'TEST'
+        , #{teacherName}
+        , #{email}
+        , #{teacherName}
+        , 'tea'
+        , 'TEST'
+        , #{teacherContent}
+        , 'Y'
+        , DATE_FORMAT(NOW(),'%y-%m-%d')
+        , DATE_FORMAT(NOW(),'%y-%m-%d')
+        )
+    </insert>
+
+    <insert id="profileTeacherInstaAdd" parameterType="ProfileDto">
+        INSERT INTO URL
+        (REF_TABLE
+        ,FK_SEQ
+        ,URL_DIV
+        ,URL_LINK
+        ,URL_CREATE_DT
+        )
+        VALUES
+        ('MEMBER'
+        , 2
+        , 'INSTA'
+        , #{instaId}
+        , DATE_FORMAT(NOW(), '%y-%m-%d')
+        );
+
+    </insert>
+
 </mapper>

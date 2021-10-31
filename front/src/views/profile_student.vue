@@ -88,7 +88,7 @@ export default {
         propsState: String,
     },
     async created() {
-      let agrument = {
+      let argument = {
         
       };
     },
@@ -102,33 +102,18 @@ export default {
         };
     },
     methods: {
-      
         async profileStudentAdd() {
-            let agrument = {
+            let argument = {
                   studentName    : this.studentName
                 , genre1         : this.genre1
                 , genre2         : this.genre2
                 , classLevel     : this.classLevel
                 , studentContent : this.studentContent
             }; 
-            console.log(agrument);
+            console.log(argument);
 
-            const {data} = await profileStudentAdd(agrument);
-            
-        },
-       
- /* 
-       async profileStudentAdd() {
-           console.log(data)
-      const _this = this
-      const { data } = await this.$fetch({
-        method:'GET',
-        url: 'http://localhost:9090/profileStudentAdd'
-      })
-       this.items = data
-       console.log(data)
-    }
-   */
+            const {data} = await profileStudentAdd(argument);
+        }
   },
     
 };
