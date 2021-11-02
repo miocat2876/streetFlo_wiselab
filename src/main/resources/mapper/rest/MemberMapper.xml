@@ -10,24 +10,34 @@
 
     <!-- 회원 가입 여부 체크 -->
     <select id="idCheck" parameterType="String" resultType="String">
-
+        SELECT(
+            MEM_NAME
+        )
+        FROM MEMBER
+        WHERE UNIQUE_IDENTIFIER = #{uniqueId}
     </select>
 
     <!-- 회원 정보 조회 -->
-    <select id="getInfo" parameterType="String" resultType="MemberDto">
+    <select id="getInfo" resultType="MemberDto">
         SELECT(
-               ID,
-               MAIL_ADDRESS,
-               PROFILE_CONTENT,
-               MEMBER_CLASS
-                )
+            MEM_NAME,
+            UNIQUE_IDENTIFIER,
+            PLATFORM,
+            MAIL_ADDRESS,
+            PROFILE_CONTENT,
+            MEMBER_CLASS
+        )
         FROM MEMBER
-        WHERE MAIL_ADDRESS = #{email}
+        WHERE UNIQUE_IDENTIFIER = #{uniqueId}
     </select>
 
     <!-- 회원 정보 수정 -->
-    <update id="update" parameterType="MemberDto">
-
+    <update id="setInfo" parameterType="MemberDto">
+        UPDATE MEMBER
+        SET
+        MEM_NAME = #{id},
+        PROFILE_CONTENT = #{picture}
+        WHERE UNIQUE_IDENTIFIER = #{uniqueIdentifier}
     </update>
 
 

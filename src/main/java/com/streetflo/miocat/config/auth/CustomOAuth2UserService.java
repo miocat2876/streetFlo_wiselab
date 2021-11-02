@@ -51,7 +51,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         user.setEmail(attributes.getEmail());
         user.setPicture(attributes.getPicture());
         user.setPlatform(registrationId);
-        user.setUniqueIdentifier(Integer.toString(attributes.getName().hashCode()));
+        user.setUniqueIdentifier(attributes.getUniqueIdentifier());
         user.setMemType("student");
         user.setAccessCode("access" + attributes.getName() + "from" + registrationId);
 
@@ -60,8 +60,6 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         httpSession.setAttribute("username", user.getId());
 
         saveOrUpdate(user);
-
-
 
         return new DefaultOAuth2User(
                 Collections.singleton(new SimpleGrantedAuthority(none)),
@@ -82,7 +80,16 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         n.setPlatform(attributes.getPlatform());
         n.setAccessCode(attributes.getAccessCode());
 
-        dao.save(n);
+        String joinChecker = dao.idCheck(attributes.getUniqueIdentifier());
+
+        System.out.println(joinChecker);
+
+        if (joinChecker == null) {
+            dao.save(n);
+        }else {
+            dao.setInfo(n);
+        }
+
         return n;
     }
 
