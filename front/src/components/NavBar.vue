@@ -35,7 +35,7 @@
           </div>
           <ul class="nav_menu">
             <li 
-              v-if="!isSignIn"
+              v-if="isSignIn"
               @click="onLogin()"
               class="nav_list nav_login"
             >
@@ -44,7 +44,7 @@
               >Log-In</a>
             </li>
             <li
-              v-if="!isSignIn"
+              v-if="isSignIn"
               @click="onSignUp()"
               class="nav_list nav_signUp"
             >
@@ -53,7 +53,6 @@
               >Sign-Up</a>
             </li>
             <li 
-              v-if="!isSignIn"
               @click="handleClickSignOut"
               class="nav_list"
             >
@@ -236,14 +235,15 @@
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
+import VueCookies from 'vue-cookies'
 
 export default {
   data () {
     return {
       navigations: {},
-      isSignIn: store.state.token == null
+      isSignIn: this.$store.state.userName
     }
-  },
+  }, 
   computed: {
     isShowNav () {
       return this.$store.state.navigation.isShowNav
@@ -260,7 +260,6 @@ export default {
   },
   methods: {
     ...mapMutations(['setToken']),
-
     ...mapGetters(['getToken']),
     async init () {
       this.navigations = await this.$axios({
@@ -299,7 +298,13 @@ export default {
 
     async handleClickSignOut(){
       try {
-        await this.$store.state.token == null;
+        
+        await this.$cookies.remove("accesstoken")
+        await this.$store.commit('signOut')
+        this.offNav()
+        alert("로그아웃 되었습니다.")
+        this.$router.push("/")
+        this.$router.go();
       } catch (error) {
       }
     }

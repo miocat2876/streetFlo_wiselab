@@ -4,28 +4,6 @@
       <h1>Reviews</h1>
     </div>
     <div class="right">
-      <vueper-slides
-        class="no-shadow"
-        :visible-slides="3"
-        slide-multiple
-        :gap="3"
-        :slide-ratio="1 / 4"
-        :dragging-distance="200"
-        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
-      >
-        <vueper-slide
-          v-for="item in items"
-          :key="item.name"
-          :title="item.toString()"
-        >
-          <div class="right">
-            <h4>{{ item.name }}</h4>
-            <h4>종목: {{ item.genre }}</h4>
-            <p>Lv. {{ item.level }}</p>
-          </div>
-        </vueper-slide>
-      </vueper-slides>
-
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div

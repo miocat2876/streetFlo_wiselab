@@ -9,5 +9,9 @@ export default {
   },
   setUserName (state, userName) {
     state.userName = userName
+  },
+  signOut (state,) {
+    state.token = ''
+    state.userName = ''
   }
 };
