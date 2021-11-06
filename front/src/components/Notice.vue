@@ -5,7 +5,10 @@
       <span>Swipe for previous notices >> </span>
     </div>
     <div class="right">
-      <swiper class="swiper-container" :options="swiperOption">
+      <swiper
+        class="swiper-container"
+        :options="swiperOption"
+      >
         <swiper-slide>
           <div class="review_box">
             <div class="border-top"></div>
@@ -14,8 +17,14 @@
                 <div class="notice_title">
                   <p>공지수업:</p>
                   <div>
-                    <select class="box" v-model="selected">
-                      <option v-for="option in options" :key="option.title">
+                    <select
+                      class="box"
+                      v-model="selected"
+                    >
+                      <option
+                        v-for="option in options"
+                        :key="option.title"
+                      >
                         {{ option.title }}
                       </option>
                     </select>
@@ -31,9 +40,11 @@
                     ></textarea>
                   </div>
                 </div>
-                <a href="javascript:void(0);" @click="postNotice">
-                  <button>Send >></button></a
+                <a
+                  href="javascript:void(0);"
+                  @click="postNotice"
                 >
+                  <button>Send >></button></a>
               </div>
             </div>
             <div class="border-bottom"></div>
@@ -68,8 +79,14 @@
       </swiper>
     </div>
     <div class="swiper-button">
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
+      <div
+        class="swiper-button-prev"
+        slot="button-prev"
+      ></div>
+      <div
+        class="swiper-button-next"
+        slot="button-next"
+      ></div>
     </div>
   </div>
 </template>
