@@ -11,4 +11,14 @@ export default {
       console.log(error);
     }
   },
+  async getCommonCode({ commit }, data) {
+    if(Object.keys(this.state.commonCode).length === 0){
+      try {
+          const result = await api.commonFind(data);
+          commit('setCommonCode', result);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  },
 };

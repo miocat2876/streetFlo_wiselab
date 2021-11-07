@@ -16,7 +16,7 @@ const requireAuth = () => (to, from, next) => {
   next("/");
 };
 
-export default new VueRouter({
+const router = new VueRouter({
   routes: [
     {
       path: "/",
@@ -50,4 +50,10 @@ export default new VueRouter({
       component: () => import("@/views/About.vue"),
     },
   ],
-});
+}
+);
+router.afterEach((to, from) => {
+  store.dispatch("getCommonCode");
+})
+
+export default router

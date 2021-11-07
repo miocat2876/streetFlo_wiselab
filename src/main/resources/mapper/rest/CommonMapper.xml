@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.streetflo.miocat.dao.rest.CommonCodeMapper">
+
+    <select id="commonCodeFind" parameterType="CommonCodeDto" resultType="CommonCodeDto">
+         SELECT CODE_GROUP as codeGroup
+              , CODE_NAME  as codeName
+              , CODE_SEQ   as codeSeq
+           FROM COMMON
+          WHERE CODE_GROUP = CASE WHEN #{codeGroup} IS NULL
+                                  THEN CODE_GROUP
+                                  ELSE #{codeGroup}
+                              END
+    </select>
+
+
+
+</mapper>

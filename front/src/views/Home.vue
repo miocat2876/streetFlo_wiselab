@@ -34,5 +34,8 @@ export default {
   name: "Home",
   components: {
   },
+  mounted() {
+    console.log(this.$store.state.commonCode.data["G0001"]);
+  },
 };
 </script>

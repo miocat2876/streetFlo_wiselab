@@ -14,4 +14,8 @@ const scheduleSubscribeAdd = (data) => {
   return axios.post(`${commonUrl}/scheduleSubscribeAdd`, data);
 };
 
-export { scheduleFind, scheduleAdd, scheduleSubscribeAdd };
+const commonFind = (data) => {
+  return axios.post(`${commonUrl}/commonFind`, data);
+};
+
+export { scheduleFind, scheduleAdd, scheduleSubscribeAdd,commonFind };

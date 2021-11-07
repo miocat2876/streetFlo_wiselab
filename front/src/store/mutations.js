@@ -9,5 +9,9 @@ export default {
   },
   setUserName (state, userName) {
     state.userName = userName
-  }
+  },
+  setCommonCode (state, commonCode) {
+    state.commonCode = commonCode
+  },
+
 };

@@ -1,7 +1,8 @@
 export default{
     userName: "",
     token: "",
-    calenderData : {}
+    calenderData : {},
+    commonCode : {},
 }
 
   
