@@ -32,7 +32,6 @@ public class MainController {
 	@PostMapping("/commonFind")
 	public Map<String,List<String>> mapTest(@RequestBody @Nullable CommonCodeDto dto){
 
-		System.out.println("되나?");
 		return commonCodeService.CommonCodeFind(dto);
 
 	}

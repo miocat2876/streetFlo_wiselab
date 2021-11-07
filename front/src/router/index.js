@@ -16,6 +16,7 @@ const requireAuth = () => (to, from, next) => {
     return next();
   }
   alert("로그인하십시오.")
+  this.$store.dispatch('navigation/offLogin')
   next("/");
 };
 
@@ -65,8 +66,22 @@ const router = new VueRouter({
   ],
 }
 );
-router.afterEach((to, from) => {
-  store.dispatch("getCommonCode");
-})
+
+//로그인-> 쿠키,로그인값 (서버) -> 클라이언트 쿠키는 x 로그인값(1) 스토어 스토어 값 1 로그인 되었있다 0 로그아웃
+//로그아웃
+//클라이언트 쿠키 엑세스 토큰 스토어 로그인 상태
+//쿠키상태 여부
+//통신안하고 로그인 상태관리
+//
+
+
+router.beforeEach(function (to, from, next) {
+  // to : 이동할 url
+  // from : 현재 url
+  // next : to에서 지정한 url로 이동하기 위해 꼭 호출해야 하는 함수
+  store.dispatch("getCommonCode").then(function (){
+    next();
+  });
+});
 
 export default router

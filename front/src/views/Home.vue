@@ -17,6 +17,7 @@
               <a>Housedance</a> <a>Hip-Hop</a> <a>Locking</a> <a>Popping</a> <a>Waacking</a>
               <a>Choreography</a> <a>K-Pop</a> <a>Girls hip-hop</a> <a>Girlish</a>
             </li>
+            {{items.G0001}}
             <li>
               <p>Class Level:</p> <a>Beginner</a> <a class="on">Intermediate</a>
               <a>Master</a>
@@ -26,16 +27,21 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
-
+import { mapState,mapActions, mapGetters, mapMutations } from 'vuex'
 export default {
   name: "Home",
   components: {
   },
-  mounted() {
-    console.log(this.$store.state.commonCode.data["G0001"]);
+  data:function () {
+    return {}
   },
+  mounted() {
+    //console.log(this.$store.state.commonCode);
+  },
+  computed: { ...mapState({ items: state => state.commonCode, }),}
 };
 </script>

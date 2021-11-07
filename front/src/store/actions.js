@@ -14,8 +14,9 @@ export default {
   async getCommonCode({ commit }, data) {
     if(Object.keys(this.state.commonCode).length === 0){
       try {
-          const result = await api.commonFind(data);
-          commit('setCommonCode', result);
+          const {data} = await api.commonFind(data);
+          console.log(data)
+          commit('setCommonCode', data);
       } catch (error) {
         console.log(error);
       }

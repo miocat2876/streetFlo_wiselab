@@ -16,6 +16,8 @@ Vue.config.productionTip = false;
 
 // Vue.use(GAuth, gAuthOptions);
 
+// store.dispatch("getCommonCode")
+
 new Vue({
   store,
   router,
