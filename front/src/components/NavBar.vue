@@ -241,7 +241,7 @@ export default {
   data () {
     return {
       navigations: {},
-      isSignIn: store.state.token == null
+      isSignIn: this.$store.state.token == null
     }
   },
   computed: {

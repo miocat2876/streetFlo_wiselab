@@ -9,14 +9,23 @@
           </span>
         </div>
       </div>
-      <div class="content-wrap" >
-        <div class="content-left" @scroll="scroll">
+      <div class="content-wrap">
+        <div
+          class="content-left"
+          @scroll="scroll"
+        >
           <div class="search_box">
             <div class="search">
               <a class="search_bt">
                 <i class="fas fa-search"></i>
               </a>
-              <input type="text" name="" id="" v-model="searchData.paramSearchValue"  v-on:keyup.enter="getSearch"/>
+              <input
+                type="text"
+                name=""
+                id=""
+                v-model="searchData.paramSearchValue"
+                @keyup.enter="getSearch"
+              />
             </div>
             <div class="bottom">
               <ul class="calss-level">
@@ -34,7 +43,10 @@
           </div>
 
           <ul class="img-list">
-            <li v-for="data in searchList" :key="data.key">
+            <li
+              v-for="data in searchList"
+              :key="data.key"
+            >
               <div class="card-wrap">
                 <div
                   style="background-image: url(/images/profile_img.png)"
@@ -63,7 +75,10 @@
         </div>
       </div>
       <div class="content_1200">
-        <a class="top_bt" href="#">
+        <a
+          class="top_bt"
+          href="#"
+        >
           <p></p>
         </a>
       </div>

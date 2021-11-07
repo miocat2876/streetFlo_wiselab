@@ -4,6 +4,9 @@ import store from '../store/index.js';
 import Home from "@/views/Home";
 import OauthRedirect from "@/components/oauth/Redirect";
 import Mypage from "@/views/Mypage";
+
+import TeacherPage from "@/views/TeacherPage";
+import AcademyPage from "@/views/AcademyPage";
 import AcademyList from "@/views/AcademyList";
 
 Vue.use(VueRouter);
@@ -43,6 +46,16 @@ const router = new VueRouter({
       path: "/AcademyList",
       name: "AcademyList",
       component: AcademyList,
+    },
+    {
+      path: "/teacher/:id",
+      name: "TeacherPage",
+      component: TeacherPage,
+    },
+    {
+      path: "/academy/:id",
+      name: "AcademyPage",
+      component: AcademyPage,
     },
     {
       path: "/about",
