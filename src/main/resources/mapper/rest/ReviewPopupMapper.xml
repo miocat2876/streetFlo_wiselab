@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.streetflo.miocat.dao.rest.ReviewPopupWordAbverbMapper">
+
+    <select id="reviewPopupWordAbverbFind" parameterType="WordAbverbDto" resultType="WordAbverbDto">
+
+        SELECT CASE WHEN #{wordSeq} != 0
+                    THEN WORD_SEQ
+                    ELSE ADVERB_SEQ
+                END AS 'wordSeq'
+             , CASE WHEN #{wordSeq} != 0
+                    THEN WORD_NM
+                    ELSE ADVERB_NM
+                END AS 'wordNm'
+        FROM (SELECT WORD_SEQ
+                   , ADVERB_SEQ
+                FROM WORD_ABVERB_MAPPING
+               WHERE WORD_SEQ = CASE WHEN #{wordSeq} != 0
+                                     THEN #{wordSeq}
+                                     ELSE WORD_SEQ
+                                 END
+             ) A
+       INNER JOIN WORD B
+          ON A.WORD_SEQ = B.SEQ
+       INNER JOIN ADVERB C
+          ON A.ADVERB_SEQ = C.SEQ
+        GROUP BY wordSeq,wordNm
+    </select>
+
+
+
+</mapper>

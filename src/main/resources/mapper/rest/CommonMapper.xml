@@ -4,9 +4,9 @@
 <mapper namespace="com.streetflo.miocat.dao.rest.CommonCodeMapper">
 
     <select id="commonCodeFind" parameterType="CommonCodeDto" resultType="CommonCodeDto">
-         SELECT CODE_GROUP as codeGroup
-              , CODE_NAME  as codeName
-              , CODE_SEQ   as codeSeq
+         SELECT CODE_GROUP AS codeGroup
+              , CODE_NAME  AS codeName
+              , CODE_SEQ   AS codeSeq
            FROM COMMON
           WHERE CODE_GROUP = CASE WHEN #{codeGroup} IS NULL
                                   THEN CODE_GROUP
