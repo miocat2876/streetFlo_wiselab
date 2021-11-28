@@ -5,20 +5,20 @@
 
     <select id="reviewPopupWordAbverbFind" parameterType="WordAbverbDto" resultType="WordAbverbDto">
 
-        SELECT CASE WHEN #{wordSeq} != 0
+        SELECT CASE WHEN #{wordSeq} = 0
                     THEN WORD_SEQ
                     ELSE ADVERB_SEQ
                 END AS 'wordSeq'
-             , CASE WHEN #{wordSeq} != 0
+             , CASE WHEN #{wordSeq} = 0
                     THEN WORD_NM
                     ELSE ADVERB_NM
                 END AS 'wordNm'
         FROM (SELECT WORD_SEQ
                    , ADVERB_SEQ
                 FROM WORD_ABVERB_MAPPING
-               WHERE WORD_SEQ = CASE WHEN #{wordSeq} != 0
-                                     THEN #{wordSeq}
-                                     ELSE WORD_SEQ
+               WHERE WORD_SEQ = CASE WHEN #{wordSeq} = 0
+                                     THEN WORD_SEQ
+                                     ELSE #{wordSeq}
                                  END
              ) A
        INNER JOIN WORD B
